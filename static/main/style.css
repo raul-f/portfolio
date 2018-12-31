@@ -171,7 +171,7 @@ footer {
 }
 
 #welcome-section {
-    background: url("https://drive.google.com/uc?export=download&id=1BxEPsyQpQ9GdH4SjuqY8nMIep9K24s3k");
+    background: url("maze.jpg");
 }
 
 #about-box {
@@ -208,7 +208,7 @@ footer {
 
 #projects {
     border-top: 3px solid;
-    background-image: url(https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/design+patterns/Art+D%C3%A9co+-+%231.jpg);
+    background-image: url("art-deco-pointy-1.jpg");
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 50px;
@@ -244,7 +244,7 @@ footer {
 
 #links {
     border-top: 3px solid;
-    background: url("https://drive.google.com/uc?export=download&id=16L81jIAhdSfnWmScvOSrLr-9wN1RZ-42");
+    background: url("art-deco-bw-hexagons-2.png");
     flex-direction: column;
 }
 

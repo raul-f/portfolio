@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('/public/project-collection/bw-triangles-pattern-1.jpg'); 
+    background-image: url('bw-triangles-pattern-1.jpg'); 
     min-height: 100vh;
     font-family: 'Noto Sans SC', sans-serif;
     @include f-style(column, space-between, center);
