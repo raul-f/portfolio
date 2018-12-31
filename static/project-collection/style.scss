@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/design+patterns/800px_COLOURBOX4404074.jpg'); 
+    background-image: url('/public/project-collection/bw-triangles-pattern-1.jpg'); 
     min-height: 100vh;
     font-family: 'Noto Sans SC', sans-serif;
     @include f-style(column, space-between, center);
@@ -31,41 +31,50 @@ body {
 
 #page-main {
     .primary-row {
+        // border: 1px solid red;
         @include f-style(row, center, center);
-    }
-    .tile-box {
-        min-height: 250px;
-        min-width: 300px;
-        padding: 0;
-        @include f-style(row, center, center);
-        .prj-tile {
-            height: 200px;
-            width: 280px;
-            margin: 0;
-            .prj-link {
-                height: 100%;
-                .prj-text {
-                    padding: 0;
-                    height: 21%;
-                    @include f-style(row, center, center);
-                    .prj-title {
-                        font-size: 16px;
-                        margin: 0;
+        .secondary-row {
+            // border: 1px solid black;
+            @include f-style(row, center, center);
+            .tile-box {
+                min-height: 250px;
+                min-width: 300px;
+                padding: 0;
+                @include f-style(row, center, center);
+                .prj-tile {
+                    height: 200px;
+                    width: 280px;
+                    margin: 0;
+                    .prj-link {
+                        height: 100%;
+                        .prj-text {
+                            padding: 0;
+                            height: 21%;
+                            @include f-style(row, center, center);
+                            .prj-title {
+                                font-size: 16px;
+                                margin: 0;
+                            }
+                        }
                     }
+                    .prj-link:link, .prj-link:hover, .prj-link:active, .prj-link:visited {
+                        color: black !important;
+                        text-decoration: none !important;
+                    }
+                    .prj-link:hover, .prj-link:active {
+                        animation-name: lighten-darken;
+                        animation-duration: 250ms;
+                        animation-fill-mode: forwards;
+                    }
+                    
                 }
             }
-            .prj-link:link, .prj-link:hover, .prj-link:active, .prj-link:visited {
-                color: black !important;
-                text-decoration: none !important;
-            }
-            .prj-link:hover, .prj-link:active {
-                animation-name: lighten-darken;
-                animation-duration: 250ms;
-                animation-fill-mode: forwards;
-            }
-            
+        }
+        .empty-box {
+            display: none;
         }
     }
+    
 }
 
 @keyframes lighten-darken {
@@ -104,8 +113,40 @@ body {
     }
 }
 
+@media (max-width: 1810px) {
+    #page-main {
+        .primary-row {
+            flex-direction: column;
+            .secondary-row {
+                min-width: 700px;
+                padding: 30px;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
 @media (max-width: 850px) {
     #header-title {
         font-size: 25px;
+    }
+    #page-main {
+        .primary-row {
+            .secondary-row {
+                padding: 0px;
+                min-width: 0;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    #page-main {
+        .primary-row {
+            .secondary-row {
+                flex-direction: column !important;
+            }
+        }
     }
 }

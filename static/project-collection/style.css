@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/design+patterns/800px_COLOURBOX4404074.jpg");
+  background-image: url("/public/project-collection/bw-triangles-pattern-1.jpg");
   min-height: 100vh;
   font-family: 'Noto Sans SC', sans-serif;
   display: -webkit-box;
@@ -63,7 +63,23 @@ body {
           align-items: center;
 }
 
-#page-main .tile-box {
+#page-main .primary-row .secondary-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-main .primary-row .secondary-row .tile-box {
   min-height: 250px;
   min-width: 300px;
   padding: 0;
@@ -82,17 +98,17 @@ body {
           align-items: center;
 }
 
-#page-main .tile-box .prj-tile {
+#page-main .primary-row .secondary-row .tile-box .prj-tile {
   height: 200px;
   width: 280px;
   margin: 0;
 }
 
-#page-main .tile-box .prj-tile .prj-link {
+#page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link {
   height: 100%;
 }
 
-#page-main .tile-box .prj-tile .prj-link .prj-text {
+#page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link .prj-text {
   padding: 0;
   height: 21%;
   display: -webkit-box;
@@ -110,23 +126,27 @@ body {
           align-items: center;
 }
 
-#page-main .tile-box .prj-tile .prj-link .prj-text .prj-title {
+#page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link .prj-text .prj-title {
   font-size: 16px;
   margin: 0;
 }
 
-#page-main .tile-box .prj-tile .prj-link:link, #page-main .tile-box .prj-tile .prj-link:hover, #page-main .tile-box .prj-tile .prj-link:active, #page-main .tile-box .prj-tile .prj-link:visited {
+#page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:link, #page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:hover, #page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:active, #page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:visited {
   color: black !important;
   text-decoration: none !important;
 }
 
-#page-main .tile-box .prj-tile .prj-link:hover, #page-main .tile-box .prj-tile .prj-link:active {
+#page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:hover, #page-main .primary-row .secondary-row .tile-box .prj-tile .prj-link:active {
   -webkit-animation-name: lighten-darken;
           animation-name: lighten-darken;
   -webkit-animation-duration: 250ms;
           animation-duration: 250ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+#page-main .primary-row .empty-box {
+  display: none;
 }
 
 @-webkit-keyframes lighten-darken {
@@ -194,9 +214,41 @@ body {
           animation-fill-mode: forwards;
 }
 
+@media (max-width: 1810px) {
+  #page-main .primary-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #page-main .primary-row .secondary-row {
+    min-width: 700px;
+    padding: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media (max-width: 850px) {
   #header-title {
     font-size: 25px;
+  }
+  #page-main .primary-row .secondary-row {
+    padding: 0px;
+    min-width: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  #page-main .primary-row .secondary-row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
