@@ -21,8 +21,24 @@ body {
     height: 80px;
     width: 100vw;
     border-bottom: 3px solid lightgray;
-    @include f-style(column, center, center);
+    text-align: center;
+    @include f-style(row, center, center);
+    #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
+        color: white;
+        position: absolute;
+        left: 15px;
+        font-size: 30px;
+    }
+    #return-link:hover, #return-link:active {
+        animation-name: lighten;
+        animation-duration: 250ms;
+        animation-fill-mode: forwards; 
+    }
+    // #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
+    //     color
+    // }
     #header-title {
+        font-size: 30px;
         text-align: center;
         margin: 0;
         font-family: 'Noto Sans SC', sans-serif; 
@@ -70,9 +86,6 @@ body {
                 }
             }
         }
-        .empty-box {
-            display: none;
-        }
     }
     
 }
@@ -88,7 +101,7 @@ body {
     100% {
       color: #adb5bd;
     }
-  }
+}
 
 #page-footer {
     background-color: black;
@@ -121,6 +134,9 @@ body {
                 min-width: 700px;
                 padding: 30px;
                 justify-content: space-between;
+            }
+            .empty-box {
+                display: none;
             }
         }
     }
