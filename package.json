@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "this is a webpage made to display raul-f's projects.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raul-f/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "raul-f"
+  ],
+  "author": "Raul Figueiredo (raul-f on GitHub)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raul-f/portfolio/issues"
+  },
+  "homepage": "https://github.com/raul-f/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
