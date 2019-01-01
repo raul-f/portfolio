@@ -24,8 +24,7 @@ body {
 #page-header {
   background-color: black;
   height: 80px;
-  width: 100vw;
-  border-bottom: 3px solid lightgray;
+  width: 100%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,14 +41,16 @@ body {
           align-items: center;
 }
 
-#page-header #return-link:link, #page-header #return-link:visited, #page-header #return-link:hover, #page-header #return-link:active {
+#page-header #return-box {
+  width: 10%;
+}
+
+#page-header #return-box #return-link:link, #page-header #return-box #return-link:visited, #page-header #return-box #return-link:hover, #page-header #return-box #return-link:active {
   color: white;
-  position: absolute;
-  left: 15px;
   font-size: 30px;
 }
 
-#page-header #return-link:hover, #page-header #return-link:active {
+#page-header #return-box #return-link:hover, #page-header #return-box #return-link:active {
   -webkit-animation-name: lighten;
           animation-name: lighten;
   -webkit-animation-duration: 250ms;
@@ -58,11 +59,30 @@ body {
           animation-fill-mode: forwards;
 }
 
-#page-header #header-title {
+#page-header #title-box {
+  padding: 0;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-header #title-box #header-title {
   font-size: 30px;
   text-align: center;
-  margin: 0;
   font-family: 'Noto Sans SC', sans-serif;
+  position: relative;
+  right: 5%;
 }
 
 #page-main .primary-row {
@@ -191,8 +211,9 @@ body {
 
 #page-footer {
   background-color: black;
+  padding: 5px;
   height: 40px;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,6 +287,9 @@ body {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+  }
+  #page-footer #credits-line {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

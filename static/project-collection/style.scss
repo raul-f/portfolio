@@ -17,31 +17,41 @@ body {
 }
 
 #page-header {
+    // border: 1px solid white;
     background-color: black;
     height: 80px;
-    width: 100vw;
-    border-bottom: 3px solid lightgray;
+    width: 100%;
+    // border-bottom: 3px solid lightgray;
     text-align: center;
     @include f-style(row, center, center);
-    #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
-        color: white;
-        position: absolute;
-        left: 15px;
-        font-size: 30px;
-    }
-    #return-link:hover, #return-link:active {
-        animation-name: lighten;
-        animation-duration: 250ms;
-        animation-fill-mode: forwards; 
+    #return-box {
+        // border: 1px solid white;
+        width: 10%;
+        #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
+            color: white;
+            font-size: 30px;
+        }
+        #return-link:hover, #return-link:active {
+            animation-name: lighten;
+            animation-duration: 250ms;
+            animation-fill-mode: forwards; 
+        }
     }
     // #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
     //     color
     // }
-    #header-title {
-        font-size: 30px;
-        text-align: center;
-        margin: 0;
-        font-family: 'Noto Sans SC', sans-serif; 
+    #title-box {
+        // border: 1px solid white;
+        padding: 0;
+        width: 90%;
+        @include f-style(column, center, center);
+        #header-title {
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Noto Sans SC', sans-serif;
+            position: relative;
+            right: 5%;
+        }
     }
 }
 
@@ -53,6 +63,7 @@ body {
             // border: 1px solid black;
             @include f-style(row, center, center);
             .tile-box {
+                // border: 1px solid blue;
                 min-height: 250px;
                 min-width: 300px;
                 padding: 0;
@@ -104,9 +115,11 @@ body {
 }
 
 #page-footer {
+    // border: 1px solid white;
     background-color: black;
+    padding: 5px;
     height: 40px;
-    width: 100vw;
+    width: 100%;
     @include f-style(row, center, center);
     #credits-line {
         font-size: 16px;
@@ -163,6 +176,11 @@ body {
             .secondary-row {
                 flex-direction: column !important;
             }
+        }
+    }
+    #page-footer {
+        #credits-line {
+            font-size: 14px;
         }
     }
 }
