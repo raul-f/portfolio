@@ -23,8 +23,10 @@ body {
 
 #page-header {
   background-color: black;
-  height: 80px;
+  min-height: 80px;
   width: 100%;
+  padding: 0 15px;
+  border-bottom: 3px solid lightgray;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,10 +41,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#page-header #return-box {
-  width: 10%;
 }
 
 #page-header #return-box #return-link:link, #page-header #return-box #return-link:visited, #page-header #return-box #return-link:hover, #page-header #return-box #return-link:active {
@@ -60,8 +58,10 @@ body {
 }
 
 #page-header #title-box {
-  padding: 0;
-  width: 90%;
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,10 +79,9 @@ body {
 
 #page-header #title-box #header-title {
   font-size: 30px;
-  text-align: center;
   font-family: 'Noto Sans SC', sans-serif;
   position: relative;
-  right: 5%;
+  right: 15px;
 }
 
 #page-main .primary-row {

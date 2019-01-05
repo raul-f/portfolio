@@ -19,14 +19,14 @@ body {
 #page-header {
     // border: 1px solid white;
     background-color: black;
-    height: 80px;
-    width: 100%;
-    // border-bottom: 3px solid lightgray;
+    min-height: 80px;
+	width: 100%;
+	padding: 0 15px;
+    border-bottom: 3px solid lightgray;
     text-align: center;
-    @include f-style(row, center, center);
+	@include f-style(row, center, center);
     #return-box {
         // border: 1px solid white;
-        width: 10%;
         #return-link:link, #return-link:visited, #return-link:hover, #return-link:active {
             color: white;
             font-size: 30px;
@@ -41,16 +41,15 @@ body {
     //     color
     // }
     #title-box {
-        // border: 1px solid white;
-        padding: 0;
-        width: 90%;
+		// border: 1px solid white;
+		padding: 0 15px;
+		flex-grow: 1;
         @include f-style(column, center, center);
         #header-title {
             font-size: 30px;
-            text-align: center;
             font-family: 'Noto Sans SC', sans-serif;
             position: relative;
-            right: 5%;
+            right: 15px;
         }
     }
 }
