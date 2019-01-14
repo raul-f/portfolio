@@ -6,10 +6,16 @@ import Projects from './components/Projects.js'
 import Contact from './components/Contact.js'
 
 class App extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			current: 'about'
+		}
+	}
 	render() {
 		return (
 		<div id="app">
-			<Home />
+			{this.state.current === 'home' ? <Home /> : this.state.current === 'about' ? <About /> : this.state.current === 'projects' ? <Projects /> : <Contact />}
 		</div>
 		)
 	}

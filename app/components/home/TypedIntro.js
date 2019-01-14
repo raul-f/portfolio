@@ -20,7 +20,6 @@ class TypedIntro extends React.Component {
 			<div className='intro-box'>
 				<span id='hello' ref={(element) => { this.greeting = element; }}/>
 				<span id='raul-f' ref={(element) => { this.descrition = element; }}/>
-				{/*<h1 className='intro-text' ref={(el) => { this.el = el; }}/>*/}
 			</div>
 		)
 	}
