@@ -1,0 +1,13 @@
+import React from 'react'
+
+function Navbar() {
+	return(
+		<nav className='navbar'>
+			<a id='about-link' className='navlink'>About<span class='gray-point'>.</span></a>
+			<a id='project-link' className='navlink'>Projects<span class='gray-point'>.</span></a>
+			<a id='contact-link' className='navlink'>Contact<span class='gray-point'>.</span></a>
+		</nav>
+	)
+}
+
+export default Navbar
