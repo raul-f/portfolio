@@ -1,26 +1,86 @@
+// Mixins
+
+@mixin f-style($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// Rules
+
 body {
 	margin: 0;
-	background-color: lightsteelblue;
-	#app {
-		.navbar {
-			background-color: black;
-			height: 80px;
-			width: 500px;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			position: absolute;
-			right: 0;
-			top: 50px;
-			.navlink {
-				color: white;
-				font-size: 20px;
-				font-family: 'Montserrat', sans-serif;
-				font-weight: 600;
-				.gray-point {
-					color: #707070;
-				}
+	//background-color: lightsteelblue;
+}
+
+#home {
+	height: 100vh;
+	background-image: url('./assets/New-York-Wallpaper-Background-8.jpg');
+	background-size: cover; 
+	background-position: 50%;
+	@include f-style(row, center, center);
+	.bg-filter {
+		background-color: rgba($color: #707070, $alpha: 0.5);
+		height: 100%;
+		width: 100%;
+		@include f-style(row, center, center);
+		text-align: center;
+	}
+	.navbar {
+		background-color: black;
+		height: 80px;
+		width: 500px;
+		@include f-style(row, center, center);
+		position: absolute;
+		right: 0;
+		top: 50px;
+		.navlink {
+			padding: 0 25px;
+			color: white;
+			font-size: 20px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+			.gray-point {
+				color: #707070;
 			}
+		}
+	}
+	.intro-box {
+		span {
+			margin-bottom: 0 !important;
+		}
+		.intro-text {
+			margin: 0 !important;
+			max-width: 1100px;
+			font-size: 70px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 800;
+			.white-text {
+				color: white;
+			}
+		}
+		#hello {
+			position: relative;
+			top: 10px;
+		}
+		#raul-f {
+			position: relative;
+			bottom: 10px;
+		}
+	}
+	.link-box {
+		height: 80px;
+		width: 300px;
+		@include f-style(row, center, center);
+		background-color: black;
+		position: absolute;
+		bottom: 60px;
+		left: 80px;
+		.link-icon {
+			color: white;
+			font-size: 55px;
+			margin: 0 15px;
 		}
 	}
 }
