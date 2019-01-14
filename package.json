@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is a repo for the page that displays my projects.",
   "main": "index.js",
   "babel": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "typed.js": "^2.0.9"
   },
   "devDependencies": {

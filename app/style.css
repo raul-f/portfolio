@@ -3,6 +3,40 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.navbar {
+  background-color: black;
+  height: 80px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.navbar .navlink {
+  text-decoration: none;
+  padding: 0 25px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar .navlink .gray-point {
+  color: #707070;
+}
+
 #home {
   height: 100vh;
   background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
@@ -90,16 +124,6 @@ body {
 
 #home .intro-box .intro-text .white-text {
   color: white;
-}
-
-#home .intro-box #hello {
-  position: relative;
-  top: 10px;
-}
-
-#home .intro-box #raul-f {
-  position: relative;
-  bottom: 10px;
 }
 
 #home .link-box {
@@ -226,9 +250,9 @@ body {
 }
 
 #about .about-right .about-article {
+  min-height: 100%;
   width: 90%;
-  position: relative;
-  top: 100px;
+  padding-top: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,21 +273,23 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 0 0 20px 0;
+  font-weight: 800;
 }
 
 #about .about-right .about-article .about-text {
-  width: 80%;
+  width: 85%;
   text-align: justify;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0 0 20px 0;
   font-size: 20px;
+  font-weight: 500;
 }
 
 #about .about-right .watermark {
   font-size: 80px;
   font-weight: 600;
-  left: 633px;
+  left: 608px;
   color: rgba(112, 112, 112, 0.7);
   position: fixed;
   -webkit-transform: rotate(90deg);
@@ -305,6 +331,10 @@ body {
   color: #707070;
 }
 
+#about .navbar #about-link {
+  color: #707070;
+}
+
 #about .link-box {
   height: 80px;
   width: 300px;
@@ -322,9 +352,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
-  position: absolute;
+  position: fixed;
   bottom: 180px;
   left: 191.5px;
+  z-index: 500;
 }
 
 #about .link-box .link-icon {

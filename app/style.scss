@@ -15,6 +15,26 @@ body {
 	//background-color: lightsteelblue;
 }
 
+.navbar {
+	background-color: black;
+	height: 80px;
+	width: 500px;
+	@include f-style(row, center, center);
+	position: absolute;
+	right: 0;
+	top: 50px;
+	.navlink {
+		text-decoration: none;
+		padding: 0 25px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+		.gray-point {
+			color: #707070;
+		}
+	}
+}
+
 #home {
 	height: 100vh;
 	background-image: url('./assets/New-York-Wallpaper-Background-8.jpg');
@@ -59,14 +79,6 @@ body {
 			.white-text {
 				color: white;
 			}
-		}
-		#hello {
-			position: relative;
-			top: 10px;
-		}
-		#raul-f {
-			position: relative;
-			bottom: 10px;
 		}
 	}
 	.link-box {
@@ -124,28 +136,30 @@ body {
 		width: 50%;
 		@include f-style(column, center, center);
 		.about-article {
+			min-height: 100%;
 			width: 90%;
-			position: relative;
-			top: 100px;
+			padding-top: 180px;
 			// border: 1px solid black;
 			@include f-style(column, center, center);
 			.about-title {
 				font-size: 50px;
 				align-self: flex-start;
 				margin: 0 0 20px 0;
+				font-weight: 800;
 			}
 			.about-text {
-				width: 80%;
+				width: 85%;
 				text-align: justify;
 				align-self: flex-end;
 				margin: 0 0 20px 0;
 				font-size: 20px;
+				font-weight: 500;
 			}
 		}
 		.watermark {
 			font-size: 80px;
 			font-weight: 600;
-			left: (1366px / 2) - 50px;
+			left: (1366px / 2) - 75px;
 			color: rgba($color: #707070, $alpha: 0.7);
 			position: fixed;
 			transform: rotate(90deg);
@@ -170,13 +184,16 @@ body {
 				color: #707070;
 			}
 		}
+		#about-link {
+			color: #707070;
+		}
 	}
 	.link-box {
 		height: 80px;
 		width: 300px;
 		@include f-style(row, center, center);
 		background-color: black;
-		position: absolute;
+		position: fixed;
 		bottom: 180px;
 		left: (1366px / 4) - 150;
 		.link-icon {
@@ -184,5 +201,6 @@ body {
 			font-size: 55px;
 			margin: 0 15px;
 		}
+		z-index: 500;
 	}
 }

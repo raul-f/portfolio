@@ -8,7 +8,7 @@ function Home() {
 	return (
 		<div id="home">
 			<div className='bg-filter'>
-				<Navbar />
+				{/*<Navbar />*/}
 				<TypedIntro />
 				<LinkBox />
 			</div>

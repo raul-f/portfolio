@@ -5,12 +5,16 @@ module.exports = {
 	entry: './app/script.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'index.js'
+		filename: 'index.js',
+		publicPath: '/'
 	},
 	module: {
 		rules: [
 			{ test: /\.js$/, use: 'babel-loader' }
 		]
+	},
+	devServer: {
+		historyApiFallback: true,
 	},
 	mode: 'development',
 	plugins: [

@@ -5,12 +5,14 @@ class TypedIntro extends React.Component {
 	componentDidMount() {
 		const greetingOptions = {
 			strings: ["<h1 class='intro-text'>Hello.</h1>"],
-			typeSpeed: 60
+			typeSpeed: 60,
+			showCursor: false
 		}
 		const descritionOptions = {
 			strings: ["<h1 class='intro-text'>My name is <span class='white-text'>Raul Figueiredo</span>, and I am a <span class='white-text'>web developer</span>.</h1>"],
 			typeSpeed: 50,
-			startDelay: 1200
+			startDelay: 1200,
+			showCursor: false
 		}
 		this.typedGreeting = new Typed(this.greeting, greetingOptions);
 		this.typedDescrition = new Typed(this.descrition, descritionOptions);

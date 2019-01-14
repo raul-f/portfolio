@@ -1,6 +1,8 @@
 import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './components/Home.js'
+import Navbar from './components/home/Navbar'
 import About from './components/About.js'
 import Projects from './components/Projects.js'
 import Contact from './components/Contact.js'
@@ -8,15 +10,18 @@ import Contact from './components/Contact.js'
 class App extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-			current: 'about'
-		}
 	}
 	render() {
 		return (
-		<div id="app">
-			{this.state.current === 'home' ? <Home /> : this.state.current === 'about' ? <About /> : this.state.current === 'projects' ? <Projects /> : <Contact />}
-		</div>
+			<BrowserRouter>
+				<div id="app">
+					<Navbar />
+					<Route exact path='/' component={Home} />
+					<Route path='/about' component={About} />
+					<Route path='/projects' component={Projects} />
+					<Route path='/contact' component={Contact} />
+				</div>
+			</BrowserRouter>
 		)
 	}
 }
