@@ -3,25 +3,17 @@ import Typed from 'typed.js'
 
 class TypedIntro extends React.Component {
 	componentDidMount() {
-		const greetingOptions = {
-			strings: ["<h1 class='intro-text'>Hello.</h1>"],
-			typeSpeed: 60,
-			showCursor: false
-		}
-		const descritionOptions = {
-			strings: ["<h1 class='intro-text'>My name is <span class='white-text'>Raul Figueiredo</span>, and I am a <span class='white-text'>web developer</span>.</h1>"],
+		const options = {
+			strings: ["<h1 class='intro-text'>Hello.</h1><br><h1 class='intro-text'> ^500 My name is <span class='white-text'>Raul Figueiredo</span>, and I am a <span class='white-text'>web developer</span>.</h1>"],
 			typeSpeed: 50,
-			startDelay: 1200,
 			showCursor: false
 		}
-		this.typedGreeting = new Typed(this.greeting, greetingOptions);
-		this.typedDescrition = new Typed(this.descrition, descritionOptions);
+		this.typed = new Typed(this.intro, options);
 	}
 	render() {
 		return(
 			<div className='intro-box'>
-				<span id='hello' ref={(element) => { this.greeting = element; }}/>
-				<span id='raul-f' ref={(element) => { this.descrition = element; }}/>
+				<span id='hello' ref={(element) => { this.intro = element; }}/>
 			</div>
 		)
 	}
