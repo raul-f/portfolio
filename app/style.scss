@@ -15,6 +15,68 @@ body {
 	//background-color: lightsteelblue;
 }
 
+.navbar {
+	background-color: black;
+	height: 80px;
+	width: 550px;
+	@include f-style(row, center, center);
+	position: absolute;
+	right: 0;
+	top: 50px;
+	.navlink {
+		text-decoration: none;
+		padding: 0 35px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+		.gray-point {
+			color: #707070;
+		}
+	}
+	z-index: 500;
+}
+
+.logo {
+	width: 430px;
+	height: 160px;
+	padding: 15px 20px;
+	position: absolute;
+	top: 0;
+	left: 100px;
+	background-color: black;
+	@include f-style(row, center, flex-end);
+	text-decoration: none;
+	.profile-picture {
+		height: 100px;
+		width: auto;
+		border-radius: 50%;
+	}
+	.logo-name {
+		color: white;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 900;
+		margin: 0 10px;
+	}
+	z-index: 600;
+}
+
+.link-box {
+	height: 80px;
+	width: 300px;
+	@include f-style(row, center, center);
+	background-color: black;
+	position: absolute;
+	bottom: 60px;
+	left: 100px;
+	.link-icon {
+		color: white;
+		font-size: 55px;
+		margin: 0 15px;
+	}
+	z-index: 400;
+}
+
 #home {
 	height: 100vh;
 	background-image: url('./assets/New-York-Wallpaper-Background-8.jpg');
@@ -28,26 +90,6 @@ body {
 		position: fixed;
 		z-index: 200;
 	}
-	.navbar {
-		background-color: black;
-		height: 80px;
-		width: 550px;
-		@include f-style(row, center, center);
-		position: absolute;
-		right: 0;
-		top: 50px;
-		.navlink {
-			text-decoration: none;
-			padding: 0 35px;
-			color: white;
-			font-size: 20px;
-			font-weight: 600;
-			.gray-point {
-				color: #707070;
-			}
-		}
-		z-index: 500;
-	}
 	.intro-box {
 		text-align: center;
 		.intro-text {
@@ -60,21 +102,6 @@ body {
 			}
 		}
 		z-index: 200;
-	}
-	.link-box {
-		height: 80px;
-		width: 300px;
-		@include f-style(row, center, center);
-		background-color: black;
-		position: absolute;
-		bottom: 60px;
-		left: 100px;
-		.link-icon {
-			color: white;
-			font-size: 55px;
-			margin: 0 15px;
-		}
-		z-index: 400;
 	}
 }
 
@@ -137,27 +164,9 @@ body {
 		}
 	}
 	.navbar {
-		background-color: black;
-		height: 80px;
-		width: 550px;
-		@include f-style(row, center, center);
-		position: absolute;
-		right: 0;
-		top: 50px;
-		.navlink {
-			text-decoration: none;
-			padding: 0 35px;
-			color: white;
-			font-size: 20px;
-			font-weight: 600;
-			.gray-point {
-				color: #707070;
-			}
-		}
 		#about-link {
 			color: #707070;
 		}
-		z-index: 500;
 	}
 	.watermark {
 		font-size: 80px;
@@ -171,19 +180,9 @@ body {
 		z-index: 400;
 	}
 	.link-box {
-		height: 80px;
-		width: 300px;
-		@include f-style(row, center, center);
-		background-color: black;
 		position: fixed;
 		bottom: 180px;
 		left: (1366px / 4) - 150;
-		.link-icon {
-			color: white;
-			font-size: 55px;
-			margin: 0 15px;
-		}
-		z-index: 500;
 	}
 }
 
@@ -205,65 +204,12 @@ body {
 	}
 	.navbar {
 		background-color: white;
-		height: 80px;
-		width: 550px;
-		@include f-style(row, center, center);
-		position: fixed;
-		right: 0;
-		top: 50px;
-		z-index: 500;
 		.navlink {
-			text-decoration: none;
-			padding: 0 35px;
 			color: black;
-			font-size: 20px;
-			font-weight: 600;
-			.gray-point {
-				color: #707070;
-			}
 		}
 		#project-link {
 			color: #707070;
 		}
-	}
-	.logo {
-		width: 430px;
-		height: 160px;
-		padding: 15px 20px;
-		position: absolute;
-		top: 0;
-		left: 100px;
-		background-color: black;
-		@include f-style(row, center, flex-end);
-		text-decoration: none;
-		.profile-picture {
-			height: 100px;
-			width: auto;
-			border-radius: 50%;
-		}
-		.logo-name {
-			color: white;
-			font-size: 50px;
-			line-height: 50px;
-			font-weight: 900;
-			margin: 0 10px;
-		}
-		z-index: 600;
-	}
-	.link-box {
-		height: 80px;
-		width: 300px;
-		@include f-style(row, center, center);
-		background-color: black;
-		position: absolute;
-		bottom: 60px;
-		left: 100px;
-		.link-icon {
-			color: white;
-			font-size: 55px;
-			margin: 0 15px;
-		}
-		z-index: 400;
 	}
 }
 
@@ -272,51 +218,9 @@ body {
 	height: 100vh;
 	width: 100%;
 	.navbar {
-		background-color: black;
-		height: 80px;
-		width: 550px;
-		@include f-style(row, center, center);
-		position: absolute;
-		right: 0;
-		top: 50px;
-		.navlink {
-			text-decoration: none;
-			padding: 0 35px;
-			color: white;
-			font-size: 20px;
-			font-weight: 600;
-			.gray-point {
-				color: #707070;
-			}
-		}
 		#contact-link {
 			color: #707070;
 		}
-		z-index: 500;
-	}
-	.logo {
-		width: 430px;
-		height: 160px;
-		padding: 15px 20px;
-		position: absolute;
-		top: 0;
-		left: 100px;
-		background-color: black;
-		@include f-style(row, center, flex-end);
-		text-decoration: none;
-		.profile-picture {
-			height: 100px;
-			width: auto;
-			border-radius: 50%;
-		}
-		.logo-name {
-			color: white;
-			font-size: 50px;
-			line-height: 50px;
-			font-weight: 900;
-			margin: 0 10px;
-		}
-		z-index: 600;
 	}
 	.content {
 		@include f-style(row, space-between, center);
@@ -367,20 +271,5 @@ body {
 		transform: rotate(90deg);
 		pointer-events: none;
 		z-index: 1000;
-	}
-	.link-box {
-		height: 80px;
-		width: 300px;
-		@include f-style(row, center, center);
-		background-color: black;
-		position: absolute;
-		bottom: 60px;
-		left: 100px;
-		.link-icon {
-			color: white;
-			font-size: 55px;
-			margin: 0 15px;
-		}
-		z-index: 400;
 	}
 }
