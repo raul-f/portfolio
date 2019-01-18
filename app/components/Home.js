@@ -7,11 +7,10 @@ import LinkBox from './home/LinkBox'
 function Home() {
 	return (
 		<div id="home">
-			<div className='bg-filter'>
-				{/*<Navbar />*/}
-				<TypedIntro />
-				<LinkBox />
-			</div>
+			<div className='bg-filter'></div>
+			<Navbar />
+			<TypedIntro />
+			<LinkBox />
 		</div>
 	)
 }

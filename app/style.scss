@@ -15,26 +15,6 @@ body {
 	//background-color: lightsteelblue;
 }
 
-.navbar {
-	background-color: black;
-	height: 80px;
-	width: 500px;
-	@include f-style(row, center, center);
-	position: absolute;
-	right: 0;
-	top: 50px;
-	.navlink {
-		text-decoration: none;
-		padding: 0 25px;
-		color: white;
-		font-size: 20px;
-		font-weight: 600;
-		.gray-point {
-			color: #707070;
-		}
-	}
-}
-
 #home {
 	height: 100vh;
 	background-image: url('./assets/New-York-Wallpaper-Background-8.jpg');
@@ -45,20 +25,20 @@ body {
 		background-color: rgba($color: #707070, $alpha: 0.5);
 		height: 100%;
 		width: 100%;
-		@include f-style(row, center, center);
-		text-align: center;
+		position: fixed;
+		z-index: 200;
 	}
 	.navbar {
 		background-color: black;
 		height: 80px;
-		width: 500px;
+		width: 550px;
 		@include f-style(row, center, center);
 		position: absolute;
 		right: 0;
 		top: 50px;
 		.navlink {
 			text-decoration: none;
-			padding: 0 25px;
+			padding: 0 35px;
 			color: white;
 			font-size: 20px;
 			font-weight: 600;
@@ -66,11 +46,10 @@ body {
 				color: #707070;
 			}
 		}
+		z-index: 500;
 	}
 	.intro-box {
-		br {
-			display: none;
-		}
+		text-align: center;
 		.intro-text {
 			margin: 0;
 			max-width: 1100px;
@@ -80,6 +59,7 @@ body {
 				color: white;
 			}
 		}
+		z-index: 200;
 	}
 	.link-box {
 		height: 80px;
@@ -88,22 +68,19 @@ body {
 		background-color: black;
 		position: absolute;
 		bottom: 60px;
-		left: 80px;
+		left: 100px;
 		.link-icon {
 			color: white;
 			font-size: 55px;
 			margin: 0 15px;
 		}
+		z-index: 400;
 	}
 }
 
 #about {
 	height: 100vh;
-	@include f-style(row, center, center);
-	.about-empty {
-		height: 100%;
-		width: 50%;
-	}
+	width: 100%;
 	.about-left {
 		position: fixed;
 		left: 0;
@@ -134,11 +111,13 @@ body {
 	.about-right {
 		min-height: 100%;
 		width: 50%;
-		@include f-style(column, center, center);
+		position: absolute;
+		right: 0;
 		.about-article {
-			min-height: 100%;
 			width: 90%;
-			padding-top: 180px;
+			position: absolute;
+			top: 150px;
+			left: 5%;
 			// border: 1px solid black;
 			@include f-style(column, center, center);
 			.about-title {
@@ -156,27 +135,18 @@ body {
 				font-weight: 500;
 			}
 		}
-		.watermark {
-			font-size: 80px;
-			font-weight: 600;
-			left: (1366px / 2) - 75px;
-			color: rgba($color: #707070, $alpha: 0.7);
-			position: fixed;
-			transform: rotate(90deg);
-			z-index: 500;
-		}
 	}
 	.navbar {
 		background-color: black;
 		height: 80px;
-		width: 500px;
+		width: 550px;
 		@include f-style(row, center, center);
 		position: absolute;
 		right: 0;
 		top: 50px;
 		.navlink {
 			text-decoration: none;
-			padding: 0 25px;
+			padding: 0 35px;
 			color: white;
 			font-size: 20px;
 			font-weight: 600;
@@ -187,6 +157,18 @@ body {
 		#about-link {
 			color: #707070;
 		}
+		z-index: 500;
+	}
+	.watermark {
+		font-size: 80px;
+		font-weight: 600;
+		color: rgba($color: #707070, $alpha: 0.7);
+		position: fixed;
+		left: 45%;
+		top: 40%;
+		transform: rotate(90deg);
+		pointer-events: none;
+		z-index: 400;
 	}
 	.link-box {
 		height: 80px;
@@ -206,12 +188,14 @@ body {
 }
 
 #projects {
+	background-image: url('./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg');
 	background-size: contain;
 	background-position-x: -5%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	width: 100%;
 	height: 200vh;
-	background-image: url('./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg');
+	position: absolute;
 	.projects-background {
 		position: fixed;
 		height: 100vh;
@@ -222,15 +206,15 @@ body {
 	.navbar {
 		background-color: white;
 		height: 80px;
-		width: 500px;
+		width: 550px;
 		@include f-style(row, center, center);
-		position: absolute;
+		position: fixed;
 		right: 0;
 		top: 50px;
 		z-index: 500;
 		.navlink {
 			text-decoration: none;
-			padding: 0 25px;
+			padding: 0 35px;
 			color: black;
 			font-size: 20px;
 			font-weight: 600;
@@ -242,9 +226,161 @@ body {
 			color: #707070;
 		}
 	}
+	.logo {
+		width: 430px;
+		height: 160px;
+		padding: 15px 20px;
+		position: absolute;
+		top: 0;
+		left: 100px;
+		background-color: black;
+		@include f-style(row, center, flex-end);
+		text-decoration: none;
+		.profile-picture {
+			height: 100px;
+			width: auto;
+			border-radius: 50%;
+		}
+		.logo-name {
+			color: white;
+			font-size: 50px;
+			line-height: 50px;
+			font-weight: 900;
+			margin: 0 10px;
+		}
+		z-index: 600;
+	}
+	.link-box {
+		height: 80px;
+		width: 300px;
+		@include f-style(row, center, center);
+		background-color: black;
+		position: absolute;
+		bottom: 60px;
+		left: 100px;
+		.link-icon {
+			color: white;
+			font-size: 55px;
+			margin: 0 15px;
+		}
+		z-index: 400;
+	}
 }
 
-/*
 #contact {
-	
-}*/
+	@include f-style(row, space-between, center);
+	height: 100vh;
+	width: 100%;
+	.navbar {
+		background-color: black;
+		height: 80px;
+		width: 550px;
+		@include f-style(row, center, center);
+		position: absolute;
+		right: 0;
+		top: 50px;
+		.navlink {
+			text-decoration: none;
+			padding: 0 35px;
+			color: white;
+			font-size: 20px;
+			font-weight: 600;
+			.gray-point {
+				color: #707070;
+			}
+		}
+		#contact-link {
+			color: #707070;
+		}
+		z-index: 500;
+	}
+	.logo {
+		width: 430px;
+		height: 160px;
+		padding: 15px 20px;
+		position: absolute;
+		top: 0;
+		left: 100px;
+		background-color: black;
+		@include f-style(row, center, flex-end);
+		text-decoration: none;
+		.profile-picture {
+			height: 100px;
+			width: auto;
+			border-radius: 50%;
+		}
+		.logo-name {
+			color: white;
+			font-size: 50px;
+			line-height: 50px;
+			font-weight: 900;
+			margin: 0 10px;
+		}
+		z-index: 600;
+	}
+	.content {
+		@include f-style(row, space-between, center);
+		width: 100%;
+		padding: 0 50px 0 100px;
+		.contact-content-info {
+			font-size: 20px;
+			width: 470px;
+			text-align: justify;
+			font-weight: 500;
+		}
+		.addresses {
+			min-width: 500px;
+			max-width: 500px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			// list-style-type: none;
+			.address-item {
+				@include f-style(row, flex-start, center);
+				.address-icon {
+					font-size: 60px;
+				}
+				.address-text {
+					font-size: 35px;
+					font-weight: 600;
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+	.copyright-text {
+		position: absolute;
+		bottom: 30px;
+		right: 80px;
+		font-size: 35px;
+		font-weight: 600;
+		color: #707070;
+	}
+	.watermark {
+		font-size: 80px;
+		line-height: 80px;
+		font-weight: 600;
+		color: rgba($color: #707070, $alpha: 0.7);
+		position: fixed;
+		left: 37.5%;
+		top: 35%;
+		transform: rotate(90deg);
+		pointer-events: none;
+		z-index: 1000;
+	}
+	.link-box {
+		height: 80px;
+		width: 300px;
+		@include f-style(row, center, center);
+		background-color: black;
+		position: absolute;
+		bottom: 60px;
+		left: 100px;
+		.link-icon {
+			color: white;
+			font-size: 55px;
+			margin: 0 15px;
+		}
+		z-index: 400;
+	}
+}

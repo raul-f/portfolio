@@ -4,7 +4,7 @@ import Typed from 'typed.js'
 class TypedIntro extends React.Component {
 	componentDidMount() {
 		const options = {
-			strings: ["<h1 class='intro-text'>Hello.</h1><br><h1 class='intro-text'> ^500 My name is <span class='white-text'>Raul Figueiredo</span>, and I am a <span class='white-text'>web developer</span>.</h1>"],
+			strings: ["<h1 class='intro-text'>Hello.<br> ^500 My name is <span class='white-text'>Raul Figueiredo</span>, ^350 and I am a <span class='white-text'>web developer</span>.</h1>"],
 			typeSpeed: 50,
 			showCursor: false
 		}
