@@ -3,6 +3,109 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.navbar {
+  background-color: black;
+  height: 80px;
+  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 500;
+}
+
+.navbar .navlink {
+  text-decoration: none;
+  margin: 0 35px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar .navlink .gray-point {
+  color: #707070;
+}
+
+.logo {
+  width: 430px;
+  height: 160px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-decoration: none;
+  z-index: 600;
+}
+
+.logo .profile-picture {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.logo .logo-name {
+  color: white;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 900;
+  margin: 0 10px;
+}
+
+.link-box {
+  height: 80px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  z-index: 400;
+}
+
+.link-box .link-icon {
+  color: white;
+  font-size: 55px;
+  margin: 0 15px;
+}
+
 #home {
   height: 100vh;
   background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
@@ -31,41 +134,6 @@ body {
   z-index: 200;
 }
 
-#home .navbar {
-  background-color: black;
-  height: 80px;
-  width: 550px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 0;
-  top: 50px;
-  z-index: 500;
-}
-
-#home .navbar .navlink {
-  text-decoration: none;
-  padding: 0 35px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-#home .navbar .navlink .gray-point {
-  color: #707070;
-}
-
 #home .intro-box {
   text-align: center;
   z-index: 200;
@@ -80,35 +148,6 @@ body {
 
 #home .intro-box .intro-text .white-text {
   color: white;
-}
-
-#home .link-box {
-  height: 80px;
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  position: absolute;
-  bottom: 60px;
-  left: 100px;
-  z-index: 400;
-}
-
-#home .link-box .link-icon {
-  color: white;
-  font-size: 55px;
-  margin: 0 15px;
 }
 
 #about {
@@ -140,6 +179,7 @@ body {
 }
 
 #about .about-left .logo {
+  padding: 0;
   margin-left: 15px;
   color: white;
   text-decoration: none;
@@ -157,7 +197,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  top: auto;
   bottom: 50px;
+  left: 0;
 }
 
 #about .about-left .logo .profile-picture {
@@ -169,6 +211,7 @@ body {
 #about .about-left .logo .logo-name {
   font-weight: 900;
   font-size: 80px;
+  line-height: 80px;
 }
 
 #about .about-right {
@@ -216,41 +259,6 @@ body {
   font-weight: 500;
 }
 
-#about .navbar {
-  background-color: black;
-  height: 80px;
-  width: 550px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 0;
-  top: 50px;
-  z-index: 500;
-}
-
-#about .navbar .navlink {
-  text-decoration: none;
-  padding: 0 35px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-#about .navbar .navlink .gray-point {
-  color: #707070;
-}
-
 #about .navbar #about-link {
   color: #707070;
 }
@@ -269,32 +277,9 @@ body {
 }
 
 #about .link-box {
-  height: 80px;
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
   position: fixed;
   bottom: 180px;
   left: 191.5px;
-  z-index: 500;
-}
-
-#about .link-box .link-icon {
-  color: white;
-  font-size: 55px;
-  margin: 0 15px;
 }
 
 #projects {
@@ -319,109 +304,14 @@ body {
 
 #projects .navbar {
   background-color: white;
-  height: 80px;
-  width: 550px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  right: 0;
-  top: 50px;
-  z-index: 500;
 }
 
 #projects .navbar .navlink {
-  text-decoration: none;
-  padding: 0 35px;
   color: black;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-#projects .navbar .navlink .gray-point {
-  color: #707070;
 }
 
 #projects .navbar #project-link {
   color: #707070;
-}
-
-#projects .logo {
-  width: 430px;
-  height: 160px;
-  padding: 15px 20px;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  text-decoration: none;
-  z-index: 600;
-}
-
-#projects .logo .profile-picture {
-  height: 100px;
-  width: auto;
-  border-radius: 50%;
-}
-
-#projects .logo .logo-name {
-  color: white;
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 900;
-  margin: 0 10px;
-}
-
-#projects .link-box {
-  height: 80px;
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  position: absolute;
-  bottom: 60px;
-  left: 100px;
-  z-index: 400;
-}
-
-#projects .link-box .link-icon {
-  color: white;
-  font-size: 55px;
-  margin: 0 15px;
 }
 
 #contact {
@@ -442,82 +332,8 @@ body {
   width: 100%;
 }
 
-#contact .navbar {
-  background-color: black;
-  height: 80px;
-  width: 550px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 0;
-  top: 50px;
-  z-index: 500;
-}
-
-#contact .navbar .navlink {
-  text-decoration: none;
-  padding: 0 35px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-#contact .navbar .navlink .gray-point {
-  color: #707070;
-}
-
 #contact .navbar #contact-link {
   color: #707070;
-}
-
-#contact .logo {
-  width: 430px;
-  height: 160px;
-  padding: 15px 20px;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  text-decoration: none;
-  z-index: 600;
-}
-
-#contact .logo .profile-picture {
-  height: 100px;
-  width: auto;
-  border-radius: 50%;
-}
-
-#contact .logo .logo-name {
-  color: white;
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 900;
-  margin: 0 10px;
 }
 
 #contact .content {
@@ -539,6 +355,7 @@ body {
 }
 
 #contact .content .contact-content-info {
+  font-size: 20px;
   width: 470px;
   text-align: justify;
   font-weight: 500;
@@ -599,34 +416,5 @@ body {
           transform: rotate(90deg);
   pointer-events: none;
   z-index: 1000;
-}
-
-#contact .link-box {
-  height: 80px;
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  position: absolute;
-  bottom: 60px;
-  left: 100px;
-  z-index: 400;
-}
-
-#contact .link-box .link-icon {
-  color: white;
-  font-size: 55px;
-  margin: 0 15px;
 }
 /*# sourceMappingURL=style.css.map */
