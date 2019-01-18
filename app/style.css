@@ -1,432 +1,408 @@
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
-    background-color: black;
-    height: 80px;
-    width: 550px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    z-index: 500;
+  background-color: black;
+  height: 80px;
+  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 500;
 }
 
 .navbar .navlink {
-    text-decoration: none;
-    margin: 0 35px;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+  text-decoration: none;
+  margin: 0 35px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .navbar .navlink .gray-point {
-    color: #707070;
+  color: #707070;
 }
 
 .logo {
-    width: 430px;
-    height: 160px;
-    padding: 15px 20px;
-    position: absolute;
-    top: 0;
-    left: 100px;
-    background-color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    text-decoration: none;
-    z-index: 600;
+  width: 430px;
+  height: 160px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-decoration: none;
+  z-index: 600;
 }
 
 .logo .profile-picture {
-    height: 100px;
-    width: auto;
-    border-radius: 50%;
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
 }
 
 .logo .logo-name {
-    color: white;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 900;
-    margin: 0 10px;
+  color: white;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 900;
+  margin: 0 10px;
 }
 
 .link-box {
-    height: 80px;
-    width: 300px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: black;
-    position: absolute;
-    bottom: 60px;
-    left: 100px;
-    z-index: 400;
+  height: 80px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  z-index: 400;
 }
 
 .link-box .link-icon {
-    color: white;
-    font-size: 55px;
-    margin: 0 15px;
+  color: white;
+  font-size: 55px;
+  margin: 0 15px;
 }
 
 #home {
-    height: 100vh;
-    background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
-    background-size: cover;
-    background-position: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  height: 100vh;
+  background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
+  background-size: cover;
+  background-position: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #home .bg-filter {
-    background-color: rgba(112, 112, 112, 0.5);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 200;
+  background-color: rgba(112, 112, 112, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 200;
 }
 
 #home .intro-box {
-    text-align: center;
-    z-index: 200;
+  text-align: center;
+  z-index: 200;
 }
 
 #home .intro-box .intro-text {
-    margin: 0;
-    max-width: 1100px;
-    font-size: 70px;
-    font-weight: 800;
+  margin: 0;
+  max-width: 1100px;
+  font-size: 70px;
+  font-weight: 800;
 }
 
 #home .intro-box .intro-text .white-text {
-    color: white;
+  color: white;
 }
 
 #about {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 #about .about-left {
-    position: fixed;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    background-color: black;
-    color: white;
-    z-index: 400;
+  position: fixed;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  color: white;
+  z-index: 400;
 }
 
 #about .about-left .logo {
-    padding: 0;
-    margin-left: 15px;
-    color: white;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    top: auto;
-    bottom: 50px;
-    left: 0;
+  padding: 0;
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: auto;
+  bottom: 50px;
+  left: 0;
 }
 
 #about .about-left .logo .profile-picture {
-    width: 160px;
-    height: auto;
-    border-radius: 50%;
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
 }
 
 #about .about-left .logo .logo-name {
-    font-weight: 900;
-    font-size: 80px;
-    line-height: 80px;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 80px;
 }
 
 #about .about-right {
-    min-height: 100%;
-    width: 50%;
-    position: absolute;
-    right: 0;
+  min-height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
 }
 
 #about .about-right .about-article {
-    width: 90%;
-    position: absolute;
-    top: 150px;
-    left: 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 150px;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #about .about-right .about-article .about-title {
-    font-size: 50px;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    margin: 0 0 20px 0;
-    font-weight: 800;
+  font-size: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 20px 0;
+  font-weight: 800;
 }
 
 #about .about-right .about-article .about-text {
-    width: 85%;
-    text-align: justify;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin: 0 0 20px 0;
-    font-size: 20px;
-    font-weight: 500;
+  width: 85%;
+  text-align: justify;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 #about .navbar #about-link {
-    color: #707070;
+  color: #707070;
 }
 
 #about .watermark {
-    font-size: 80px;
-    font-weight: 600;
-    color: rgba(112, 112, 112, 0.7);
-    position: fixed;
-    left: 45%;
-    top: 40%;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    pointer-events: none;
-    z-index: 400;
+  font-size: 80px;
+  font-weight: 600;
+  color: rgba(112, 112, 112, 0.7);
+  position: fixed;
+  left: 45%;
+  top: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  pointer-events: none;
+  z-index: 400;
 }
 
 #about .link-box {
-    position: fixed;
-    bottom: 180px;
-    left: 191.5px;
+  position: fixed;
+  bottom: 180px;
+  left: 191.5px;
 }
 
 #projects {
-    background-image: url("./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg");
-    background-size: contain;
-    background-position-x: -5%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 200vh;
-    position: absolute;
+  background-image: url("./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg");
+  background-size: contain;
+  background-position-x: -5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
 }
 
 #projects .projects-background {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(40%, rgba(64, 64, 64, 0.5)),
-        color-stop(60%, black)
-    );
-    background-image: linear-gradient(
-        to right,
-        rgba(64, 64, 64, 0.5) 40%,
-        black 60%
-    );
-    z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, rgba(64, 64, 64, 0.5)), color-stop(60%, black));
+  background-image: linear-gradient(to right, rgba(64, 64, 64, 0.5) 40%, black 60%);
+  z-index: 100;
 }
 
 #projects .navbar {
-    background-color: white;
+  background-color: white;
 }
 
 #projects .navbar .navlink {
-    color: black;
+  color: black;
 }
 
 #projects .navbar #project-link {
-    color: #707070;
+  color: #707070;
 }
 
 #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
 #contact .navbar #contact-link {
-    color: #707070;
+  color: #707070;
 }
 
 #contact .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 50px 0 100px;
-    position: relative;
-    top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 50px 0 100px;
+  position: relative;
+  top: 25px;
 }
 
 #contact .content .contact-content-info {
-    font-size: 20px;
-    width: 470px;
-    text-align: justify;
-    font-weight: 500;
+  font-size: 20px;
+  width: 470px;
+  text-align: justify;
+  font-weight: 500;
 }
 
 #contact .content .addresses {
-    min-width: 500px;
-    max-width: 500px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-#contact .content .addresses .address-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  min-width: 500px;
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  bottom: 15px;
 }
 
 #contact .content .addresses .address-item .address-icon {
-    font-size: 60px;
+  font-size: 60px;
+  margin-right: 20px;
 }
 
 #contact .content .addresses .address-item .address-text {
-    font-size: 35px;
-    font-weight: 600;
-    padding-left: 20px;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 #contact .copyright-text {
-    position: absolute;
-    bottom: 30px;
-    right: 80px;
-    font-size: 35px;
-    font-weight: 600;
-    color: #707070;
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  font-size: 35px;
+  font-weight: 600;
+  color: #707070;
 }
 
 #contact .watermark {
-    font-size: 80px;
-    line-height: 80px;
-    font-weight: 600;
-    color: rgba(112, 112, 112, 0.7);
-    position: fixed;
-    left: 37.5%;
-    top: 35%;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    pointer-events: none;
-    z-index: 1000;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 600;
+  color: rgba(112, 112, 112, 0.7);
+  position: fixed;
+  left: 37.5%;
+  top: 35%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  pointer-events: none;
+  z-index: 1000;
 }
 /*# sourceMappingURL=style.css.map */
