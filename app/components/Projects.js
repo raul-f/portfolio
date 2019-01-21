@@ -1,4 +1,5 @@
 import React from "react"
+import anime from "animejs"
 
 import Navbar from "./projects/Navbar"
 import LinkBox from "./projects/LinkBox"
@@ -16,7 +17,9 @@ class Projects extends React.Component {
             activeSet: "personal-picks",
             selectedProject: "random-quote-machine",
             activeProject: "random-quote-machine",
-            scrollBtnStyle: { transform: "rotate(0deg)" }
+            rotation: 0,
+            style: { transform: "rotate(0deg)" },
+            animating: false
         }
     }
 
@@ -69,35 +72,121 @@ class Projects extends React.Component {
         // console.log(`The window's inner height is ${window.innerHeight}`)
         // console.log(`The window's outer height is ${window.outerHeight}`)
         //console.log( `The window's Y page offset was ${ window.pageYOffset} when the button was clicked` )
-        if (window.pageYOffset > window.innerHeight / 1.25) {
+        if (
+            window.pageYOffset > window.innerHeight / 1.25 &&
+            !this.state.animating
+        ) {
             window.scrollTo({ top: 0, behavior: "smooth" })
-            this.setState({ scrollBtnStyle: { transform: "rotate(0deg)" } })
-        } else {
+            console.log(this.state.animating)
+            anime({
+                targets: ".scroll-btn",
+                rotate: this.state.rotation + 180,
+                easing: "easeInOutCubic",
+                duration: 300
+            })
+            this.setState({
+                rotation: this.state.rotation + 180,
+                animating: true
+            })
+            console.log(this.state.animating)
+            setTimeout(
+                function() {
+                    this.setState({ animating: false })
+                }.bind(this),
+                500
+            )
+        } else if (!this.state.animating) {
             window.scrollTo({
                 top: window.innerHeight,
                 behavior: "smooth"
             })
-            this.setState({ scrollBtnStyle: { transform: "rotate(180deg)" } })
+            anime({
+                targets: ".scroll-btn",
+                rotate: this.state.rotation + 180,
+                easing: "easeInOutCubic",
+                duration: 300
+            })
+            this.setState({
+                rotation: this.state.rotation + 180,
+                animating: true
+            })
+            console.log(this.state.animating)
+            setTimeout(
+                function() {
+                    this.setState({ animating: false })
+                }.bind(this),
+                500
+            )
         }
     }
 
     handleScrolling = event => {
-        console.log(event)
         event.preventDefault()
-        if (event.deltaY > 0) {
+        console.log(event.deltaY)
+        if (
+            event.deltaY > 0 &&
+            window.pageYOffset === 0 &&
+            !this.state.animating
+        ) {
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
-            this.setState({ scrollBtnStyle: { transform: "rotate(180deg)" } })
-        } else {
+            if (!this.state.animating) {
+                anime({
+                    targets: ".scroll-btn",
+                    rotate: this.state.rotation + 180,
+                    easing: "easeInOutCubic",
+                    duration: 300
+                })
+                this.setState({
+                    rotation: this.state.rotation + 180,
+                    animating: true
+                })
+                console.log(this.state.animating)
+                setTimeout(
+                    function() {
+                        this.setState({ animating: false })
+                    }.bind(this),
+                    500
+                )
+            }
+        } else if (
+            window.pageYOffset > 0 &&
+            event.deltaY < 0 &&
+            !this.state.animating
+        ) {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             })
-            this.setState({ scrollBtnStyle: { transform: "rotate(0deg)" } })
+            if (!this.state.animating) {
+                anime({
+                    targets: ".scroll-btn",
+                    rotate: this.state.rotation + 180,
+                    easing: "easeInOutCubic",
+                    duration: 300
+                })
+                this.setState({
+                    rotation: this.state.rotation + 180,
+                    animating: true
+                })
+                console.log(this.state.animating)
+                setTimeout(
+                    function() {
+                        this.setState({ animating: false })
+                    }.bind(this),
+                    500
+                )
+            }
         }
     }
 
     componentDidMount() {
         document.addEventListener("wheel", this.handleScrolling)
+        if (window.pageYOffset === window.innerHeight) {
+            this.setState({
+                rotation: 180,
+                style: { transform: "rotate(180deg)" }
+            })
+        }
     }
 
     render() {
@@ -123,7 +212,7 @@ class Projects extends React.Component {
                 </div>
                 <ScrollBtn
                     update={this.handleScrollBtn}
-                    style={this.state.scrollBtnStyle}
+                    style={this.state.style}
                 />
                 <Watermark />
                 <LinkBox />

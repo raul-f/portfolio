@@ -21,15 +21,17 @@ const DisplayProject = props => {
         },
         shortr: {
             screenshotUrl: "",
-            description: "",
+            description:
+                "The API is in place, but the interface is pending. Check the github repo!",
             link: "",
-            repoLink: "",
+            repoLink: "https://github.com/raul-f/shortr",
             type: "fullstack"
         },
         "product-landing-page": {
-            screenshotUrl: "",
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/product-landing-page.png",
             description: "",
-            link: "",
+            link: "https://codepen.io/raul-f/full/PxoVBv",
             repoLink: "",
             type: "frontend"
         },
@@ -47,43 +49,119 @@ const DisplayProject = props => {
             description: "",
             link: "https://codepen.io/raul-f/full/wQbpWJ",
             repoLink: "",
-            type: ""
+            type: "frontend"
         },
         "markdown-previewer": {
             screenshotUrl:
-                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/markdown-previewer.png",
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/markdown-previewer-v1.png",
             description: "",
             link: "https://codepen.io/raul-f/full/QJVqQV",
             repoLink: "",
-            type: ""
+            type: "frontend"
         },
-        template: {
-            screenshotUrl: "",
+        "tribute-page": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/tribute-page.png",
             description: "",
-            link: "",
+            link: "https://codepen.io/raul-f/full/PyrVWq",
             repoLink: "",
-            type: ""
+            type: "frontend"
         },
-        template: {
-            screenshotUrl: "",
+        "survey-page": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/survey-page.png",
             description: "",
-            link: "",
+            link: "https://codepen.io/raul-f/full/gBVJNP",
             repoLink: "",
-            type: ""
+            type: "frontend"
         },
-        template: {
-            screenshotUrl: "",
+        "technical-documentation-page": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/technical-documentation-page.png",
             description: "",
-            link: "",
+            link: "https://codepen.io/raul-f/full/bQdGNb",
             repoLink: "",
-            type: ""
+            type: "frontend"
         },
-        template: {
-            screenshotUrl: "",
+        "personal-portfolio-page": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/personal-portfolio-page.png",
             description: "",
-            link: "",
+            link: "https://raul-f.glitch.me/",
             repoLink: "",
-            type: ""
+            type: "frontend"
+        },
+        "bar-chart": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/bar-chart.png",
+            description: "",
+            link: "https://codepen.io/raul-f/full/oJNXWK",
+            repoLink: "",
+            type: "frontend"
+        },
+        "scatterplot-graph": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/scatterplot-graph.png",
+            description: "",
+            link: "https://codepen.io/raul-f/full/GPgvKx",
+            repoLink: "",
+            type: "frontend"
+        },
+        "heat-map": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/heat-map.png",
+            description: "",
+            link: "https://codepen.io/raul-f/full/MZYBmz",
+            repoLink: "",
+            type: "frontend"
+        },
+        "choropleth-map": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/choropleth-map.png",
+            description: "",
+            link: "https://codepen.io/raul-f/full/jXWbgz",
+            repoLink: "",
+            type: "frontend"
+        },
+        "treemap-diagram": {
+            screenshotUrl:
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/treemap-diagram.png",
+            description: "",
+            link: "https://codepen.io/raul-f/full/VqjdxW",
+            repoLink: "",
+            type: "frontend"
+        },
+        timely: {
+            screenshotUrl: "",
+            description:
+                "The API is in place, but the interface is pending. Check the github repo!",
+            link: "",
+            repoLink: "https://github.com/raul-f/timely",
+            type: "fullstack"
+        },
+        headparser: {
+            screenshotUrl: "",
+            description:
+                "The API is in place, but the interface is pending. Check the github repo!",
+            link: "",
+            repoLink: "https://github.com/raul-f/headparser",
+            type: "fullstack"
+        },
+        xtrack: {
+            screenshotUrl: "",
+            description:
+                "The API is in place, but the interface is pending. Check the github repo!",
+            link: "",
+            repoLink: "https://github.com/raul-f/xtrack",
+            type: "fullstack"
+        },
+        metareader: {
+            screenshotUrl: "",
+            description:
+                "The API is in place, but the interface is pending. Check the github repo!",
+            link: "",
+            repoLink: "https://github.com/raul-f/metareader",
+            type: "fullstack"
         },
         template: {
             screenshotUrl: "",
@@ -115,6 +193,7 @@ const DisplayProject = props => {
                     {sets[props.active].type === "fullstack" && (
                         <a
                             href={sets[props.active].repoLink}
+                            target="_blank"
                             className="display-repoLink"
                         >
                             Check the repo{" "}
