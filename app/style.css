@@ -128,6 +128,16 @@ body {
   margin: 0 15px;
 }
 
+.watermark {
+  font-size: 80px;
+  font-weight: 600;
+  color: rgba(112, 112, 112, 0.7);
+  position: fixed;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  pointer-events: none;
+}
+
 .language {
   height: 100vh;
   color: white;
@@ -352,15 +362,8 @@ body {
 }
 
 .about .watermark {
-  font-size: 80px;
-  font-weight: 600;
-  color: rgba(112, 112, 112, 0.7);
-  position: fixed;
   left: 45%;
   top: 40%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  pointer-events: none;
   z-index: 400;
 }
 
@@ -512,8 +515,8 @@ body {
 }
 
 .projects .content .filter .filter-menu-box .filter-menu .filter-option:hover {
-  -webkit-animation: activate 250ms forwards;
-          animation: activate 250ms forwards;
+  -webkit-animation: activate 200ms forwards;
+          animation: activate 200ms forwards;
 }
 
 .projects .content .filter .filter-menu-box .filter-menu .sel {
@@ -682,8 +685,8 @@ body {
 }
 
 .projects .content .display .display-menu-box .display-menu .display-option:hover {
-  -webkit-animation: activate 250ms forwards;
-          animation: activate 250ms forwards;
+  -webkit-animation: activate 200ms forwards;
+          animation: activate 200ms forwards;
 }
 
 .projects .content .display .display-menu-box .display-menu .sel {
@@ -725,15 +728,8 @@ body {
 }
 
 .projects .watermark {
-  font-size: 80px;
-  font-weight: 600;
-  color: rgba(112, 112, 112, 0.7);
-  position: fixed;
   left: 40%;
   top: 40%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  pointer-events: none;
   z-index: 400;
 }
 
@@ -851,16 +847,8 @@ body {
 }
 
 .contact .watermark {
-  font-size: 80px;
-  line-height: 80px;
-  font-weight: 600;
-  color: rgba(112, 112, 112, 0.7);
-  position: fixed;
   left: 37.5%;
   top: 35%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  pointer-events: none;
   z-index: 1000;
 }
 

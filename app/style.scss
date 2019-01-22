@@ -38,6 +38,8 @@ body {
     overflow-x: hidden;
 }
 
+// Shared assets
+
 .navbar {
     background-color: black;
     height: 80px;
@@ -99,6 +101,17 @@ body {
     }
     z-index: 400;
 }
+
+.watermark {
+    font-size: 80px;
+    font-weight: 600;
+    color: rgba($color: #707070, $alpha: 0.7);
+    position: fixed;
+    transform: rotate(90deg);
+    pointer-events: none;
+}
+
+// pages
 
 .language {
     $svg-scale: 100/212;
@@ -231,14 +244,8 @@ body {
         }
     }
     .watermark {
-        font-size: 80px;
-        font-weight: 600;
-        color: rgba($color: #707070, $alpha: 0.7);
-        position: fixed;
         left: 45%;
         top: 40%;
-        transform: rotate(90deg);
-        pointer-events: none;
         z-index: 400;
     }
     .link-box {
@@ -337,7 +344,7 @@ body {
                         outline: none;
                     }
                     .filter-option:hover {
-                        animation: activate 250ms forwards;
+                        animation: activate 200ms forwards;
                     }
                     .sel {
                         font-size: 28px;
@@ -433,7 +440,7 @@ body {
                         outline: none;
                     }
                     .display-option:hover {
-                        animation: activate 250ms forwards;
+                        animation: activate 200ms forwards;
                     }
                     .sel {
                         color: white;
@@ -464,14 +471,8 @@ body {
         z-index: 450;
     }
     .watermark {
-        font-size: 80px;
-        font-weight: 600;
-        color: rgba($color: #707070, $alpha: 0.7);
-        position: fixed;
         left: 40%;
         top: 40%;
-        transform: rotate(90deg);
-        pointer-events: none;
         z-index: 400;
     }
 }
@@ -543,15 +544,8 @@ body {
         font-size: 30px;
     }
     .watermark {
-        font-size: 80px;
-        line-height: 80px;
-        font-weight: 600;
-        color: rgba($color: #707070, $alpha: 0.7);
-        position: fixed;
         left: 37.5%;
         top: 35%;
-        transform: rotate(90deg);
-        pointer-events: none;
         z-index: 1000;
     }
 }
