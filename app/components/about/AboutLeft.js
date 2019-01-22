@@ -6,7 +6,7 @@ const AboutLeft = () => {
         <div className="about-left">
             <Link className="logo" to="/home">
                 <img
-                    src="../app/assets/profile-pic-2.jpg"
+                    src="https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/profile-pic-2.jpg"
                     className="profile-picture"
                 />
                 <h1 className="logo-name">Raul Figueiredo.</h1>

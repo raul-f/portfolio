@@ -201,7 +201,7 @@ body {
 
 .home {
   height: 100vh;
-  background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
+  background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
   background-size: cover;
   background-position: 50%;
   display: -webkit-box;
@@ -374,7 +374,7 @@ body {
 }
 
 .projects {
-  background-image: url("./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg");
+  background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
   background-size: contain;
   background-position-x: -5%;
   background-repeat: no-repeat;
@@ -702,7 +702,7 @@ body {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 32px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
