@@ -9,7 +9,6 @@ import Watermark from "./Watermark"
 import LinkBox from "./LinkBox"
 
 const Contact = props => {
-    console.log(props.language)
     return (
         <div className="contact">
             <Navbar language={props.language} />

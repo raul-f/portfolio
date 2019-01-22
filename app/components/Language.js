@@ -13,7 +13,7 @@ const Language = props => {
                 <Link
                     to="/home"
                     className="lang-link"
-                    id="pt_BR"
+                    id="pt-BR"
                     onClick={props.changeLanguage}
                     title="Português Brasileiro"
                 >
@@ -25,7 +25,7 @@ const Language = props => {
                 <Link
                     to="/home"
                     className="lang-link"
-                    id="en_US"
+                    id="en-US"
                     onClick={props.changeLanguage}
                     title="American English"
                 >

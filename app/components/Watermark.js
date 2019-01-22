@@ -2,7 +2,7 @@ import React from "react"
 
 const Watermark = props => (
     <h2 className="watermark">
-        {props.language === "pt_BR"
+        {props.language === "pt-BR"
             ? props.page === "about"
                 ? "Sobre"
                 : props.page === "projects"

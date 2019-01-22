@@ -1,10 +1,13 @@
 import React from "react"
 
 const FilterMenu = props => {
+    console.log(props.language)
     return (
         <div className="filter-menu-box">
             <div className="filter-menu">
-                <h2 className="menu-title">PROJECTS</h2>
+                <h2 className="menu-title">
+                    {props.language === "pt-BR" ? "PROJETOS" : "PROJECTS"}
+                </h2>
                 <hr className="menu-break" />
                 <button
                     type="button"
@@ -18,7 +21,9 @@ const FilterMenu = props => {
                             : "filter-option"
                     }
                 >
-                    Personal Picks
+                    {props.language === "pt-BR"
+                        ? "Destaques"
+                        : "Personal Picks"}
                 </button>
                 <button
                     type="button"
@@ -32,7 +37,9 @@ const FilterMenu = props => {
                             : "filter-option"
                     }
                 >
-                    Pure HTML & CSS Websites
+                    {props.language === "pt-BR"
+                        ? "Sites HTML & CSS"
+                        : "Pure HTML & CSS Websites"}
                 </button>
                 <button
                     type="button"
@@ -46,7 +53,9 @@ const FilterMenu = props => {
                             : "filter-option"
                     }
                 >
-                    Single-Page Apps
+                    {props.language === "pt-BR"
+                        ? "Apps de página única"
+                        : "Single-Page Apps"}
                 </button>
                 <button
                     type="button"
@@ -60,7 +69,9 @@ const FilterMenu = props => {
                             : "filter-option"
                     }
                 >
-                    D3.js charts
+                    {props.language === "pt-BR"
+                        ? "Gráficos com D3.js"
+                        : "D3.js charts"}
                 </button>
                 <button
                     type="button"
@@ -74,7 +85,9 @@ const FilterMenu = props => {
                             : "filter-option"
                     }
                 >
-                    Full-Stack Web Apps
+                    {props.language === "pt-BR"
+                        ? "Aplicativos Full-Stack"
+                        : "Full-Stack Web Apps"}
                 </button>
                 {/*<button
                     type="button"

@@ -7,7 +7,6 @@ import LinkBox from "./LinkBox"
 // <Home /> component
 
 const Home = props => {
-    console.log(props.language)
     return (
         <div className="home">
             <div className="bg-filter" />

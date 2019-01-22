@@ -5,8 +5,12 @@ const DisplayProject = props => {
         "random-quote-machine": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/random-quote-machine.png",
-            description:
-                "A simple, single page application that lets you randomly raffle quotes curated by me and tweet them if you like.",
+            description: {
+                "en-US":
+                    "A simple, single page application that lets you randomly raffle quotes curated by me and tweet them if you like.",
+                "pt-BR":
+                    "Uma aplicação simples que permite ao usuário sortear frases curadas por mim e tuitá-las."
+            },
             link: "https://codepen.io/raul-f/full/JeZEwe",
             repoLink: "",
             type: "frontend"
@@ -14,7 +18,7 @@ const DisplayProject = props => {
         "pomodoro-clock": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/pomodoro-clock.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/rQXbxz",
             repoLink: "",
             type: "frontend"
@@ -22,8 +26,12 @@ const DisplayProject = props => {
         shortr: {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
-            description:
-                "The API is in place, but the interface is pending. Check the github repo!",
+            description: {
+                "en-US":
+                    "The API is in place, but the interface is pending. Check the github repo!",
+                "pt-BR":
+                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+            },
             link: "",
             repoLink: "https://github.com/raul-f/shortr",
             type: "fullstack"
@@ -31,7 +39,7 @@ const DisplayProject = props => {
         "product-landing-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/product-landing-page.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/PxoVBv",
             repoLink: "",
             type: "frontend"
@@ -39,7 +47,7 @@ const DisplayProject = props => {
         "drum-machine": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/drum-machine.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/GwzbLm",
             repoLink: "",
             type: "frontend"
@@ -47,7 +55,7 @@ const DisplayProject = props => {
         "javascript-calculator": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/javascript-calculator.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/wQbpWJ",
             repoLink: "",
             type: "frontend"
@@ -55,7 +63,7 @@ const DisplayProject = props => {
         "markdown-previewer": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/markdown-previewer-v1.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/QJVqQV",
             repoLink: "",
             type: "frontend"
@@ -63,7 +71,7 @@ const DisplayProject = props => {
         "tribute-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/tribute-page.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/PyrVWq",
             repoLink: "",
             type: "frontend"
@@ -71,7 +79,7 @@ const DisplayProject = props => {
         "survey-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/survey-page.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/gBVJNP",
             repoLink: "",
             type: "frontend"
@@ -79,7 +87,7 @@ const DisplayProject = props => {
         "technical-documentation-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/technical-documentation-page.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/bQdGNb",
             repoLink: "",
             type: "frontend"
@@ -87,7 +95,7 @@ const DisplayProject = props => {
         "personal-portfolio-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/personal-portfolio-page.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://raul-f.glitch.me/",
             repoLink: "",
             type: "frontend"
@@ -95,7 +103,7 @@ const DisplayProject = props => {
         "bar-chart": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/bar-chart.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/oJNXWK",
             repoLink: "",
             type: "frontend"
@@ -103,7 +111,7 @@ const DisplayProject = props => {
         "scatterplot-graph": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/scatterplot-graph.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/GPgvKx",
             repoLink: "",
             type: "frontend"
@@ -111,7 +119,7 @@ const DisplayProject = props => {
         "heat-map": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/heat-map.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/MZYBmz",
             repoLink: "",
             type: "frontend"
@@ -119,7 +127,7 @@ const DisplayProject = props => {
         "choropleth-map": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/choropleth-map.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/jXWbgz",
             repoLink: "",
             type: "frontend"
@@ -127,7 +135,7 @@ const DisplayProject = props => {
         "treemap-diagram": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/treemap-diagram.png",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "https://codepen.io/raul-f/full/VqjdxW",
             repoLink: "",
             type: "frontend"
@@ -135,8 +143,12 @@ const DisplayProject = props => {
         timely: {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
-            description:
-                "The API is in place, but the interface is pending. Check the github repo!",
+            description: {
+                "en-US":
+                    "The API is in place, but the interface is pending. Check the github repo!",
+                "pt-BR":
+                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+            },
             link: "",
             repoLink: "https://github.com/raul-f/timely",
             type: "fullstack"
@@ -144,8 +156,12 @@ const DisplayProject = props => {
         headparser: {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
-            description:
-                "The API is in place, but the interface is pending. Check the github repo!",
+            description: {
+                "en-US":
+                    "The API is in place, but the interface is pending. Check the github repo!",
+                "pt-BR":
+                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+            },
             link: "",
             repoLink: "https://github.com/raul-f/headparser",
             type: "fullstack"
@@ -153,8 +169,12 @@ const DisplayProject = props => {
         xtrack: {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
-            description:
-                "The API is in place, but the interface is pending. Check the github repo!",
+            description: {
+                "en-US":
+                    "The API is in place, but the interface is pending. Check the github repo!",
+                "pt-BR":
+                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+            },
             link: "",
             repoLink: "https://github.com/raul-f/xtrack",
             type: "fullstack"
@@ -162,15 +182,19 @@ const DisplayProject = props => {
         metareader: {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
-            description:
-                "The API is in place, but the interface is pending. Check the github repo!",
+            description: {
+                "en-US":
+                    "The API is in place, but the interface is pending. Check the github repo!",
+                "pt-BR":
+                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+            },
             link: "",
             repoLink: "https://github.com/raul-f/metareader",
             type: "fullstack"
         },
         template: {
             screenshotUrl: "",
-            description: "",
+            description: { "en-US": "", "pt-BR": "" },
             link: "",
             repoLink: "",
             type: ""
@@ -179,21 +203,35 @@ const DisplayProject = props => {
     return (
         <div className="display-content-box">
             <div className="display-content">
-                <a href={sets[props.active].link} target="_blank">
+                <a
+                    href={
+                        sets[props.active].link ? sets[props.active].link : null
+                    }
+                    target="_blank"
+                >
                     <img
                         src={sets[props.active].screenshotUrl}
                         alt="A screenshot of the selected project."
                         className="display-screenshot"
                     />
                 </a>
-                <p className="display-info">{sets[props.active].description}</p>
+                <p className="display-info">
+                    {sets[props.active].description[props.language]}
+                </p>
                 <div className="display-link-box">
                     <a
-                        href={sets[props.active].link}
+                        href={
+                            sets[props.active].link
+                                ? sets[props.active].link
+                                : null
+                        }
                         target="_blank"
                         className="display-pageLink"
                     >
-                        Go see it live <i className="fas fa-chevron-right" />
+                        {props.language === "pt-BR"
+                            ? "Veja ao vivo "
+                            : "Go see it live "}
+                        <i className="fas fa-chevron-right" />
                     </a>
                     {sets[props.active].type === "fullstack" && (
                         <a
@@ -201,7 +239,9 @@ const DisplayProject = props => {
                             target="_blank"
                             className="display-repoLink"
                         >
-                            Check the repo{" "}
+                            {props.language === "pt-BR"
+                                ? "Veja no Github "
+                                : "Check the repo "}
                             <i className="fas fa-chevron-right" />
                         </a>
                     )}

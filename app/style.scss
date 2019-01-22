@@ -452,14 +452,14 @@ body {
         z-index: 300;
     }
     .scroll-btn {
-        height: 70px;
-        width: 70px;
+        height: 40px;
+        width: 40px;
         background-color: white;
         border: none;
         border-radius: 50%;
         outline: none;
         cursor: pointer;
-        font-size: 50px;
+        font-size: 30px;
         padding: 0;
         @include f-style(row, center, center);
         position: fixed;
@@ -554,5 +554,14 @@ body {
     100% {
         color: white;
         font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        display: none;
+    }
+    .link-box {
+        display: none;
     }
 }

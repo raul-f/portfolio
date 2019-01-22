@@ -7,7 +7,6 @@ import Watermark from "./Watermark"
 import LinkBox from "./LinkBox"
 
 const About = props => {
-    console.log(props.language)
     return (
         <div className="about">
             <Navbar language={props.language} />

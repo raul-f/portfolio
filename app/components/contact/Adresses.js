@@ -24,7 +24,7 @@ const Adresses = props => {
                 >
                     <i className="fas fa-download address-icon" />
                     <span className="address-text">
-                        {props.language === "pt_BR"
+                        {props.language === "pt-BR"
                             ? " Baixe meu currículo"
                             : " Download my CV"}
                     </span>

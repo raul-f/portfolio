@@ -127,7 +127,6 @@ class Projects extends React.Component {
             window.pageYOffset === 0 &&
             !this.state.animating
         ) {
-            console.log(this.state.settings.rotate)
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
             this.setState(
                 {
@@ -149,7 +148,6 @@ class Projects extends React.Component {
             event.deltaY < 0 &&
             !this.state.animating
         ) {
-            console.log(this.state.settings.rotate)
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
@@ -183,7 +181,7 @@ class Projects extends React.Component {
     }
 
     render() {
-        console.log(this.props.language)
+        //console.log(this.props.language)
         return (
             <div className="projects">
                 <div className="projects-background" />

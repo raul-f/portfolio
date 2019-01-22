@@ -13,7 +13,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            language: "pt_BR"
+            language: "pt-BR" // navigator.languages[0]
         }
     }
 

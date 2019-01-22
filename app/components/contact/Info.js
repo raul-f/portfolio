@@ -4,7 +4,7 @@ const Info = props => {
     return (
         <div className="contact-content-info">
             <p className="contact-content-text">
-                {props.language === "pt_BR"
+                {props.language === "pt-BR"
                     ? `Sinta-se à vontade para falar comigo! Eu sempre tento responder
                 e-mails rapidamente - ligações e mensagens também, mas nesse
                 caso posso demorar um pouco. Também estou disponível no Twitter.`
@@ -13,7 +13,7 @@ const Info = props => {
                 effectively. I am also available on Twitter.`}
             </p>
             <p className="contact-content-text">
-                {props.language === "pt_BR"
+                {props.language === "pt-BR"
                     ? `No momento estou procurando meu primeiro emprego! Meu objetivo é
 					uma oportunidade de trabalho em uma startup que ofereça um
 					serviço inovador ou inove na oferta de um serviço tradicional,
