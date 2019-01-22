@@ -128,7 +128,68 @@ body {
   margin: 0 15px;
 }
 
-#home {
+.language {
+  height: 100vh;
+  color: white;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.language h1 {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.language h1 .gray-text {
+  color: #707070;
+}
+
+.language .lang-options {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.language .lang-options .lang-link {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.language .lang-options .lang-link img {
+  pointer-events: none;
+  width: 100px;
+  fill: white;
+  color: white;
+}
+
+.home {
   height: 100vh;
   background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
   background-size: cover;
@@ -148,7 +209,7 @@ body {
           align-items: center;
 }
 
-#home .bg-filter {
+.home .bg-filter {
   background-color: rgba(112, 112, 112, 0.5);
   height: 100%;
   width: 100%;
@@ -156,29 +217,29 @@ body {
   z-index: 200;
 }
 
-#home .intro-box {
+.home .intro-box {
   text-align: center;
   z-index: 200;
 }
 
-#home .intro-box .intro-text {
+.home .intro-box .intro-text {
   margin: 0;
   max-width: 1100px;
   font-size: 70px;
   font-weight: 800;
 }
 
-#home .intro-box .intro-text .white-text {
+.home .intro-box .intro-text .white-text {
   color: white;
 }
 
-#about {
+.about {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
 }
 
-#about .about-left {
+.about .about-left {
   position: fixed;
   left: 0;
   display: -webkit-box;
@@ -201,7 +262,7 @@ body {
   z-index: 400;
 }
 
-#about .about-left .logo {
+.about .about-left .logo {
   padding: 0;
   margin-left: 15px;
   color: white;
@@ -225,26 +286,26 @@ body {
   left: 0;
 }
 
-#about .about-left .logo .profile-picture {
+.about .about-left .logo .profile-picture {
   width: 160px;
   height: auto;
   border-radius: 50%;
 }
 
-#about .about-left .logo .logo-name {
+.about .about-left .logo .logo-name {
   font-weight: 900;
   font-size: 80px;
   line-height: 80px;
 }
 
-#about .about-right {
+.about .about-right {
   min-height: 100%;
   width: 50%;
   position: absolute;
   right: 0;
 }
 
-#about .about-right .about-article {
+.about .about-right .about-article {
   width: 90%;
   position: absolute;
   top: 150px;
@@ -264,7 +325,7 @@ body {
           align-items: center;
 }
 
-#about .about-right .about-article .about-title {
+.about .about-right .about-article .about-title {
   font-size: 50px;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -272,7 +333,7 @@ body {
   font-weight: 800;
 }
 
-#about .about-right .about-article .about-text {
+.about .about-right .about-article .about-text {
   width: 85%;
   text-align: justify;
   -ms-flex-item-align: end;
@@ -282,15 +343,15 @@ body {
   font-weight: 500;
 }
 
-#about .navbar {
+.about .navbar {
   right: -6px;
 }
 
-#about .navbar #about-link {
+.about .navbar #about-link {
   color: #707070;
 }
 
-#about .watermark {
+.about .watermark {
   font-size: 80px;
   font-weight: 600;
   color: rgba(112, 112, 112, 0.7);
@@ -303,13 +364,13 @@ body {
   z-index: 400;
 }
 
-#about .link-box {
+.about .link-box {
   position: fixed;
   bottom: 180px;
   left: 191.5px;
 }
 
-#projects {
+.projects {
   background-image: url("./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg");
   background-size: contain;
   background-position-x: -5%;
@@ -321,7 +382,7 @@ body {
   position: absolute;
 }
 
-#projects .projects-background {
+.projects .projects-background {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -331,28 +392,28 @@ body {
   z-index: 100;
 }
 
-#projects .navbar {
+.projects .navbar {
   background-color: white;
   position: fixed;
   right: -6px;
 }
 
-#projects .navbar .navlink {
+.projects .navbar .navlink {
   color: black;
 }
 
-#projects .navbar #project-link {
+.projects .navbar #project-link {
   color: #707070;
 }
 
-#projects .content {
+.projects .content {
   position: absolute;
   height: 200vh;
   width: 100%;
   z-index: 300;
 }
 
-#projects .content .filter {
+.projects .content .filter {
   height: 50%;
   width: 100%;
   color: white;
@@ -371,13 +432,13 @@ body {
           align-items: center;
 }
 
-#projects .content .filter .filter-info {
+.projects .content .filter .filter-info {
   position: relative;
   height: 100%;
   width: 50%;
 }
 
-#projects .content .filter .filter-info .filter-info-text {
+.projects .content .filter .filter-info .filter-info-text {
   width: 470px;
   text-align: justify;
   margin: 0;
@@ -388,7 +449,7 @@ body {
   font-size: 28px;
 }
 
-#projects .content .filter .filter-menu-box {
+.projects .content .filter .filter-menu-box {
   position: relative;
   height: 100%;
   width: 50%;
@@ -407,7 +468,7 @@ body {
           align-items: flex-end;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu {
+.projects .content .filter .filter-menu-box .filter-menu {
   width: 500px;
   padding-right: 50px;
   display: -webkit-box;
@@ -425,42 +486,42 @@ body {
           align-items: flex-start;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu .menu-title {
+.projects .content .filter .filter-menu-box .filter-menu .menu-title {
   margin: 0;
   font-weight: 800;
   font-size: 40px;
   line-height: 40px;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu .menu-break {
+.projects .content .filter .filter-menu-box .filter-menu .menu-break {
   width: 100%;
   margin: 0 0 10px;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu .filter-option {
+.projects .content .filter .filter-menu-box .filter-menu .filter-option {
   padding: 0;
   color: #707070;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 25px;
-  line-height: 35px;
+  line-height: 32px;
   cursor: pointer;
   background: none;
   border: none;
   outline: none;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu .filter-option:hover {
+.projects .content .filter .filter-menu-box .filter-menu .filter-option:hover {
   -webkit-animation: activate 250ms forwards;
           animation: activate 250ms forwards;
 }
 
-#projects .content .filter .filter-menu-box .filter-menu .sel {
-  font-size: 30px;
+.projects .content .filter .filter-menu-box .filter-menu .sel {
+  font-size: 28px;
   color: white;
 }
 
-#projects .content .display {
+.projects .content .display {
   height: 50%;
   width: 100%;
   color: white;
@@ -479,14 +540,14 @@ body {
           align-items: center;
 }
 
-#projects .content .display .display-content-box {
+.projects .content .display .display-content-box {
   text-align: justify;
   position: relative;
   height: 100%;
   width: 50%;
 }
 
-#projects .content .display .display-content-box .display-content {
+.projects .content .display .display-content-box .display-content {
   width: 580px;
   position: absolute;
   left: 50px;
@@ -506,17 +567,17 @@ body {
           align-items: flex-end;
 }
 
-#projects .content .display .display-content-box .display-content .display-screenshot {
+.projects .content .display .display-content-box .display-content .display-screenshot {
   max-width: 580px;
 }
 
-#projects .content .display .display-content-box .display-content .display-info {
+.projects .content .display .display-content-box .display-content .display-info {
   font-size: 20px;
   font-weight: 600;
   max-width: 580px;
 }
 
-#projects .content .display .display-content-box .display-content .display-link-box {
+.projects .content .display .display-content-box .display-content .display-link-box {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -525,7 +586,7 @@ body {
       grid-template-columns: 1fr 1fr;
 }
 
-#projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
+.projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
   font-size: 25px;
   font-weight: 600;
   color: #707070;
@@ -537,11 +598,11 @@ body {
       justify-self: end;
 }
 
-#projects .content .display .display-content-box .display-content .display-link-box .display-pageLink:hover {
+.projects .content .display .display-content-box .display-content .display-link-box .display-pageLink:hover {
   color: #bbbbbb;
 }
 
-#projects .content .display .display-content-box .display-content .display-link-box .display-repoLink {
+.projects .content .display .display-content-box .display-content .display-link-box .display-repoLink {
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-grid-row: 1;
@@ -553,11 +614,11 @@ body {
   text-decoration: none;
 }
 
-#projects .content .display .display-content-box .display-content .display-link-box .display-repoLink:hover {
+.projects .content .display .display-content-box .display-content .display-link-box .display-repoLink:hover {
   color: #bbbbbb;
 }
 
-#projects .content .display .display-menu-box {
+.projects .content .display .display-menu-box {
   position: relative;
   height: 100%;
   width: 50%;
@@ -576,7 +637,7 @@ body {
           align-items: flex-end;
 }
 
-#projects .content .display .display-menu-box .display-menu {
+.projects .content .display .display-menu-box .display-menu {
   width: 500px;
   padding-right: 50px;
   display: -webkit-box;
@@ -594,42 +655,43 @@ body {
           align-items: flex-start;
 }
 
-#projects .content .display .display-menu-box .display-menu .menu-title {
+.projects .content .display .display-menu-box .display-menu .menu-title {
   margin: 0;
   font-weight: 800;
   font-size: 40px;
   line-height: 40px;
 }
 
-#projects .content .display .display-menu-box .display-menu .menu-break {
+.projects .content .display .display-menu-box .display-menu .menu-break {
   width: 100%;
   margin: 0 0 10px;
 }
 
-#projects .content .display .display-menu-box .display-menu .display-option {
+.projects .content .display .display-menu-box .display-menu .display-option {
   padding: 0;
   color: #707070;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 25px;
-  line-height: 35px;
+  line-height: 32px;
+  text-align: left;
   cursor: pointer;
   background: none;
   border: none;
   outline: none;
 }
 
-#projects .content .display .display-menu-box .display-menu .display-option:hover {
+.projects .content .display .display-menu-box .display-menu .display-option:hover {
   -webkit-animation: activate 250ms forwards;
           animation: activate 250ms forwards;
 }
 
-#projects .content .display .display-menu-box .display-menu .sel {
+.projects .content .display .display-menu-box .display-menu .sel {
   color: white;
-  font-size: 30px;
+  font-size: 28px;
 }
 
-#projects .scroll-btn {
+.projects .scroll-btn {
   height: 70px;
   width: 70px;
   background-color: white;
@@ -658,11 +720,11 @@ body {
   z-index: 450;
 }
 
-#projects .scroll-btn i {
+.projects .scroll-btn i {
   margin: 0;
 }
 
-#projects .watermark {
+.projects .watermark {
   font-size: 80px;
   font-weight: 600;
   color: rgba(112, 112, 112, 0.7);
@@ -675,7 +737,7 @@ body {
   z-index: 400;
 }
 
-#contact {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,11 +755,11 @@ body {
   width: 100%;
 }
 
-#contact .navbar #contact-link {
+.contact .navbar #contact-link {
   color: #707070;
 }
 
-#contact .content {
+.contact .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,14 +779,14 @@ body {
   top: 25px;
 }
 
-#contact .content .contact-content-info {
+.contact .content .contact-content-info {
   font-size: 20px;
   width: 470px;
   text-align: justify;
   font-weight: 500;
 }
 
-#contact .content .addresses {
+.contact .content .addresses {
   min-width: 500px;
   max-width: 500px;
   margin: 0;
@@ -734,8 +796,9 @@ body {
   bottom: 15px;
 }
 
-#contact .content .addresses .address {
-  margin: 35px 0;
+.contact .content .addresses .address {
+  color: black;
+  margin: 25px 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,17 +815,28 @@ body {
           align-items: center;
 }
 
-#contact .content .addresses .address .address-icon {
-  font-size: 70px;
+.contact .content .addresses .address .address-icon {
+  width: 60px;
+  font-size: 60px;
   margin-right: 20px;
 }
 
-#contact .content .addresses .address .address-text {
-  font-size: 40px;
+.contact .content .addresses .address .address-text {
+  font-size: 35px;
   font-weight: 600;
+  margin: 0;
 }
 
-#contact .copyright-text {
+.contact .content .addresses .address-link {
+  text-decoration: none;
+  color: #707070;
+}
+
+.contact .content .addresses .address-link:hover {
+  color: #aaa;
+}
+
+.contact .copyright-text {
   position: absolute;
   bottom: 30px;
   right: 80px;
@@ -772,7 +846,7 @@ body {
   pointer-events: none;
 }
 
-#contact .watermark {
+.contact .watermark {
   font-size: 80px;
   line-height: 80px;
   font-weight: 600;
@@ -789,14 +863,14 @@ body {
 @-webkit-keyframes activate {
   100% {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @keyframes activate {
   100% {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -100,7 +100,40 @@ body {
     z-index: 400;
 }
 
-#home {
+.language {
+    $svg-scale: 100/212;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    h1 {
+        margin: 0;
+        font-size: 70px;
+        font-weight: 800;
+        .gray-text {
+            color: #707070;
+        }
+    }
+    @include f-style(column, center, center);
+    .lang-options {
+        width: 250px;
+        @include f-style(row, space-between, center);
+        margin: 20px 0;
+        .lang-link {
+            padding: 0;
+            border: none;
+            outline: none;
+            background: none;
+            img {
+                pointer-events: none;
+                width: 100px;
+                fill: white;
+                color: white;
+            }
+        }
+    }
+}
+
+.home {
     height: 100vh;
     background-image: url("./assets/New-York-Wallpaper-Background-8.jpg");
     background-size: cover;
@@ -128,7 +161,7 @@ body {
     }
 }
 
-#about {
+.about {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -215,7 +248,7 @@ body {
     }
 }
 
-#projects {
+.projects {
     background-image: url("./assets/draculas-daughter-1936-001-nan-grey-gloria-holden.jpg");
     background-size: contain;
     background-position-x: -5%;
@@ -297,7 +330,7 @@ body {
                         font-family: "Montserrat", sans-serif;
                         font-weight: 600;
                         font-size: 25px;
-                        line-height: 35px;
+                        line-height: 32px;
                         cursor: pointer;
                         background: none;
                         border: none;
@@ -307,7 +340,7 @@ body {
                         animation: activate 250ms forwards;
                     }
                     .sel {
-                        font-size: 30px;
+                        font-size: 28px;
                         color: white;
                     }
                 }
@@ -392,7 +425,8 @@ body {
                         font-family: "Montserrat", sans-serif;
                         font-weight: 600;
                         font-size: 25px;
-                        line-height: 35px;
+                        line-height: 32px;
+                        text-align: left;
                         cursor: pointer;
                         background: none;
                         border: none;
@@ -403,7 +437,7 @@ body {
                     }
                     .sel {
                         color: white;
-                        font-size: 30px;
+                        font-size: 28px;
                     }
                 }
             }
@@ -442,7 +476,7 @@ body {
     }
 }
 
-#contact {
+.contact {
     @include f-style(row, space-between, center);
     height: 100vh;
     width: 100%;
@@ -472,17 +506,27 @@ body {
             position: relative;
             bottom: 15px;
             .address {
-                margin: 35px 0;
+                color: black;
+                margin: 25px 0;
                 padding: 0;
                 @include f-style(row, flex-start, center);
                 .address-icon {
-                    font-size: 70px;
+                    width: 60px;
+                    font-size: 60px;
                     margin-right: 20px;
                 }
                 .address-text {
-                    font-size: 40px;
+                    font-size: 35px;
                     font-weight: 600;
+                    margin: 0;
                 }
+            }
+            .address-link {
+                text-decoration: none;
+                color: #707070;
+            }
+            .address-link:hover {
+                color: #aaa;
             }
         }
     }
@@ -512,6 +556,6 @@ body {
 @keyframes activate {
     100% {
         color: white;
-        font-size: 30px;
+        font-size: 28px;
     }
 }
