@@ -205,7 +205,11 @@ const DisplayProject = props => {
             <div className="display-content">
                 <a
                     href={
-                        sets[props.active].link ? sets[props.active].link : null
+                        sets[props.active].link
+                            ? sets[props.active].link
+                            : sets[props.active].repoLink
+                            ? sets[props.active].repoLink
+                            : null
                     }
                     target="_blank"
                 >
