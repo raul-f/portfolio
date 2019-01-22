@@ -846,6 +846,10 @@ body {
   pointer-events: none;
 }
 
+.contact .portuguese {
+  font-size: 30px;
+}
+
 .contact .watermark {
   font-size: 80px;
   line-height: 80px;

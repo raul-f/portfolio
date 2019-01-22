@@ -4,13 +4,13 @@ function Navbar() {
     return (
         <nav className="navbar">
             <a id="about-link" className="navlink">
-                About<span class="gray-point">.</span>
+                Sobre<span className="gray-point">.</span>
             </a>
             <a id="project-link" className="navlink" href="/pt/projects">
-                Projects<span class="gray-point">.</span>
+                Projetos<span className="gray-point">.</span>
             </a>
             <a id="contact-link" className="navlink" href="/pt/contact">
-                Contact<span class="gray-point">.</span>
+                Contato<span className="gray-point">.</span>
             </a>
         </nav>
     )

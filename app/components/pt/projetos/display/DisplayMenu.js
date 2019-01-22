@@ -6,7 +6,7 @@ const DisplayMenu = props => {
             setName: "DESTAQUE",
             setOptions: [
                 {
-                    name: "Máquina de Frases Aleatórias",
+                    name: "Máquina de Citações Aleatórias",
                     id: "random-quote-machine",
                     hash: "166f6abef74056d74e89fa20d5f6c793"
                 },
@@ -21,12 +21,12 @@ const DisplayMenu = props => {
                     hash: "461d81e54ed7f5bdc045d16f89df4b48"
                 },
                 {
-                    name: "Página de Produto",
+                    name: "Página de Destino do Produto",
                     id: "product-landing-page",
                     hash: "0212803ee6f961b0c42b5d402fa55246"
                 },
                 {
-                    name: "Bateria",
+                    name: "Máquina de Ritmos",
                     id: "drum-machine",
                     hash: "717d06318160bff54f6157868a8143e1"
                 }
@@ -36,7 +36,7 @@ const DisplayMenu = props => {
             setName: "SITES HTML & CSS",
             setOptions: [
                 {
-                    name: "Página Tributo",
+                    name: "Página de Homenagem",
                     id: "tribute-page",
                     hash: "f7e689a5dd32254c6e98a3315175f3ee"
                 },
@@ -46,7 +46,7 @@ const DisplayMenu = props => {
                     hash: "71e777f3f65f01abd5f5b6d3abd3c0cc"
                 },
                 {
-                    name: "Página de Produto",
+                    name: "Página de Destino do Produto",
                     id: "product-landing-page",
                     hash: "0212803ee6f961b0c42b5d402fa55246"
                 },
@@ -66,17 +66,17 @@ const DisplayMenu = props => {
             setName: "APPS DE PÁGINA ÚNICA",
             setOptions: [
                 {
-                    name: "Máquina de Frases Aleatórias",
+                    name: "Máquina de Citações Aleatórias",
                     id: "random-quote-machine",
                     hash: "166f6abef74056d74e89fa20d5f6c793"
                 },
                 {
-                    name: "Playground de Markdown",
+                    name: "Visualizador de Markdown",
                     id: "markdown-previewer",
                     hash: "0e9d930c3fa180109b36feb106df0b88"
                 },
                 {
-                    name: "Bateria",
+                    name: "Máquina de Ritmos",
                     id: "drum-machine",
                     hash: "717d06318160bff54f6157868a8143e1"
                 },
@@ -116,7 +116,7 @@ const DisplayMenu = props => {
                     hash: "4334c1b2f60cdf07892e8850bf6e4131"
                 },
                 {
-                    name: "Diagrama Treemap",
+                    name: "Mapa de Árvore",
                     id: "treemap-diagram",
                     hash: "b309935e07b6635fb4aa223962194f13"
                 }

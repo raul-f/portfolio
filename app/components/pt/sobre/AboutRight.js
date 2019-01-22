@@ -4,7 +4,7 @@ const AboutRight = () => {
     return (
         <div className="about-right">
             <article className="about-article">
-                <h2 className="about-title">Form equals function.</h2>
+                <h2 className="about-title">A forma é a função.</h2>
                 <p className="about-text">
                     As a developer, that's my core philosophy: having your site
                     be well-designed, usable, intuitive to navigate - and feel

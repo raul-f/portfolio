@@ -6,7 +6,7 @@ const DisplayProject = props => {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/random-quote-machine.png",
             description:
-                "Uma aplicação simples que lhe permite sortear frases curadas por mim e tuitá-las.",
+                "Uma aplicação simples que permite ao usuário sortear frases curadas por mim e tuitá-las.",
             link: "https://codepen.io/raul-f/full/JeZEwe",
             repoLink: "",
             type: "frontend"
