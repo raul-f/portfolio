@@ -7,26 +7,13 @@
     align-items: $align;
 }
 
-// custom scrollbar
+// animation
 
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #707070;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
+@keyframes activate {
+    100% {
+        color: white;
+        font-size: 28px;
+    }
 }
 
 // Rules
@@ -40,97 +27,62 @@ body {
 
 // Shared assets
 
-.navbar {
-    background-color: black;
-    height: 80px;
-    width: 550px;
-    @include f-style(row, center, center);
-    position: absolute;
-    right: 0;
-    top: 50px;
-    .navlink {
-        text-decoration: none;
-        margin: 0 35px;
-        color: white;
-        font-size: 20px;
-        font-weight: 600;
-        .gray-point {
-            color: #707070;
-        }
-    }
-    z-index: 500;
-}
-
-.logo {
-    width: 430px;
-    height: 160px;
-    padding: 15px 20px;
-    position: absolute;
-    top: 0;
-    left: 100px;
-    background-color: black;
-    @include f-style(row, center, flex-end);
-    text-decoration: none;
-    .profile-picture {
-        height: 100px;
-        width: auto;
-        border-radius: 50%;
-    }
-    .logo-name {
-        color: white;
-        font-size: 50px;
-        line-height: 50px;
-        font-weight: 900;
-        margin: 0 10px;
-    }
-    z-index: 600;
-}
-
+.navbar,
+.logo,
 .link-box {
-    height: 80px;
-    width: 300px;
-    @include f-style(row, center, center);
+    display: none;
+}
+
+.mobile-menu {
     background-color: black;
-    position: absolute;
-    bottom: 60px;
-    left: 100px;
-    .link-icon {
-        color: white;
-        font-size: 55px;
-        margin: 0 15px;
+    display: grid;
+    grid-template-areas: "logo button";
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 100px;
+    .mobile-logo {
+        width: 230px;
+        text-decoration: none;
+        grid-area: logo;
+        justify-self: center;
+        position: relative;
+        left: 15px;
+        @include f-style(row, center, center);
     }
-    z-index: 400;
+    z-index: 1000;
 }
 
-.watermark {
-    font-size: 80px;
-    font-weight: 600;
-    color: rgba($color: #707070, $alpha: 0.7);
-    position: fixed;
-    transform: rotate(90deg);
-    pointer-events: none;
+.profile-picture {
+    border-radius: 50%;
+    height: 50px;
 }
 
-// pages
+.logo-name {
+    padding-left: 10px;
+    color: white;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 900;
+}
+
+// Pages
 
 .language {
-    $svg-scale: 100/212;
     height: 100vh;
     color: white;
     background-color: black;
     h1 {
         margin: 0;
-        font-size: 70px;
-        font-weight: 800;
+        font-size: 30px;
+        font-weight: 700;
         .gray-text {
             color: #707070;
         }
     }
     @include f-style(column, center, center);
     .lang-options {
-        width: 250px;
+        width: 180px;
         @include f-style(row, space-between, center);
-        margin: 20px 0;
+        margin: 15px 0;
         .lang-link {
             padding: 0;
             border: none;
@@ -138,432 +90,534 @@ body {
             background: none;
             img {
                 pointer-events: none;
-                width: 100px;
-                fill: white;
-                color: white;
+                width: 70px;
             }
         }
     }
 }
 
-.home {
-    height: 100vh;
-    background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
-    background-size: cover;
-    background-position: 50%;
-    @include f-style(row, center, center);
-    .bg-filter {
-        background-color: rgba($color: #707070, $alpha: 0.5);
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: 200;
+// Media queries
+
+@media (min-width: 500px) and (max-width: 1250px) {
+    .navbar {
+        display: none;
     }
-    .intro-box {
-        text-align: center;
-        .intro-text {
-            margin: 0;
-            max-width: 1100px;
-            font-size: 70px;
-            font-weight: 800;
-            .white-text {
-                color: white;
-            }
-        }
-        z-index: 200;
+    .link-box {
+        display: none;
     }
 }
 
-.about {
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    .about-left {
-        position: fixed;
-        left: 0;
-        @include f-style(row, center, center);
-        height: 100%;
-        width: 50%;
+@media (min-width: 1250px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #707070;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #aaa;
+    }
+
+    // Shared assets
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .navbar {
         background-color: black;
-        color: white;
-        z-index: 400;
-        .logo {
-            padding: 0;
-            margin-left: 15px;
-            color: white;
-            text-decoration: none;
-            @include f-style(row, center, center);
-            position: relative;
-            top: auto;
-            bottom: 50px;
-            left: 0;
-            .profile-picture {
-                width: 160px;
-                height: auto;
-                border-radius: 50%;
-            }
-            .logo-name {
-                font-weight: 900;
-                font-size: 80px;
-                line-height: 80px;
-            }
-        }
-    }
-    .about-right {
-        min-height: 100%;
-        width: 50%;
+        height: 80px;
+        width: 550px;
+        @include f-style(row, center, center);
         position: absolute;
         right: 0;
-        .about-article {
-            width: 90%;
-            position: absolute;
-            top: 150px;
-            left: 5%;
-            // border: 1px solid black;
-            @include f-style(column, center, center);
-            .about-title {
-                font-size: 50px;
-                align-self: flex-start;
-                margin: 0 0 20px 0;
-                font-weight: 800;
-            }
-            .about-text {
-                width: 85%;
-                font-family: Rubik, sans-serif;
-                text-align: justify;
-                align-self: flex-end;
-                margin: 0 0 20px 0;
-                font-size: 20px;
-            }
-        }
-    }
-    .navbar {
-        right: -6px;
-        #about-link {
-            color: #707070;
-        }
-    }
-    .watermark {
-        left: 45%;
-        top: 40%;
-        z-index: 400;
-    }
-    .link-box {
-        position: fixed;
-        bottom: 180px;
-        left: (1366px / 4) - 150;
-    }
-}
-
-.projects {
-    background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
-    background-size: contain;
-    background-position-x: -5%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 200vh;
-    width: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    .projects-background {
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden; // rgba(64, 64, 64, 0.8) 40%,
-        background-image: linear-gradient(
-            to right,
-            rgba(30, 30, 30, 0.8) 30%,
-            rgba(0, 0, 0, 1) 50%
-        );
-        z-index: 100;
-    }
-    .navbar {
-        background-color: white;
-        position: fixed;
-        right: -6px;
+        top: 50px;
         .navlink {
-            color: black;
-        }
-        #project-link {
-            color: #707070;
-        }
-    }
-    .content {
-        position: absolute;
-        height: 200vh;
-        width: 100%;
-        .filter {
-            height: 50%;
-            width: 100%;
+            text-decoration: none;
+            margin: 0 35px;
             color: white;
-            @include f-style(row, center, center);
-            .filter-info {
-                position: relative;
-                height: 100%;
-                width: 50%;
-                .filter-info-text {
-                    width: 470px;
-                    font-family: Rubik, sans-serif;
-                    text-align: justify;
-                    margin: 0;
-                    position: absolute;
-                    left: 100px;
-                    top: 50%;
-                    font-size: 22px;
-                }
-            }
-            .filter-menu-box {
-                position: relative;
-                height: 100%;
-                width: 50%;
-                @include f-style(column, center, flex-end);
-                .filter-menu {
-                    width: 500px;
-                    padding-right: 50px;
-                    @include f-style(column, center, flex-start);
-                    .menu-title {
-                        margin: 0;
-                        font-weight: 800;
-                        font-size: 40px;
-                        line-height: 40px;
-                    }
-                    .menu-break {
-                        width: 100%;
-                        margin: 0 0 10px;
-                    }
-                    .filter-option {
-                        padding: 0;
-                        color: #707070;
-                        font-family: "Montserrat", sans-serif;
-                        font-weight: 600;
-                        font-size: 25px;
-                        line-height: 32px;
-                        cursor: pointer;
-                        background: none;
-                        border: none;
-                        outline: none;
-                    }
-                    .filter-option:hover {
-                        animation: activate 200ms forwards;
-                    }
-                    .sel {
-                        font-size: 28px;
-                        color: white;
-                    }
-                }
-            }
-        }
-        .display {
-            height: 50%;
-            width: 100%;
-            color: white;
-            @include f-style(row, center, center);
-            .display-content-box {
-                text-align: justify;
-                position: relative;
-                height: 100%;
-                width: 50%;
-                .display-content {
-                    width: 580px;
-                    position: absolute;
-                    left: 50px;
-                    top: 50px;
-                    @include f-style(column, flex-start, flex-end);
-                    .display-screenshot {
-                        max-width: 580px;
-                    }
-                    .display-info {
-                        font-size: 20px;
-                        font-family: Rubik, sans-serif;
-                        font-weight: 500;
-                        max-width: 580px;
-                    }
-                    .display-link-box {
-                        width: 100%;
-                        display: grid;
-                        grid-template-areas: "repo-link page-link";
-                        grid-template-columns: 1fr 1fr;
-                        .display-pageLink {
-                            font-size: 25px;
-                            font-weight: 600;
-                            color: #707070;
-                            text-decoration: none;
-                            grid-area: page-link;
-                            justify-self: end;
-                        }
-                        .display-pageLink:hover {
-                            color: #bbbbbb;
-                        }
-                        .display-repoLink {
-                            justify-self: start;
-                            grid-area: repo-link;
-                            font-size: 25px;
-                            font-weight: 600;
-                            color: #707070;
-                            text-decoration: none;
-                        }
-                        .display-repoLink:hover {
-                            color: #bbbbbb;
-                        }
-                    }
-                }
-            }
-            .display-menu-box {
-                position: relative;
-                height: 100%;
-                width: 50%;
-                @include f-style(column, center, flex-end);
-                .display-menu {
-                    width: 500px;
-                    padding-right: 50px;
-                    @include f-style(column, center, flex-start);
-                    .menu-title {
-                        margin: 0;
-                        font-weight: 800;
-                        font-size: 40px;
-                        line-height: 40px;
-                    }
-                    .menu-break {
-                        width: 100%;
-                        margin: 0 0 10px;
-                    }
-                    .display-option {
-                        padding: 0;
-                        color: #707070;
-                        font-family: "Montserrat", sans-serif;
-                        font-weight: 600;
-                        font-size: 25px;
-                        line-height: 32px;
-                        text-align: left;
-                        cursor: pointer;
-                        background: none;
-                        border: none;
-                        outline: none;
-                    }
-                    .display-option:hover {
-                        animation: activate 200ms forwards;
-                    }
-                    .sel {
-                        color: white;
-                        font-size: 28px;
-                    }
-                }
-            }
-        }
-        z-index: 300;
-    }
-    .scroll-btn {
-        height: 40px;
-        width: 40px;
-        background-color: white;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-        cursor: pointer;
-        font-size: 32px;
-        padding: 0;
-        @include f-style(row, center, center);
-        position: fixed;
-        right: 50px;
-        bottom: 50px;
-        i {
-            margin: 0;
-        }
-        z-index: 450;
-    }
-    .watermark {
-        left: 40%;
-        top: 40%;
-        z-index: 400;
-    }
-}
-
-.contact {
-    @include f-style(row, space-between, center);
-    height: 100vh;
-    width: 100%;
-    .navbar {
-        #contact-link {
-            color: #707070;
-        }
-    }
-    .content {
-        @include f-style(row, space-between, center);
-        width: 100%;
-        padding: 0 50px 0 100px;
-        position: relative;
-        top: 25px;
-        .contact-content-info {
             font-size: 20px;
-            font-family: Rubik, sans-serif;
-            width: 470px;
-            text-align: justify;
-            font-weight: 500;
-        }
-        .addresses {
-            min-width: 500px;
-            max-width: 500px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            position: relative;
-            bottom: 15px;
-            .address {
-                color: black;
-                margin: 25px 0;
-                padding: 0;
-                @include f-style(row, flex-start, center);
-                .address-icon {
-                    width: 60px;
-                    font-size: 60px;
-                    margin-right: 20px;
-                }
-                .address-text {
-                    font-size: 35px;
-                    font-weight: 600;
-                    margin: 0;
-                }
-            }
-            .address-link {
-                text-decoration: none;
+            font-weight: 600;
+            .gray-point {
                 color: #707070;
             }
-            .address-link:hover {
-                color: #aaa;
+        }
+        z-index: 500;
+    }
+
+    .logo {
+        width: 430px;
+        height: 160px;
+        padding: 15px 20px;
+        position: absolute;
+        top: 0;
+        left: 100px;
+        background-color: black;
+        @include f-style(row, center, flex-end);
+        text-decoration: none;
+        .profile-picture {
+            height: 100px;
+        }
+        .logo-name {
+            font-size: 50px;
+            line-height: 50px;
+            margin: 0 10px;
+        }
+        z-index: 600;
+    }
+
+    .link-box {
+        height: 80px;
+        width: 300px;
+        @include f-style(row, center, center);
+        background-color: black;
+        position: absolute;
+        bottom: 60px;
+        left: 100px;
+        .link-icon {
+            color: white;
+            font-size: 55px;
+            margin: 0 15px;
+        }
+        z-index: 400;
+    }
+
+    .watermark {
+        font-size: 80px;
+        font-weight: 600;
+        color: rgba($color: #707070, $alpha: 0.7);
+        position: fixed;
+        transform: rotate(90deg);
+        pointer-events: none;
+    }
+
+    // pages
+
+    .language {
+        h1 {
+            font-size: 70px;
+            font-weight: 800;
+        }
+        .lang-options {
+            width: 250px;
+            margin: 20px 0;
+            .lang-link {
+                img {
+                    width: 100px;
+                }
             }
         }
     }
-    .copyright-text {
+
+    .home {
+        height: 100vh;
+        background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
+        background-size: cover;
+        background-position: 50%;
+        @include f-style(row, center, center);
+        .bg-filter {
+            background-color: rgba($color: #707070, $alpha: 0.5);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 200;
+        }
+        .intro-box {
+            text-align: center;
+            .intro-text {
+                margin: 0;
+                max-width: 1100px;
+                font-size: 70px;
+                font-weight: 800;
+                .white-text {
+                    color: white;
+                }
+            }
+            z-index: 200;
+        }
+    }
+
+    .about {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        .about-left {
+            position: fixed;
+            left: 0;
+            @include f-style(row, center, center);
+            height: 100%;
+            width: 50%;
+            background-color: black;
+            color: white;
+            z-index: 400;
+            .logo {
+                padding: 0 0 0 15px;
+                color: white;
+                text-decoration: none;
+                @include f-style(row, center, center);
+                position: relative;
+                top: auto;
+                bottom: 50px;
+                left: 0;
+                .profile-picture {
+                    height: 160px;
+                }
+                .logo-name {
+                    font-size: 80px;
+                    line-height: 80px;
+                }
+            }
+        }
+        .about-right {
+            min-height: 100%;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            .about-article {
+                width: 90%;
+                position: absolute;
+                top: 150px;
+                left: 5%;
+                // border: 1px solid black;
+                @include f-style(column, center, center);
+                .about-title {
+                    font-size: 50px;
+                    align-self: flex-start;
+                    margin: 0 0 20px 0;
+                    font-weight: 800;
+                }
+                .about-text {
+                    width: 85%;
+                    font-family: Rubik, sans-serif;
+                    text-align: justify;
+                    align-self: flex-end;
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                }
+            }
+        }
+        .navbar {
+            right: -6px;
+            #about-link {
+                color: #707070;
+            }
+        }
+        .watermark {
+            left: 45%;
+            top: 40%;
+            z-index: 400;
+        }
+        .link-box {
+            position: fixed;
+            bottom: 180px;
+            left: (1366px / 4) - 150;
+        }
+    }
+
+    .projects {
+        background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
+        background-size: contain;
+        background-position-x: -5%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 200vh;
+        width: 100vw;
+        overflow-x: hidden;
         position: absolute;
-        bottom: 30px;
-        right: 80px;
-        font-size: 35px;
-        font-weight: 600;
-        color: #707070;
-        pointer-events: none;
+        .projects-background {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden; // rgba(64, 64, 64, 0.8) 40%,
+            background-image: linear-gradient(
+                to right,
+                rgba(30, 30, 30, 0.8) 30%,
+                rgba(0, 0, 0, 1) 50%
+            );
+            z-index: 100;
+        }
+        .navbar {
+            background-color: white;
+            position: fixed;
+            right: -6px;
+            .navlink {
+                color: black;
+            }
+            #project-link {
+                color: #707070;
+            }
+        }
+        .content {
+            position: absolute;
+            height: 200vh;
+            width: 100%;
+            .filter {
+                height: 50%;
+                width: 100%;
+                color: white;
+                @include f-style(row, center, center);
+                .filter-info {
+                    position: relative;
+                    height: 100%;
+                    width: 50%;
+                    .filter-info-text {
+                        width: 470px;
+                        font-family: Rubik, sans-serif;
+                        text-align: justify;
+                        margin: 0;
+                        position: absolute;
+                        left: 100px;
+                        top: 50%;
+                        font-size: 22px;
+                    }
+                }
+                .filter-menu-box {
+                    position: relative;
+                    height: 100%;
+                    width: 50%;
+                    @include f-style(column, center, flex-end);
+                    .filter-menu {
+                        width: 500px;
+                        padding-right: 50px;
+                        @include f-style(column, center, flex-start);
+                        .menu-title {
+                            margin: 0;
+                            font-weight: 800;
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                        .menu-break {
+                            width: 100%;
+                            margin: 0 0 10px;
+                        }
+                        .filter-option {
+                            padding: 0;
+                            color: #707070;
+                            font-family: "Montserrat", sans-serif;
+                            font-weight: 600;
+                            font-size: 25px;
+                            line-height: 32px;
+                            cursor: pointer;
+                            background: none;
+                            border: none;
+                            outline: none;
+                        }
+                        .filter-option:hover {
+                            animation: activate 200ms forwards;
+                        }
+                        .sel {
+                            font-size: 28px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .display {
+                height: 50%;
+                width: 100%;
+                color: white;
+                @include f-style(row, center, center);
+                .display-content-box {
+                    text-align: justify;
+                    position: relative;
+                    height: 100%;
+                    width: 50%;
+                    .display-content {
+                        width: 580px;
+                        position: absolute;
+                        left: 50px;
+                        top: 50px;
+                        @include f-style(column, flex-start, flex-end);
+                        .display-screenshot {
+                            max-width: 580px;
+                        }
+                        .display-info {
+                            font-size: 20px;
+                            font-family: Rubik, sans-serif;
+                            font-weight: 500;
+                            max-width: 580px;
+                        }
+                        .display-link-box {
+                            width: 100%;
+                            display: grid;
+                            grid-template-areas: "repo-link page-link";
+                            grid-template-columns: 1fr 1fr;
+                            .display-pageLink {
+                                font-size: 25px;
+                                font-weight: 600;
+                                color: #707070;
+                                text-decoration: none;
+                                grid-area: page-link;
+                                justify-self: end;
+                            }
+                            .display-pageLink:hover {
+                                color: #bbbbbb;
+                            }
+                            .display-repoLink {
+                                justify-self: start;
+                                grid-area: repo-link;
+                                font-size: 25px;
+                                font-weight: 600;
+                                color: #707070;
+                                text-decoration: none;
+                            }
+                            .display-repoLink:hover {
+                                color: #bbbbbb;
+                            }
+                        }
+                    }
+                }
+                .display-menu-box {
+                    position: relative;
+                    height: 100%;
+                    width: 50%;
+                    @include f-style(column, center, flex-end);
+                    .display-menu {
+                        width: 500px;
+                        padding-right: 50px;
+                        @include f-style(column, center, flex-start);
+                        .menu-title {
+                            margin: 0;
+                            font-weight: 800;
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                        .menu-break {
+                            width: 100%;
+                            margin: 0 0 10px;
+                        }
+                        .display-option {
+                            padding: 0;
+                            color: #707070;
+                            font-family: "Montserrat", sans-serif;
+                            font-weight: 600;
+                            font-size: 25px;
+                            line-height: 32px;
+                            text-align: left;
+                            cursor: pointer;
+                            background: none;
+                            border: none;
+                            outline: none;
+                        }
+                        .display-option:hover {
+                            animation: activate 200ms forwards;
+                        }
+                        .sel {
+                            color: white;
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+            z-index: 300;
+        }
+        .scroll-btn {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            font-size: 32px;
+            padding: 0;
+            @include f-style(row, center, center);
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            i {
+                margin: 0;
+            }
+            z-index: 450;
+        }
+        .watermark {
+            left: 40%;
+            top: 40%;
+            z-index: 400;
+        }
     }
-    .portuguese {
-        font-size: 30px;
-    }
-    .watermark {
-        left: 37.5%;
-        top: 35%;
-        z-index: 1000;
-    }
-}
 
-@keyframes activate {
-    100% {
-        color: white;
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 500px) {
-    .navbar {
-        display: none;
-    }
-    .link-box {
-        display: none;
+    .contact {
+        @include f-style(row, space-between, center);
+        height: 100vh;
+        width: 100%;
+        .navbar {
+            #contact-link {
+                color: #707070;
+            }
+        }
+        .content {
+            @include f-style(row, space-between, center);
+            width: 100%;
+            padding: 0 50px 0 100px;
+            position: relative;
+            top: 25px;
+            .contact-content-info {
+                font-size: 20px;
+                font-family: Rubik, sans-serif;
+                width: 470px;
+                text-align: justify;
+                font-weight: 500;
+            }
+            .addresses {
+                min-width: 500px;
+                max-width: 500px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                position: relative;
+                bottom: 15px;
+                .address {
+                    color: black;
+                    margin: 25px 0;
+                    padding: 0;
+                    @include f-style(row, flex-start, center);
+                    .address-icon {
+                        width: 60px;
+                        font-size: 60px;
+                        margin-right: 20px;
+                    }
+                    .address-text {
+                        font-size: 35px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                }
+                .address-link {
+                    text-decoration: none;
+                    color: #707070;
+                }
+                .address-link:hover {
+                    color: #aaa;
+                }
+            }
+        }
+        .copyright-text {
+            position: absolute;
+            bottom: 30px;
+            right: 80px;
+            font-size: 35px;
+            font-weight: 600;
+            color: #707070;
+            pointer-events: none;
+        }
+        .portuguese {
+            font-size: 30px;
+        }
+        .watermark {
+            left: 37.5%;
+            top: 35%;
+            z-index: 1000;
+        }
     }
 }

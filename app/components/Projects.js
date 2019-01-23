@@ -8,6 +8,7 @@ import Filter from "./projects/Filter"
 import Display from "./projects/Display"
 import ScrollBtn from "./projects/ScrollBtn"
 import Watermark from "./Watermark"
+import MobileMenu from "./MobileMenu"
 
 class Projects extends React.Component {
     constructor(props) {
@@ -190,8 +191,9 @@ class Projects extends React.Component {
     render() {
         //console.log(this.props.language)
         return (
-            <div className="projects">
+            <div id="projects" className="projects">
                 <div className="projects-background" />
+                <MobileMenu />
                 <Logo />
                 <Navbar language={this.props.language} />
                 <div className="content">
