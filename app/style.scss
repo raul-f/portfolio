@@ -34,11 +34,14 @@ body {
 }
 
 .mobile-menu {
+    width: 100%;
     background-color: black;
     display: grid;
     grid-template-areas: "logo button";
     grid-template-columns: 1fr 30px;
     grid-template-rows: 100px;
+    position: fixed;
+    top: 0;
     .mobile-logo {
         width: 230px;
         text-decoration: none;
