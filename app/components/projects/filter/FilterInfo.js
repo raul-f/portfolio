@@ -8,10 +8,9 @@ const FilterInfo = props => {
                 "Uma seleção dos cinco projetos de que eu tenho mais orgulho."
         },
         "html-css-websites": {
-            "en-US":
-                "Very simple pages I developed using only HTML and pure CSS.",
+            "en-US": "Pages I developed using only HTML and pure CSS.",
             "pt-BR":
-                "Páginas bem simples que eu desenvolvi utilizando apenas HTML e CSS puro."
+                "Páginas que eu desenvolvi utilizando apenas HTML e CSS puro."
         },
         "single-page-apps": {
             "en-US": "Small, single-page web apps I developed using React.",

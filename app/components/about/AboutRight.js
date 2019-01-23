@@ -19,23 +19,14 @@ const AboutRight = props => {
                 </p>
                 <p className="about-text">
                     {props.language === "pt-BR"
-                        ? ``
-                        : `I'm a 21-year-old front-end web developer based in São
-                    Paulo, Brasil. Besides design and coding, I love cats,
-                    birds, kids, story-driven video games and fashion. I have
-                    ADHD, and my friends say that most of the time my behavior
-                    is between that of a cat and a kid - but I'm always
-                    hyperfocused when designing or coding. Also, I'm a big fan
-                    of high-contrast, well-balanced two-color design - black and
-                    white design in particular.`}
+                        ? `Eu sou um desenvolvedor front-end de 21 anos morando em São Paulo, Brasil. Além de design e programação, eu amo gatos, pássaros, crianças, videogames com histórias interessantes e moda. Além disso, sou um grande fã de design bicolor de alto contraste - preto e branco em particular.`
+                        : `I'm a 21-year-old front-end web developer based in São Paulo, Brasil. Besides design and coding, I love cats, birds, kids, story-driven video games and fashion. I have ADHD, and my friends say that most of the time my behavior is between that of a cat and a kid - but I'm always hyperfocused when designing or coding. Also, I'm a big fan of high-contrast, well-balanced two-color design - black and white design in particular.`}
                 </p>
                 <p className="about-text">
                     {props.language === "pt-BR"
-                        ? ``
-                        : `I should say that I have confidence in my CSS, SASS, HTML,
-                    JavaScript and React.js skills. I am also well-versed in
-                    Node.js, a prolific user of Git and Github, and I can work
-                    with D3.js, too.`}
+                        ? `Eu tenho confiança na minha habilidade para trabalhar com CSS, SASS, HTML,
+						JavaScript e React.js. Além disso tenho um conhecimento básico de UX/UI, sou versado em Node.js, usuário prolífico de Git e do Github, e também sei trabalhar com D3.js.`
+                        : `I should say that I have confidence in my CSS, SASS, HTML, JavaScript and React.js skills. I also have some basic knowledge of UX/UI, am well-versed in Node.js, a prolific user of Git and Github, and I can work with D3.js, too.`}
                 </p>
             </article>
         </div>

@@ -229,11 +229,11 @@ body {
             }
             .about-text {
                 width: 85%;
+                font-family: Rubik, sans-serif;
                 text-align: justify;
                 align-self: flex-end;
                 margin: 0 0 20px 0;
                 font-size: 20px;
-                font-weight: 500;
             }
         }
     }
@@ -303,13 +303,13 @@ body {
                 width: 50%;
                 .filter-info-text {
                     width: 470px;
+                    font-family: Rubik, sans-serif;
                     text-align: justify;
                     margin: 0;
                     position: absolute;
                     left: 100px;
                     top: 50%;
-                    font-weight: 600;
-                    font-size: 28px;
+                    font-size: 22px;
                 }
             }
             .filter-menu-box {
@@ -374,7 +374,8 @@ body {
                     }
                     .display-info {
                         font-size: 20px;
-                        font-weight: 600;
+                        font-family: Rubik, sans-serif;
+                        font-weight: 500;
                         max-width: 580px;
                     }
                     .display-link-box {
@@ -494,6 +495,7 @@ body {
         top: 25px;
         .contact-content-info {
             font-size: 20px;
+            font-family: Rubik, sans-serif;
             width: 470px;
             text-align: justify;
             font-weight: 500;

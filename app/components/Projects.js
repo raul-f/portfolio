@@ -144,7 +144,7 @@ class Projects extends React.Component {
                 450
             )
         } else if (
-            window.pageYOffset > 0 &&
+            window.pageYOffset === window.innerHeight &&
             event.deltaY < 0 &&
             !this.state.animating
         ) {
@@ -172,12 +172,19 @@ class Projects extends React.Component {
 
     componentDidMount() {
         document.addEventListener("wheel", this.handleScrolling)
-        if (window.pageYOffset === window.innerHeight) {
+        if (window.pageYOffset < 100) {
+            window.scrollTo({ top: 0, behavior: "auto" })
+        } else {
+            window.scrollTo({ top: window.innerHeight, behavior: "auto" })
             this.setState({
                 rotate: this.state.rotate + 180,
                 style: { transform: "rotate(180deg)" }
             })
         }
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("wheel", this.handleScrolling)
     }
 
     render() {

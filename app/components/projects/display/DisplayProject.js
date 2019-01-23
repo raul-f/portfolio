@@ -18,7 +18,12 @@ const DisplayProject = props => {
         "pomodoro-clock": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/pomodoro-clock.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An app that allows you to easily manage your time using the Pomodoro Technique.",
+                "pt-BR":
+                    "Um aplicativo que permite o gerenciamento de tempo atráves da Técnica Pomodoro."
+            },
             link: "https://codepen.io/raul-f/full/rQXbxz",
             repoLink: "",
             type: "frontend"
@@ -39,7 +44,12 @@ const DisplayProject = props => {
         "product-landing-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/product-landing-page.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "A promotional page for a product, with an explanatory video, its features and pricing options",
+                "pt-BR":
+                    "Uma página promocional para um produto, com um vídeo explanatório, suas características e opções de preço."
+            },
             link: "https://codepen.io/raul-f/full/PxoVBv",
             repoLink: "",
             type: "frontend"
@@ -47,7 +57,12 @@ const DisplayProject = props => {
         "drum-machine": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/drum-machine.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An application that imitates some of the functionalities of a drum machine.",
+                "pt-BR":
+                    "Uma aplicação que imita algumas das funcionalidades de uma máquina de ritmos."
+            },
             link: "https://codepen.io/raul-f/full/GwzbLm",
             repoLink: "",
             type: "frontend"
@@ -55,7 +70,11 @@ const DisplayProject = props => {
         "javascript-calculator": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/javascript-calculator.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US": "An online calculator, built with JavaScript e React",
+                "pt-BR":
+                    "Uma calculadora online, construída com JavaScript e React."
+            },
             link: "https://codepen.io/raul-f/full/wQbpWJ",
             repoLink: "",
             type: "frontend"
@@ -63,7 +82,12 @@ const DisplayProject = props => {
         "markdown-previewer": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/markdown-previewer-v1.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An application that allows the preview of Github-flavored markdown",
+                "pt-BR":
+                    "Uma aplicação que permite a visualização de markdown escrito no estilo do Github."
+            },
             link: "https://codepen.io/raul-f/full/QJVqQV",
             repoLink: "",
             type: "frontend"
@@ -71,7 +95,11 @@ const DisplayProject = props => {
         "tribute-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/tribute-page.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US": "A page built to pay honors to Rosalind Franklin.",
+                "pt-BR":
+                    "Uma página construída para homenagear Rosalind Franklin."
+            },
             link: "https://codepen.io/raul-f/full/PyrVWq",
             repoLink: "",
             type: "frontend"
@@ -79,7 +107,11 @@ const DisplayProject = props => {
         "survey-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/survey-page.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US": "A page that collects a wide range of user data.",
+                "pt-BR":
+                    "Uma página que coleta uma ampla gama de dados do usuário."
+            },
             link: "https://codepen.io/raul-f/full/gBVJNP",
             repoLink: "",
             type: "frontend"
@@ -87,7 +119,10 @@ const DisplayProject = props => {
         "technical-documentation-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/technical-documentation-page.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US": "A short technical documentation of JavaScript.",
+                "pt-BR": "Uma curta documentação técnica de JavaScript."
+            },
             link: "https://codepen.io/raul-f/full/bQdGNb",
             repoLink: "",
             type: "frontend"
@@ -95,15 +130,23 @@ const DisplayProject = props => {
         "personal-portfolio-page": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/personal-portfolio-page.png",
-            description: { "en-US": "", "pt-BR": "" },
-            link: "https://raul-f.glitch.me/",
+            description: {
+                "en-US": "A previous version of this page.",
+                "pt-BR": "A versão anterior desta página."
+            },
+            link: "https://oldraul-f.glitch.me/",
             repoLink: "",
             type: "frontend"
         },
         "bar-chart": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/bar-chart.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An interactive chart representing the magnitude of the US GDP from 1947 to late 2015.",
+                "pt-BR":
+                    "Um gráfico interativo que representa a magnitude do PIB dos EUA desde 1947 até o fim de 2015."
+            },
             link: "https://codepen.io/raul-f/full/oJNXWK",
             repoLink: "",
             type: "frontend"
@@ -111,7 +154,12 @@ const DisplayProject = props => {
         "scatterplot-graph": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/scatterplot-graph.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An interactive graph representing the completion times and doping status of Tour de France competitors.",
+                "pt-BR":
+                    "Um gráfico interativo que representa os tempos de prova e status de doping de competidores do Tour de France."
+            },
             link: "https://codepen.io/raul-f/full/GPgvKx",
             repoLink: "",
             type: "frontend"
@@ -119,7 +167,12 @@ const DisplayProject = props => {
         "heat-map": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/heat-map.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "A heat map that displays which was the average temperature of the Earth every month from 1753 to 2015.",
+                "pt-BR":
+                    "Um gráfico que mostra qual foi a temperatura média da Terra todos os meses desde 1753 até 2015."
+            },
             link: "https://codepen.io/raul-f/full/MZYBmz",
             repoLink: "",
             type: "frontend"
@@ -127,7 +180,12 @@ const DisplayProject = props => {
         "choropleth-map": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/choropleth-map.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "An interactive map that displays the percentage of college graduates for every US county.",
+                "pt-BR":
+                    "Um mapa interativo que mostra a porcentagem de cidadãos graduados para cada um dos condados dos EUA."
+            },
             link: "https://codepen.io/raul-f/full/jXWbgz",
             repoLink: "",
             type: "frontend"
@@ -135,7 +193,12 @@ const DisplayProject = props => {
         "treemap-diagram": {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/treemap-diagram.png",
-            description: { "en-US": "", "pt-BR": "" },
+            description: {
+                "en-US":
+                    "A diagram that displays the highest-grossing movies of US cinema.",
+                "pt-BR":
+                    "Um diagram que mostra os filmes dos EUA que mais arrecadaram."
+            },
             link: "https://codepen.io/raul-f/full/VqjdxW",
             repoLink: "",
             type: "frontend"
