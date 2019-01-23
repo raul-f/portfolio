@@ -301,11 +301,11 @@ body {
                 }
                 .about-text {
                     width: 85%;
-                    font-family: Rubik, sans-serif;
+                    font-family: Lato, sans-serif;
                     text-align: justify;
                     align-self: flex-end;
                     margin: 0 0 20px 0;
-                    font-size: 20px;
+                    font-size: 21px;
                 }
             }
         }
@@ -375,8 +375,7 @@ body {
                     width: 50%;
                     .filter-info-text {
                         width: 470px;
-                        font-family: Rubik, sans-serif;
-                        text-align: justify;
+                        font-family: Lato, sans-serif;
                         margin: 0;
                         position: absolute;
                         left: 100px;
@@ -431,7 +430,6 @@ body {
                 color: white;
                 @include f-style(row, center, center);
                 .display-content-box {
-                    text-align: justify;
                     position: relative;
                     height: 100%;
                     width: 50%;
@@ -446,7 +444,7 @@ body {
                         }
                         .display-info {
                             font-size: 20px;
-                            font-family: Rubik, sans-serif;
+                            font-family: Lato, sans-serif;
                             font-weight: 500;
                             max-width: 580px;
                         }
@@ -567,7 +565,7 @@ body {
             top: 25px;
             .contact-content-info {
                 font-size: 20px;
-                font-family: Rubik, sans-serif;
+                font-family: Lato, sans-serif;
                 width: 470px;
                 text-align: justify;
                 font-weight: 500;

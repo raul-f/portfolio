@@ -405,12 +405,12 @@ body {
   }
   .about .about-right .about-article .about-text {
     width: 85%;
-    font-family: Rubik, sans-serif;
+    font-family: Lato, sans-serif;
     text-align: justify;
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin: 0 0 20px 0;
-    font-size: 20px;
+    font-size: 21px;
   }
   .about .navbar {
     right: -6px;
@@ -490,8 +490,7 @@ body {
   }
   .projects .content .filter .filter-info .filter-info-text {
     width: 470px;
-    font-family: Rubik, sans-serif;
-    text-align: justify;
+    font-family: Lato, sans-serif;
     margin: 0;
     position: absolute;
     left: 100px;
@@ -582,7 +581,6 @@ body {
             align-items: center;
   }
   .projects .content .display .display-content-box {
-    text-align: justify;
     position: relative;
     height: 100%;
     width: 50%;
@@ -611,7 +609,7 @@ body {
   }
   .projects .content .display .display-content-box .display-content .display-info {
     font-size: 20px;
-    font-family: Rubik, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 500;
     max-width: 580px;
   }
@@ -794,7 +792,7 @@ body {
   }
   .contact .content .contact-content-info {
     font-size: 20px;
-    font-family: Rubik, sans-serif;
+    font-family: Lato, sans-serif;
     width: 470px;
     text-align: justify;
     font-weight: 500;

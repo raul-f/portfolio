@@ -9,7 +9,7 @@ const DisplayProject = props => {
                 "en-US":
                     "A simple, single page application that lets you randomly raffle quotes curated by me and tweet them if you like.",
                 "pt-BR":
-                    "Uma aplicação simples que permite ao usuário sortear frases curadas por mim e tuitá-las."
+                    "Uma aplicação simples que permite ao usuário sortear citações curadas por mim e tuitá-las."
             },
             link: "https://codepen.io/raul-f/full/JeZEwe",
             repoLink: "",
@@ -22,7 +22,7 @@ const DisplayProject = props => {
                 "en-US":
                     "An app that allows you to easily manage your time using the Pomodoro Technique.",
                 "pt-BR":
-                    "Um aplicativo que permite o gerenciamento de tempo atráves da Técnica Pomodoro."
+                    "Uma aplicação que permite o gerenciamento de tempo atráves da Técnica Pomodoro."
             },
             link: "https://codepen.io/raul-f/full/rQXbxz",
             repoLink: "",
@@ -71,7 +71,8 @@ const DisplayProject = props => {
             screenshotUrl:
                 "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/javascript-calculator.png",
             description: {
-                "en-US": "An online calculator, built with JavaScript e React",
+                "en-US":
+                    "An online calculator, built with JavaScript and React.",
                 "pt-BR":
                     "Uma calculadora online, construída com JavaScript e React."
             },
