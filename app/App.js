@@ -7,6 +7,7 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import MobileMenu from "./components/MobileMenu"
 
 // <App /> component
 
@@ -15,7 +16,7 @@ class App extends React.Component {
         super(props)
         this.state = {
             language: "pt-BR",
-            status: false // navigator.languages[0]
+            status: true // navigator.languages[0]
         }
     }
 
@@ -32,7 +33,13 @@ class App extends React.Component {
                         path="/"
                         render={() =>
                             this.state.status ? (
-                                <Home language={this.state.language} />
+                                <div>
+                                    <MobileMenu
+                                        language={this.state.language}
+                                    />
+                                    <Home language={this.state.language} />
+                                    <div className="mobile-footer" />
+                                </div>
                             ) : (
                                 <Language
                                     changeLanguage={this.changeLanguage}
@@ -45,7 +52,13 @@ class App extends React.Component {
                         path="/about"
                         render={() =>
                             this.state.status ? (
-                                <About language={this.state.language} />
+                                <div>
+                                    <MobileMenu
+                                        language={this.state.language}
+                                    />
+                                    <About language={this.state.language} />
+                                    <div className="mobile-footer" />
+                                </div>
                             ) : (
                                 <Language
                                     changeLanguage={this.changeLanguage}
@@ -58,7 +71,13 @@ class App extends React.Component {
                         path="/projects"
                         render={() =>
                             this.state.status ? (
-                                <Projects language={this.state.language} />
+                                <div>
+                                    <MobileMenu
+                                        language={this.state.language}
+                                    />
+                                    <Projects language={this.state.language} />
+                                    <div className="mobile-footer" />
+                                </div>
                             ) : (
                                 <Language
                                     changeLanguage={this.changeLanguage}
@@ -71,7 +90,13 @@ class App extends React.Component {
                         path="/contact"
                         render={() =>
                             this.state.status ? (
-                                <Contact language={this.state.language} />
+                                <div>
+                                    <MobileMenu
+                                        language={this.state.language}
+                                    />
+                                    <Contact language={this.state.language} />
+                                    <div className="mobile-footer" />
+                                </div>
                             ) : (
                                 <Language
                                     changeLanguage={this.changeLanguage}
@@ -83,6 +108,7 @@ class App extends React.Component {
                 </div>
             </BrowserRouter>
         )
+        /**/
     }
 }
 

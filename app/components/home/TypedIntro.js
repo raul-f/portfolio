@@ -6,8 +6,8 @@ class TypedIntro extends React.Component {
         const options = {
             strings: [
                 this.props.language === "pt-BR"
-                    ? "<h1 class='intro-text'>Ol&aacute;.<br> ^500 Meu nome é <span class='white-text'>Raul Figueiredo</span>, ^350 e eu sou um <span class='white-text'>web developer</span>.</h1>"
-                    : "<h1 class='intro-text'>Hello.<br> ^500 My name is <span class='white-text'>Raul Figueiredo</span>, ^350 and I am a <span class='white-text'>web developer</span>.</h1>"
+                    ? "<h1 class='intro-text'>Ol&aacute;.<br> ^500 Meu nome é</span> <span class='mobile-hand'><span class='white-text'>Raul Figueiredo</span>,</span> ^350 e eu sou um <span class='mobile-hand'><span class='white-text'>web developer</span>.</span></h1>"
+                    : "<h1 class='intro-text'>Hello.<br> ^500 My name is <span class='mobile-hand'><span class='white-text'>Raul Figueiredo</span>,</span> ^350 and I am a <span class='mobile-hand'><span class='white-text'>web developer</span>.</span></h1>"
             ],
             typeSpeed: 50,
             showCursor: false
