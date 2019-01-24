@@ -638,6 +638,8 @@ body {
     font-size: 4.16667vw;
     font-family: Lato, sans-serif;
     font-weight: 500;
+    position: relative;
+    top: 3.125vh;
   }
   .contact .content .addresses {
     min-width: 72.22222vw;
@@ -648,7 +650,6 @@ body {
     list-style: none;
     position: relative;
     right: 3.33333vw;
-    bottom: 2.34375vh;
   }
   .contact .content .addresses .address {
     color: black;
@@ -718,12 +719,90 @@ body {
   .mobile-menu .logo {
     left: 2.77778vw;
   }
+  .projects .filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .filter .filter-info {
+    display: initial;
+    position: relative;
+    max-width: 85%;
+    height: 15.625vh;
+    font-size: 5vw;
+  }
+  .projects .filter .filter-menu {
+    position: relative;
+    top: 1.5625vh;
+  }
+  .projects .display .display-content-box {
+    top: 17.96875vh;
+  }
+  .projects .display .display-content-box .display-content {
+    width: 90%;
+    right: initial;
+    top: initial;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .projects .display .display-content-box .display-content .display-screenshot {
+    max-width: 100%;
+  }
+  .projects .display .display-content-box .display-content .display-info {
+    font-size: 5vw;
+    max-width: 90%;
+  }
+  .projects .display .display-content-box .display-content .display-link-box {
+    -ms-grid-rows: 9.72222vw 9.72222vw;
+        grid-template-rows: 9.72222vw 9.72222vw;
+  }
+  .projects .display .display-content-box .display-content .display-link-box .display-pageLink {
+    font-size: 6.94444vw;
+    line-height: 6.94444vw;
+  }
+  .projects .display .display-content-box .display-content .display-link-box .display-repoLink {
+    font-size: 6.94444vw;
+    line-height: 6.94444vw;
+  }
+  .projects .display .display-menu-box {
+    height: 23.4375vh;
+    top: 20.3125vh;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .projects .display .display-menu-box .display-menu .menu-title {
+    margin: 0;
+    display: initial;
+    font-weight: 800;
+    font-size: 6.11111vw;
+  }
+  .projects .display .display-menu-box .display-menu .menu-break {
+    margin: 0 0 2.77778vw;
+    width: 100%;
+    display: initial;
+  }
+  .projects .scroll-btn {
+    right: 5.55556vw;
+    bottom: 5.46875vh;
+  }
+  .projects .watermark {
+    top: 51%;
+    right: -18.05556vw;
+    z-index: 400;
+  }
   .contact .content .contact-content-info {
-    margin-top: 2.77778vw;
     font-size: 4.72222vw;
     font-family: Lato, sans-serif;
     font-weight: 500;
-    margin-bottom: 2.77778vw;
+  }
+  .contact .content .addresses {
+    top: 2.34375vh;
+  }
+  .contact .copyright-text {
+    padding-bottom: 4.6875vh;
   }
 }
 
@@ -1610,6 +1689,22 @@ body {
       color: white;
       font-size: 2.04978vw;
     }
+  }
+}
+
+@media (min-width: 1250px) and (min-width: 1900px) {
+  .projects {
+    background-position-x: -25%;
+  }
+  .projects .content .display .display-content-box .display-content {
+    left: 3.66032vw;
+    top: 10.98097vw;
+  }
+  .projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
+    font-size: 2.19619vw;
+  }
+  .projects .content .display .display-content-box .display-content .display-link-box .display-repoLink {
+    font-size: 2.19619vw;
   }
 }
 /*# sourceMappingURL=main.css.map */

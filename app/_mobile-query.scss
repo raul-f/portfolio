@@ -383,6 +383,8 @@
                 font-size: (15 / $scalew) * 100vw;
                 font-family: Lato, sans-serif;
                 font-weight: 500;
+                position: relative;
+                top: (20 / $scaleh) * 100vh;
             }
             .addresses {
                 min-width: (260 / $scalew) * 100vw;
@@ -393,7 +395,7 @@
                 list-style: none;
                 position: relative;
                 right: (12 / $scalew) * 100vw;
-                bottom: (15 / $scaleh) * 100vh;
+                //top: (25 / $scaleh) * 100vh;
                 .address {
                     color: black;
                     margin: (15 / $scaleh) * 100vh 0;
@@ -455,15 +457,96 @@
                 left: (10 / $scalew) * 100vw;
             }
         }
+        .projects {
+            .filter {
+                flex-direction: column;
+                .filter-info {
+                    display: initial;
+                    position: relative;
+                    max-width: 85%;
+                    height: (100 / $scaleh) * 100vh;
+                    font-size: (18 / $scalew) * 100vw;
+                }
+                .filter-menu {
+                    position: relative;
+                    top: (10 / $scaleh) * 100vh;
+                }
+            }
+            .display {
+                .display-content-box {
+                    top: (115 / $scaleh) * 100vh;
+                    .display-content {
+                        width: 90%;
+                        right: initial;
+                        top: initial;
+                        align-items: flex-start;
+                        .display-screenshot {
+                            max-width: 100%;
+                        }
+                        .display-info {
+                            font-size: (18 / $scalew) * 100vw;
+                            max-width: 90%;
+                        }
+                        .display-link-box {
+                            grid-template-rows: (35 / $scalew) * 100vw (
+                                    35 / $scalew
+                                ) * 100vw;
+                            .display-pageLink {
+                                font-size: (25 / $scalew) * 100vw;
+                                line-height: (25 / $scalew) * 100vw;
+                            }
+                            .display-repoLink {
+                                font-size: (25 / $scalew) * 100vw;
+                                line-height: (25 / $scalew) * 100vw;
+                            }
+                        }
+                    }
+                }
+                .display-menu-box {
+                    height: (150 / $scaleh) * 100vh;
+                    top: (130 / $scaleh) * 100vh;
+                    align-items: flex-start;
+                    .display-menu {
+                        .menu-title {
+                            margin: 0;
+                            display: initial;
+                            font-weight: 800;
+                            font-size: (22 / $scalew) * 100vw;
+                        }
+                        .menu-break {
+                            margin: 0 0 (10 / $scalew) * 100vw;
+                            width: 100%;
+                            display: initial;
+                        }
+                        //max-width: 85%;
+                    }
+                }
+            }
+            .scroll-btn {
+                right: (20 / $scalew) * 100vw;
+                bottom: (35 / $scaleh) * 100vh;
+            }
+            .watermark {
+                top: 51%;
+                right: -(65 / $scalew) * 100vw;
+                z-index: 400;
+            }
+        }
         .contact {
             .content {
                 .contact-content-info {
-                    margin-top: (10 / $scalew) * 100vw;
+                    //margin-top: (10 / $scalew) * 100vw;
                     font-size: (17 / $scalew) * 100vw;
                     font-family: Lato, sans-serif;
                     font-weight: 500;
-                    margin-bottom: (10 / $scalew) * 100vw;
+                    //margin-bottom: (10 / $scalew) * 100vw;
                 }
+                .addresses {
+                    top: (15 / $scaleh) * 100vh;
+                }
+            }
+            .copyright-text {
+                padding-bottom: (30 / $scaleh) * 100vh;
             }
         }
     }

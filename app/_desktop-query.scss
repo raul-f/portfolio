@@ -542,4 +542,28 @@
             font-size: (28 / $scale) * 100vw;
         }
     }
+
+    @media (min-width: 1900px) {
+        .projects {
+            background-position-x: -25%;
+            .content {
+                .display {
+                    .display-content-box {
+                        .display-content {
+                            left: (50 / $scale) * 100vw;
+                            top: (150 / $scale) * 100vw;
+                            .display-link-box {
+                                .display-pageLink {
+                                    font-size: (30 / $scale) * 100vw;
+                                }
+                                .display-repoLink {
+                                    font-size: (30 / $scale) * 100vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

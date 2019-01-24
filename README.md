@@ -1,6 +1,6 @@
 # portfolio
 
-This is the repository for the page that displays my projects.
+This is the repository for the page that displays my projects, and is my magnum opus (so far). See it live at [https://raul-f.glitch.me/](https://raul-f.glitch.me/) - and please report any bug you may find!
 
 ## Built with
 
