@@ -49,8 +49,8 @@
             .logo-name {
                 padding-left: (5 / $scalew) * 100vw;
                 color: white;
-                font-size: (27 / $scaleh) * 100vh;
-                line-height: (27 / $scaleh) * 100vh;
+                font-size: (27 / $scalew) * 100vw;
+                line-height: (27 / $scalew) * 100vw;
                 font-weight: 900;
             }
         }
@@ -92,7 +92,8 @@
             @include f-style(row, center, flex-start);
             .link-icon {
                 color: white;
-                margin: 0 (20 / $scalew) * 100vw;
+                margin-left: (20 / $scalew) * 100vw;
+                margin-right: (20 / $scalew) * 100vw;
             }
             grid-area: links;
         }
@@ -118,7 +119,8 @@
         .lang-options {
             width: (180 / $scalew) * 100vw;
             @include f-style(row, space-between, center);
-            margin: (20 / $scaleh) * 100vh 0;
+            margin-top: (20 / $scaleh) * 100vh;
+            margin-bottom: (20 / $scaleh) * 100vh;
             .lang-link {
                 padding: 0;
                 border: none;
@@ -133,7 +135,10 @@
     }
 
     .home {
+        position: absolute;
         height: 100vh;
+        width: 100%;
+        top: 0;
         background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
         background-size: cover;
         background-position: 50%;
@@ -172,21 +177,24 @@
             @include f-style(column, flex-start, center);
             .about-article {
                 width: 95%;
-                margin-top: (120 / $scaleh) * 100vh;
+                margin-top: (140 / $scaleh) * 100vh;
                 margin-bottom: (40 / $scaleh) * 100vh;
                 @include f-style(column, flex-start, center);
                 .about-title {
                     width: (300 / $scalew) * 100vw;
                     font-size: (28 / $scalew) * 100vw;
                     align-self: flex-start;
-                    margin: 0 0 (10 / $scaleh) * 100vh (10 / $scalew) * 100vw;
+                    margin: 0;
+                    margin-bottom: (10 / $scaleh) * 100vh;
+                    margin-left: (10 / $scalew) * 100vw;
                     font-weight: 800;
                 }
                 .about-text {
                     width: 85%;
                     font-family: Lato, sans-serif;
                     align-self: flex-end;
-                    margin: 0 0 (10 / $scaleh) * 100vh 0;
+                    margin: 0;
+                    margin-bottom: (10 / $scaleh) * 100vh;
                     font-size: (17 / $scalew) * 100vw;
                 }
             }
@@ -236,7 +244,8 @@
                 }
                 .menu-break {
                     width: 100%;
-                    margin-bottom: (10 / $scalew) * 100vw;
+                    margin: 0;
+                    margin-bottom: (10 / $scaleh) * 100vh;
                 }
                 .filter-option {
                     padding: 0;
@@ -271,8 +280,8 @@
                     width: (265 / $scalew) * 100vw;
                     @include f-style(column, flex-start, flex-end);
                     position: relative;
-                    top: (15 / $scalew) * 100vw;
-                    right: (20 / $scalew) * 100vw;
+                    top: (15 / $scaleh) * 100vh;
+                    right: (30 / $scalew) * 100vw;
                     .display-screenshot {
                         max-width: (265 / $scalew) * 100vw;
                     }
@@ -282,14 +291,13 @@
                         font-weight: 500;
                     }
                     .display-link-box {
+                        $row-height: (25 / $scaleh) * 100vh;
                         width: 100%;
                         display: grid;
                         grid-template-areas:
                             "page-link"
                             "repo-link";
-                        grid-template-rows: (25 / $scalew) * 100vw (
-                                25 / $scalew
-                            ) * 100vw;
+                        grid-template-rows: $row-height $row-height;
                         .display-pageLink {
                             font-size: (20 / $scalew) * 100vw;
                             font-weight: 600;
@@ -314,13 +322,19 @@
                 height: 50%;
                 @include f-style(column, center, flex-end);
                 .display-menu {
+                    position: relative;
+                    top: (15 / $scaleh) * 100vh;
                     @include f-style(column, center, flex-start);
                     width: 90vw;
                     .menu-title {
-                        display: none;
+                        margin: 0;
+                        font-weight: 800;
+                        font-size: (22 / $scalew) * 100vw;
                     }
                     .menu-break {
-                        display: none;
+                        margin: 0;
+                        margin-bottom: (10 / $scaleh) * 100vh;
+                        width: 100%;
                     }
                     .display-option {
                         padding: 0;
@@ -398,7 +412,8 @@
                 //top: (25 / $scaleh) * 100vh;
                 .address {
                     color: black;
-                    margin: (15 / $scaleh) * 100vh 0;
+                    margin-top: (15 / $scaleh) * 100vh;
+                    margin-bottom: (15 / $scaleh) * 100vh;
                     padding: 0;
                     @include f-style(row, flex-start, center);
                     .address-icon {
@@ -488,9 +503,8 @@
                             max-width: 90%;
                         }
                         .display-link-box {
-                            grid-template-rows: (35 / $scalew) * 100vw (
-                                    35 / $scalew
-                                ) * 100vw;
+                            $row-height: (35 / $scaleh) * 100vh;
+                            grid-template-rows: $row-height $row-height;
                             .display-pageLink {
                                 font-size: (25 / $scalew) * 100vw;
                                 line-height: (25 / $scalew) * 100vw;
@@ -504,22 +518,8 @@
                 }
                 .display-menu-box {
                     height: (150 / $scaleh) * 100vh;
-                    top: (130 / $scaleh) * 100vh;
+                    top: (110 / $scaleh) * 100vh;
                     align-items: flex-start;
-                    .display-menu {
-                        .menu-title {
-                            margin: 0;
-                            display: initial;
-                            font-weight: 800;
-                            font-size: (22 / $scalew) * 100vw;
-                        }
-                        .menu-break {
-                            margin: 0 0 (10 / $scalew) * 100vw;
-                            width: 100%;
-                            display: initial;
-                        }
-                        //max-width: 85%;
-                    }
                 }
             }
             .scroll-btn {

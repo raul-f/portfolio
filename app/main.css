@@ -70,8 +70,8 @@ body {
   .mobile-menu .logo .logo-name {
     padding-left: 1.38889vw;
     color: white;
-    font-size: 4.21875vh;
-    line-height: 4.21875vh;
+    font-size: 7.5vw;
+    line-height: 7.5vw;
     font-weight: 900;
   }
   .mobile-menu .menu-btn {
@@ -170,7 +170,8 @@ body {
   }
   .mobile-menu .link-box .link-icon {
     color: white;
-    margin: 0 5.55556vw;
+    margin-left: 5.55556vw;
+    margin-right: 5.55556vw;
   }
   .language {
     height: 100vh;
@@ -214,7 +215,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 3.125vh 0;
+    margin-top: 3.125vh;
+    margin-bottom: 3.125vh;
   }
   .language .lang-options .lang-link {
     padding: 0;
@@ -227,7 +229,10 @@ body {
     width: 19.44444vw;
   }
   .home {
+    position: absolute;
     height: 100vh;
+    width: 100%;
+    top: 0;
     background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
     background-size: cover;
     background-position: 50%;
@@ -291,7 +296,7 @@ body {
   }
   .about .about-right .about-article {
     width: 95%;
-    margin-top: 18.75vh;
+    margin-top: 21.875vh;
     margin-bottom: 6.25vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -312,7 +317,9 @@ body {
     font-size: 7.77778vw;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin: 0 0 1.5625vh 2.77778vw;
+    margin: 0;
+    margin-bottom: 1.5625vh;
+    margin-left: 2.77778vw;
     font-weight: 800;
   }
   .about .about-right .about-article .about-text {
@@ -320,7 +327,8 @@ body {
     font-family: Lato, sans-serif;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 1.5625vh 0;
+    margin: 0;
+    margin-bottom: 1.5625vh;
     font-size: 4.72222vw;
   }
   .about .watermark {
@@ -394,7 +402,8 @@ body {
   }
   .projects .filter .filter-menu .menu-break {
     width: 100%;
-    margin-bottom: 2.77778vw;
+    margin: 0;
+    margin-bottom: 1.5625vh;
   }
   .projects .filter .filter-menu .filter-option {
     padding: 0;
@@ -465,8 +474,8 @@ body {
         -ms-flex-align: end;
             align-items: flex-end;
     position: relative;
-    top: 4.16667vw;
-    right: 5.55556vw;
+    top: 2.34375vh;
+    right: 8.33333vw;
   }
   .projects .display .display-content-box .display-content .display-screenshot {
     max-width: 73.61111vw;
@@ -481,8 +490,8 @@ body {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "page-link" "repo-link";
-    -ms-grid-rows: 6.94444vw 6.94444vw;
-        grid-template-rows: 6.94444vw 6.94444vw;
+    -ms-grid-rows: 3.90625vh 3.90625vh;
+        grid-template-rows: 3.90625vh 3.90625vh;
   }
   .projects .display .display-content-box .display-content .display-link-box .display-pageLink {
     font-size: 5.55556vw;
@@ -524,6 +533,8 @@ body {
             align-items: flex-end;
   }
   .projects .display .display-menu-box .display-menu {
+    position: relative;
+    top: 2.34375vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -540,10 +551,14 @@ body {
     width: 90vw;
   }
   .projects .display .display-menu-box .display-menu .menu-title {
-    display: none;
+    margin: 0;
+    font-weight: 800;
+    font-size: 6.11111vw;
   }
   .projects .display .display-menu-box .display-menu .menu-break {
-    display: none;
+    margin: 0;
+    margin-bottom: 1.5625vh;
+    width: 100%;
   }
   .projects .display .display-menu-box .display-menu .display-option {
     padding: 0;
@@ -653,7 +668,8 @@ body {
   }
   .contact .content .addresses .address {
     color: black;
-    margin: 2.34375vh 0;
+    margin-top: 2.34375vh;
+    margin-bottom: 2.34375vh;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -755,8 +771,8 @@ body {
     max-width: 90%;
   }
   .projects .display .display-content-box .display-content .display-link-box {
-    -ms-grid-rows: 9.72222vw 9.72222vw;
-        grid-template-rows: 9.72222vw 9.72222vw;
+    -ms-grid-rows: 5.46875vh 5.46875vh;
+        grid-template-rows: 5.46875vh 5.46875vh;
   }
   .projects .display .display-content-box .display-content .display-link-box .display-pageLink {
     font-size: 6.94444vw;
@@ -768,21 +784,10 @@ body {
   }
   .projects .display .display-menu-box {
     height: 23.4375vh;
-    top: 20.3125vh;
+    top: 17.1875vh;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-  .projects .display .display-menu-box .display-menu .menu-title {
-    margin: 0;
-    display: initial;
-    font-weight: 800;
-    font-size: 6.11111vw;
-  }
-  .projects .display .display-menu-box .display-menu .menu-break {
-    margin: 0 0 2.77778vw;
-    width: 100%;
-    display: initial;
   }
   .projects .scroll-btn {
     right: 5.55556vw;
@@ -937,7 +942,7 @@ body {
   }
   .navbar {
     background-color: black;
-    height: 5.85652vw;
+    height: 11.71875vh;
     width: 40.26354vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -954,12 +959,13 @@ body {
             align-items: center;
     position: absolute;
     right: 0;
-    top: 3.66032vh;
+    top: 6.51042vh;
     z-index: 500;
   }
   .navbar .navlink {
     text-decoration: none;
-    margin: 0 3.66032vh;
+    margin-left: 2.56223vw;
+    margin-right: 2.56223vw;
     color: white;
     font-size: 1.46413vw;
     font-weight: 600;
@@ -969,8 +975,8 @@ body {
   }
   .logo {
     width: 31.47877vw;
-    height: 11.71303vw;
-    padding: 1.0981vw 1.46413vw;
+    height: 20.83333vh;
+    padding: 1.95312vh 1.46413vw;
     position: absolute;
     top: 0;
     left: 7.32064vw;
@@ -993,18 +999,20 @@ body {
   }
   .logo .profile-picture {
     border-radius: 50%;
-    height: 7.32064vw;
+    height: 13.02083vh;
   }
   .logo .logo-name {
     color: white;
     font-size: 3.66032vw;
     line-height: 3.66032vw;
-    margin: 0 0.73206vw;
+    margin: 0;
+    margin-right: 0.73206vw;
+    margin-left: 0.73206vw;
     font-weight: 900;
   }
   .link-box {
-    height: 5.85652vw;
-    width: 21.96193vw;
+    height: 11.71875vh;
+    width: 19.76574vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1020,7 +1028,7 @@ body {
             align-items: center;
     background-color: black;
     position: absolute;
-    bottom: 4.39239vw;
+    bottom: 7.8125vh;
     left: 7.32064vw;
     z-index: 400;
   }
@@ -1079,7 +1087,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1.46413vw 0;
+    margin-top: 2.60417vh;
+    margin-bottom: 2.60417vh;
   }
   .language .lang-options .lang-link {
     padding: 0;
@@ -1180,12 +1189,12 @@ body {
             align-items: center;
     position: relative;
     top: auto;
-    bottom: 3.66032vw;
+    bottom: 6.51042vh;
     left: 0;
   }
   .about .about-left .logo .profile-picture {
     border-radius: 50%;
-    height: 11.71303vw;
+    height: 20.83333vh;
   }
   .about .about-left .logo .logo-name {
     font-size: 5.85652vw;
@@ -1200,7 +1209,7 @@ body {
   .about .about-right .about-article {
     width: 90%;
     position: absolute;
-    top: 10.98097vw;
+    top: 19.53125vh;
     left: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1220,7 +1229,8 @@ body {
     font-size: 3.66032vw;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin: 0 0 1.46413vw 0;
+    margin: 0;
+    margin-bottom: 2.60417vh;
     font-weight: 800;
   }
   .about .about-right .about-article .about-text {
@@ -1229,11 +1239,9 @@ body {
     text-align: justify;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 1.46413vw 0;
+    margin: 0;
+    margin-bottom: 2.60417vh;
     font-size: 1.53734vw;
-  }
-  .about .navbar {
-    right: -6px;
   }
   .about .navbar #about-link {
     color: #707070;
@@ -1245,7 +1253,7 @@ body {
   }
   .about .link-box {
     position: fixed;
-    bottom: 13.17716vw;
+    bottom: 23.4375vh;
     left: 14.01903vw;
   }
   .projects {
@@ -1360,7 +1368,7 @@ body {
   }
   .projects .content .filter .filter-menu-box .filter-menu .menu-break {
     width: 100%;
-    margin: 0 0 0.73206vw;
+    margin-right: 0.73206vw;
   }
   .projects .content .filter .filter-menu-box .filter-menu .filter-option {
     padding: 0;
@@ -1409,7 +1417,7 @@ body {
     width: 42.45974vw;
     position: absolute;
     left: 3.66032vw;
-    top: 3.66032vw;
+    top: 6.51042vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1512,7 +1520,7 @@ body {
   }
   .projects .content .display .display-menu-box .display-menu .menu-break {
     width: 100%;
-    margin: 0 0 0.73206vw;
+    margin-bottom: 1.30208vh;
   }
   .projects .content .display .display-menu-box .display-menu .display-option {
     padding: 0;
@@ -1536,8 +1544,8 @@ body {
     font-size: 2.04978vw;
   }
   .projects .scroll-btn {
-    height: 2.92826vw;
-    width: 2.92826vw;
+    height: 40px;
+    width: 40px;
     background-color: white;
     border: none;
     border-radius: 50%;
@@ -1560,7 +1568,7 @@ body {
             align-items: center;
     position: fixed;
     right: 3.66032vw;
-    bottom: 3.66032vw;
+    bottom: 6.51042vh;
     z-index: 450;
   }
   .projects .scroll-btn i {
@@ -1606,9 +1614,11 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    padding: 0 3.66032vw 0 7.32064vw;
+    padding: 0;
+    padding-right: 3.66032vw;
+    padding-left: 7.32064vw;
     position: relative;
-    top: 1.83016vw;
+    top: 3.25521vh;
   }
   .contact .content .contact-content-info {
     font-size: 1.53734vw;
@@ -1624,11 +1634,11 @@ body {
     padding: 0;
     list-style: none;
     position: relative;
-    bottom: 1.0981vw;
+    bottom: 1.95312vh;
   }
   .contact .content .addresses .address {
     color: black;
-    margin: 1.83016vw 0;
+    margin: 3.25521vh 0;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1663,7 +1673,7 @@ body {
   }
   .contact .copyright-text {
     position: absolute;
-    bottom: 2.19619vw;
+    bottom: 3.90625vh;
     right: 5.85652vw;
     font-size: 2.56223vw;
     font-weight: 600;
@@ -1698,7 +1708,7 @@ body {
   }
   .projects .content .display .display-content-box .display-content {
     left: 3.66032vw;
-    top: 10.98097vw;
+    top: 19.53125vh;
   }
   .projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
     font-size: 2.19619vw;
@@ -1706,5 +1716,39 @@ body {
   .projects .content .display .display-content-box .display-content .display-link-box .display-repoLink {
     font-size: 2.19619vw;
   }
+}
+
+@media (min-width: 1250px) {
+  /*
+    @media (max-width: 1300px) {
+        .projects {
+            background-position-x: -25%;
+            .content {
+                .filter {
+                    .filter-info {
+                        .filter-info-text {
+                            font-size: (25 / $scaleW) * 100vw;
+                        }
+                    }
+                }
+                .display {
+                    .display-content-box {
+                        .display-content {
+                            left: (50 / $scaleW) * 100vw;
+                            top: (150 / $scaleH) * 100vh;
+                            .display-link-box {
+                                .display-pageLink {
+                                    font-size: (30 / $scaleW) * 100vw;
+                                }
+                                .display-repoLink {
+                                    font-size: (30 / $scaleW) * 100vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }*/
 }
 /*# sourceMappingURL=main.css.map */

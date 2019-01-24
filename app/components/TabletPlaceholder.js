@@ -11,8 +11,8 @@ const TabletPlaceholder = props => {
             </h1>
             <p>
                 {props.language === "pt-BR"
-                    ? "Veja o site no computador ou no celular!"
-                    : "Check this website on desktop or mobile!"}
+                    ? "Veja o site no celular ou no computador!"
+                    : "Check this website on mobile or desktop!"}
             </p>
         </div>
     )

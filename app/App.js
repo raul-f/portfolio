@@ -17,7 +17,7 @@ class App extends React.Component {
         super(props)
         this.state = {
             language: "pt-BR",
-            status: true // navigator.languages[0]
+            status: false // navigator.languages[0]
         }
     }
 

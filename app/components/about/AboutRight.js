@@ -19,8 +19,8 @@ const AboutRight = props => {
                 </p>
                 <p className="about-text">
                     {props.language === "pt-BR"
-                        ? `Eu sou um desenvolvedor front-end de 21 anos morando em São Paulo, Brasil. Além de design e programação, eu amo gatos, pássaros, crianças, videogames com histórias interessantes e moda. Além disso, sou um grande fã de design bicolor de alto contraste - preto e branco em particular.`
-                        : `I'm a 21-year-old front-end web developer based in São Paulo, Brasil. Besides design and coding, I love cats, birds, kids, story-driven video games and fashion. Also, I'm a big fan of high-contrast, well-balanced two-color design - black and white design in particular.` /*I have ADHD, and my friends say that most of the time my behavior is between that of a cat and a kid - but I'm always hyperfocused when designing or coding.*/}
+                        ? `Eu sou um web designer e desenvolvedor front-end de 21 anos morando em São Paulo, Brasil. Além de design e programação, eu amo gatos, pássaros, crianças, videogames com histórias interessantes e moda. Além disso, sou um grande fã de design bicolor de alto contraste - preto e branco em particular.`
+                        : `I'm a 21-year-old web designer and front-end web developer based in São Paulo, Brasil. Besides design and coding, I love cats, birds, kids, story-driven video games and fashion. Also, I'm a big fan of high-contrast, well-balanced two-color design - black and white design in particular.` /*I have ADHD, and my friends say that most of the time my behavior is between that of a cat and a kid - but I'm always hyperfocused when designing or coding.*/}
                 </p>
                 <p className="about-text">
                     {props.language === "pt-BR"
