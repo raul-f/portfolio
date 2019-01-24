@@ -1,0 +1,34 @@
+// variables
+
+$gray: #707070;
+$lightgray: #a0a0a0;
+
+// Mixins
+
+@mixin f-style($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// animation
+
+// Rules
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+// Shared assets
+
+// Media queries
+
+@import "mobile-query";
+
+@import "tablet-query";
+
+@import "desktop-query";

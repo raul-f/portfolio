@@ -1,13 +1,14 @@
 import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 
-require("./style.css")
+require("./main.css")
 import Language from "./components/Language"
 import Home from "./components/Home"
 import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import MobileMenu from "./components/MobileMenu"
+import TabletPlaceholder from "./components/TabletPlaceholder"
 
 // <App /> component
 
@@ -16,7 +17,7 @@ class App extends React.Component {
         super(props)
         this.state = {
             language: "pt-BR",
-            status: true // navigator.languages[0]
+            status: false // navigator.languages[0]
         }
     }
 
@@ -34,11 +35,13 @@ class App extends React.Component {
                         render={() =>
                             this.state.status ? (
                                 <div>
+                                    <TabletPlaceholder
+                                        language={this.state.language}
+                                    />
                                     <MobileMenu
                                         language={this.state.language}
                                     />
                                     <Home language={this.state.language} />
-                                    <div className="mobile-footer" />
                                 </div>
                             ) : (
                                 <Language
@@ -53,11 +56,13 @@ class App extends React.Component {
                         render={() =>
                             this.state.status ? (
                                 <div>
+                                    <TabletPlaceholder
+                                        language={this.state.language}
+                                    />
                                     <MobileMenu
                                         language={this.state.language}
                                     />
                                     <About language={this.state.language} />
-                                    <div className="mobile-footer" />
                                 </div>
                             ) : (
                                 <Language
@@ -72,11 +77,13 @@ class App extends React.Component {
                         render={() =>
                             this.state.status ? (
                                 <div>
+                                    <TabletPlaceholder
+                                        language={this.state.language}
+                                    />
                                     <MobileMenu
                                         language={this.state.language}
                                     />
                                     <Projects language={this.state.language} />
-                                    <div className="mobile-footer" />
                                 </div>
                             ) : (
                                 <Language
@@ -91,11 +98,13 @@ class App extends React.Component {
                         render={() =>
                             this.state.status ? (
                                 <div>
+                                    <TabletPlaceholder
+                                        language={this.state.language}
+                                    />
                                     <MobileMenu
                                         language={this.state.language}
                                     />
                                     <Contact language={this.state.language} />
-                                    <div className="mobile-footer" />
                                 </div>
                             ) : (
                                 <Language

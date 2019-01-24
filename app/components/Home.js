@@ -13,6 +13,7 @@ const Home = props => {
             <Navbar language={props.language} />
             <TypedIntro language={props.language} />
             <LinkBox />
+            <div className="mobile-footer" />
         </div>
     )
 }

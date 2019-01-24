@@ -14,6 +14,7 @@ const About = props => {
             <AboutRight language={props.language} />
             <Watermark language={props.language} page="about" />
             <LinkBox />
+            <div className="mobile-footer" />
         </div>
     )
 }

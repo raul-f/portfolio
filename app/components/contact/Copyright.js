@@ -9,9 +9,11 @@ const Copyright = props => (
         }
     >
         &copy; 2019 Raul Figueiredo.
-        {props.language === "pt-BR"
-            ? " Todos os direitos reservados"
-            : " All rights reserved"}
+        <span className="mobile-help">
+            {props.language === "pt-BR"
+                ? " Todos os direitos reservados"
+                : " All rights reserved"}
+        </span>
         .
     </h2>
 )

@@ -75,48 +75,26 @@ class Projects extends React.Component {
     }
 
     handleScrollBtn = () => {
-        // console.log(`The window's inner height is ${window.innerHeight}`)
-        // console.log(`The window's outer height is ${window.outerHeight}`)
-        //console.log( `The window's Y page offset was ${ window.pageYOffset} when the button was clicked` )
-        if (
-            window.pageYOffset > window.innerHeight / 1.25 &&
-            !this.state.animating
-        ) {
-            window.scrollTo({ top: 0, behavior: "smooth" })
+        if (!this.state.animating) {
+            if (window.pageYOffset === window.innerHeight) {
+                window.scrollTo({ top: 0, behavior: "smooth" })
+            } else {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                })
+            }
             this.setState(
                 {
                     rotate: this.state.rotate + 180,
                     animating: true
                 },
                 () => {
-                    anime({ ...this.state.settings, rotate: this.state.rotate })
+                    anime({
+                        ...this.state.settings,
+                        rotate: this.state.rotate
+                    }).finished.then(() => this.setState({ animating: false }))
                 }
-            )
-            setTimeout(
-                function() {
-                    this.setState({ animating: false })
-                }.bind(this),
-                450
-            )
-        } else if (!this.state.animating) {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: "smooth"
-            })
-            this.setState(
-                {
-                    rotate: this.state.rotate + 180,
-                    animating: true
-                },
-                () => {
-                    anime({ ...this.state.settings, rotate: this.state.rotate })
-                }
-            )
-            setTimeout(
-                function() {
-                    this.setState({ animating: false })
-                }.bind(this),
-                450
             )
         }
     }
@@ -135,14 +113,11 @@ class Projects extends React.Component {
                     animating: true
                 },
                 () => {
-                    anime({ ...this.state.settings, rotate: this.state.rotate })
+                    anime({
+                        ...this.state.settings,
+                        rotate: this.state.rotate
+                    }).finished.then(() => this.setState({ animating: false }))
                 }
-            )
-            setTimeout(
-                function() {
-                    this.setState({ animating: false })
-                }.bind(this),
-                450
             )
         } else if (
             window.pageYOffset === window.innerHeight &&
@@ -159,14 +134,11 @@ class Projects extends React.Component {
                     animating: true
                 },
                 () => {
-                    anime({ ...this.state.settings, rotate: this.state.rotate })
+                    anime({
+                        ...this.state.settings,
+                        rotate: this.state.rotate
+                    }).finished.then(() => this.setState({ animating: false }))
                 }
-            )
-            setTimeout(
-                function() {
-                    this.setState({ animating: false })
-                }.bind(this),
-                450
             )
         }
     }
@@ -193,7 +165,7 @@ class Projects extends React.Component {
         return (
             <div id="projects" className="projects">
                 <div className="projects-background" />
-                <MobileMenu />
+                <MobileMenu language={this.props.language} />
                 <Logo />
                 <Navbar language={this.props.language} />
                 <div className="content">
@@ -219,6 +191,7 @@ class Projects extends React.Component {
                 />
                 <Watermark language={this.props.language} page="projects" />
                 <LinkBox />
+                <div className="mobile-footer" />
             </div>
         )
     }

@@ -20,6 +20,7 @@ const Contact = props => {
             <Copyright language={props.language} />
             <Watermark language={props.language} page="contact" />
             <LinkBox />
+            <div className="mobile-footer" />
         </div>
     )
 }

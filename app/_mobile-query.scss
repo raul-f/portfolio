@@ -1,46 +1,21 @@
-// variables
-
-$gray: #707070;
-$lightgray: #a0a0a0;
-
-// Mixins
-
-@mixin f-style($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-// animation
-
-@keyframes activate {
-    100% {
-        color: white;
-        font-size: 28px;
-    }
-}
-
-// Rules
-
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-// Shared assets
-
-// Media queries
-
 @media (max-width: 500px) {
-    $scalew: 414;
-    $scaleh: 736;
+    $scalew: 360;
+    $scaleh: 640;
+
     .navbar,
     .logo,
-    .link-box {
+    .link-box,
+    .tablet-placeholder {
         display: none;
+    }
+
+    .watermark {
+        font-size: (40 / $scalew) * 100vw;
+        font-weight: 600;
+        color: rgba($color: $gray, $alpha: 0.7);
+        position: fixed;
+        transform: rotate(90deg);
+        pointer-events: none;
     }
 
     .mobile-menu {
@@ -62,19 +37,20 @@ body {
             width: (230 / $scalew) * 100vw;
             text-decoration: none;
             grid-area: logo;
+            align-self: center;
             justify-self: center;
             position: relative;
-            left: (30 / $scalew) * 100vw;
+            left: (25 / $scalew) * 100vw;
             @include f-style(row, center, center);
             .profile-picture {
                 border-radius: 50%;
-                height: (50 / $scaleh) * 100vh;
+                height: (55 / $scaleh) * 100vh;
             }
             .logo-name {
-                padding-left: (10 / $scalew) * 100vw;
+                padding-left: (5 / $scalew) * 100vw;
                 color: white;
-                font-size: (26 / $scalew) * 100vw;
-                line-height: (26 / $scalew) * 100vw;
+                font-size: (27 / $scaleh) * 100vh;
+                line-height: (27 / $scaleh) * 100vh;
                 font-weight: 900;
             }
         }
@@ -89,7 +65,7 @@ body {
             @include f-style(row, flex-start, center);
         }
         .outer-navbox {
-            min-height: (510 / $scaleh) * 100vh;
+            min-height: (410 / $scaleh) * 100vh;
             width: 100%;
             grid-area: table;
             @include f-style(column, center, center);
@@ -129,9 +105,10 @@ body {
         height: 100vh;
         color: white;
         background-color: black;
+        text-align: center;
         h1 {
             margin: 0;
-            font-size: (30 / $scalew) * 100vw;
+            font-size: (28 / $scalew) * 100vw;
             font-weight: 700;
             .gray-text {
                 color: $gray;
@@ -171,7 +148,7 @@ body {
         }
         .intro-text {
             position: relative;
-            font-size: 45px;
+            font-size: (40 / $scalew) * 100vw;
             .mobile-hand {
                 display: block;
                 .white-text {
@@ -182,278 +159,50 @@ body {
         }
     }
 
-    .projects {
-        padding: 100px 0 40px;
-        .display {
-            display: none;
-        }
-    }
-
-    .mobile-footer {
-        height: 30px;
-        width: 100%;
-        background-color: black;
-        position: absolute;
-        bottom: 0;
-        z-index: 1000;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 1250px) {
-    .navbar {
-        display: none;
-    }
-    .link-box {
-        display: none;
-    }
-}
-
-@media (min-width: 1250px) {
-    $scale: 1366;
-
-    ::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: $gray;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: $lightgray;
-    }
-
-    // Shared assets
-
-    .mobile-menu,
-    .mobile-footer {
-        display: none;
-    }
-
-    .navbar {
-        background-color: black;
-        height: (80 / $scale) * 100vw;
-        width: (550 / $scale) * 100vw;
-        @include f-style(row, center, center);
-        position: absolute;
-        right: 0;
-        top: (50 / $scale) * 100vh;
-        .navlink {
-            text-decoration: none;
-            margin: 0 ((50 / $scale) * 100vh);
-            color: white;
-            font-size: (20 / $scale) * 100vw;
-            font-weight: 600;
-            .gray-point {
-                color: $gray;
-            }
-        }
-        z-index: 500;
-    }
-
-    .logo {
-        width: 430px;
-        height: 160px;
-        padding: 15px 20px;
+    .about {
+        min-height: 100vh;
         position: absolute;
         top: 0;
-        left: 100px;
-        background-color: black;
-        @include f-style(row, center, flex-end);
-        text-decoration: none;
-        .profile-picture {
-            border-radius: 50%;
-            height: 100px;
-        }
-        .logo-name {
-            color: white;
-            font-size: 50px;
-            line-height: 50px;
-            margin: 0 10px;
-        }
-        z-index: 600;
-    }
-
-    .link-box {
-        height: 80px;
-        width: 300px;
-        @include f-style(row, center, center);
-        background-color: black;
-        position: absolute;
-        bottom: 60px;
-        left: 100px;
-        .link-icon {
-            color: white;
-            font-size: 55px;
-            margin: 0 15px;
-        }
-        z-index: 400;
-    }
-
-    .watermark {
-        font-size: 80px;
-        font-weight: 600;
-        color: rgba($color: $gray, $alpha: 0.7);
-        position: fixed;
-        transform: rotate(90deg);
-        pointer-events: none;
-    }
-
-    // pages
-
-    .language {
-        height: 100vh;
-        color: white;
-        background-color: black;
-        h1 {
-            margin: 0;
-            font-size: 70px;
-            font-weight: 800;
-            .gray-text {
-                color: $gray;
-            }
-        }
-        @include f-style(column, center, center);
-        .lang-options {
-            width: 250px;
-            @include f-style(row, space-between, center);
-            margin: 20px 0;
-            .lang-link {
-                padding: 0;
-                border: none;
-                outline: none;
-                background: none;
-                img {
-                    pointer-events: none;
-                    width: 100px;
-                }
-            }
-        }
-    }
-
-    .home {
-        height: 100vh;
-        padding: 0;
-        background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/home-background.jpg");
-        background-size: cover;
-        background-position: 50%;
-        @include f-style(row, center, center);
-        .bg-filter {
-            background-color: rgba($color: $gray, $alpha: 0.5);
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            z-index: 100;
-        }
-        .intro-box {
-            text-align: center;
-            .intro-text {
-                position: initial;
-                margin: 0;
-                max-width: 1100px;
-                font-size: 70px;
-                font-weight: 800;
-                .mobile-hand {
-                    display: initial;
-                }
-                .white-text {
-                    color: white;
-                }
-            }
-            z-index: 200;
-        }
-    }
-
-    .about {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
+        width: 100%;
         .about-left {
-            position: fixed;
-            left: 0;
-            @include f-style(row, center, center);
-            height: 100%;
-            width: 50%;
-            background-color: black;
-            color: white;
-            z-index: 400;
-            .logo {
-                padding: 0 0 0 15px;
-                color: white;
-                text-decoration: none;
-                @include f-style(row, center, center);
-                position: relative;
-                top: auto;
-                bottom: 50px;
-                left: 0;
-                .profile-picture {
-                    border-radius: 50%;
-                    height: 160px;
-                }
-                .logo-name {
-                    font-size: 80px;
-                    line-height: 80px;
-                }
-            }
+            display: none;
         }
         .about-right {
-            min-height: 100%;
-            width: 50%;
-            position: absolute;
-            right: 0;
+            height: 100%;
+            @include f-style(column, flex-start, center);
             .about-article {
-                width: 90%;
-                position: absolute;
-                top: 150px;
-                left: 5%;
-                // border: 1px solid black;
-                @include f-style(column, center, center);
+                width: 95%;
+                margin-top: (120 / $scaleh) * 100vh;
+                margin-bottom: (40 / $scaleh) * 100vh;
+                @include f-style(column, flex-start, center);
                 .about-title {
-                    font-size: 50px;
+                    width: (300 / $scalew) * 100vw;
+                    font-size: (28 / $scalew) * 100vw;
                     align-self: flex-start;
-                    margin: 0 0 20px 0;
+                    margin: 0 0 (10 / $scaleh) * 100vh (10 / $scalew) * 100vw;
                     font-weight: 800;
                 }
                 .about-text {
                     width: 85%;
                     font-family: Lato, sans-serif;
-                    text-align: justify;
                     align-self: flex-end;
-                    margin: 0 0 20px 0;
-                    font-size: 21px;
+                    margin: 0 0 (10 / $scaleh) * 100vh 0;
+                    font-size: (17 / $scalew) * 100vw;
                 }
             }
         }
-        .navbar {
-            right: -6px;
-            #about-link {
-                color: $gray;
-            }
-        }
         .watermark {
-            left: 45%;
             top: 40%;
-            z-index: 400;
-        }
-        .link-box {
-            position: fixed;
-            bottom: 180px;
-            left: (1366px / 4) - 150;
+            left: -(30 / $scalew) * 100vw;
         }
     }
 
     .projects {
+        padding-top: (100 / $scaleh) * 100vh;
+        padding-bottom: (40 / $scaleh) * 100vh;
         background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
-        background-size: contain;
-        background-position-x: -5%;
+        background-size: cover;
+        background-position: 50%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: 200vh;
@@ -465,23 +214,8 @@ body {
             height: 100vh;
             width: 100vw;
             overflow-x: hidden; // rgba(64, 64, 64, 0.8) 40%,
-            background-image: linear-gradient(
-                to right,
-                rgba(30, 30, 30, 0.8) 30%,
-                rgba(0, 0, 0, 1) 50%
-            );
+            background-color: rgba($color: #111111, $alpha: 0.75);
             z-index: 100;
-        }
-        .navbar {
-            background-color: white;
-            position: fixed;
-            right: -6px;
-            .navlink {
-                color: black;
-            }
-            #project-link {
-                color: $gray;
-            }
         }
         .content {
             position: absolute;
@@ -493,45 +227,35 @@ body {
                 color: white;
                 @include f-style(row, center, center);
                 .filter-info {
-                    position: relative;
-                    height: 100%;
-                    width: 50%;
-                    .filter-info-text {
-                        width: 470px;
-                        font-family: Lato, sans-serif;
-                        margin: 0;
-                        position: absolute;
-                        left: 100px;
-                        top: 50%;
-                        font-size: 22px;
-                    }
+                    display: none;
                 }
                 .filter-menu-box {
                     position: relative;
                     height: 100%;
-                    width: 50%;
-                    @include f-style(column, center, flex-end);
+                    width: 100%;
+                    @include f-style(column, center, center);
                     .filter-menu {
-                        width: 500px;
-                        padding-right: 50px;
+                        width: (250 / $scalew) * 100vw;
+                        margin-right: (30 / $scalew) * 100vw;
+                        margin-bottom: (200 / $scaleh) * 100vh;
                         @include f-style(column, center, flex-start);
                         .menu-title {
                             margin: 0;
                             font-weight: 800;
-                            font-size: 40px;
-                            line-height: 40px;
+                            font-size: (30 / $scalew) * 100vw;
+                            line-height: (30 / $scalew) * 100vw;
                         }
                         .menu-break {
                             width: 100%;
-                            margin: 0 0 10px;
+                            margin-bottom: (10 / $scalew) * 100vw;
                         }
                         .filter-option {
                             padding: 0;
                             color: $gray;
                             font-family: "Montserrat", sans-serif;
                             font-weight: 600;
-                            font-size: 25px;
-                            line-height: 32px;
+                            font-size: (20 / $scalew) * 100vw;
+                            line-height: (25 / $scalew) * 100vw;
                             cursor: pointer;
                             background: none;
                             border: none;
@@ -541,7 +265,7 @@ body {
                             animation: activate 200ms forwards;
                         }
                         .sel {
-                            font-size: 28px;
+                            font-size: (22 / $scalew) * 100vw;
                             color: white;
                         }
                     }
@@ -637,8 +361,8 @@ body {
                             animation: activate 200ms forwards;
                         }
                         .sel {
+                            font-size: (22 / $scalew) * 100vw;
                             color: white;
-                            font-size: 28px;
                         }
                     }
                 }
@@ -657,62 +381,57 @@ body {
             padding: 0;
             @include f-style(row, center, center);
             position: fixed;
-            right: 50px;
-            bottom: 50px;
+            right: (25 / $scalew) * 100vw;
+            bottom: (25 / $scaleh) * 100vh;
             i {
                 margin: 0;
             }
             z-index: 450;
         }
         .watermark {
-            left: 40%;
-            top: 40%;
+            right: -(60 / $scalew) * 100vw;
+            top: 43%;
             z-index: 400;
         }
     }
 
     .contact {
-        @include f-style(row, space-between, center);
-        height: 100vh;
-        width: 100%;
-        .navbar {
-            #contact-link {
-                color: $gray;
-            }
-        }
+        min-height: 100vh;
+        position: absolute;
+        border: 1px solid;
+        @include f-style(column, space-between, flex-end);
         .content {
-            @include f-style(row, space-between, center);
-            width: 100%;
-            padding: 0 50px 0 100px;
-            position: relative;
-            top: 25px;
+            padding-top: (100 / $scaleh) * 100vh;
+            width: (280 / $scalew) * 100vw;
+            padding-right: (20 / $scalew) * 100vw;
+            @include f-style(column, space-between, center);
             .contact-content-info {
-                font-size: 21px;
+                font-size: (15 / $scalew) * 100vw;
                 font-family: Lato, sans-serif;
-                width: 470px;
-                text-align: justify;
                 font-weight: 500;
             }
             .addresses {
-                min-width: 500px;
-                max-width: 500px;
+                min-width: (260 / $scalew) * 100vw;
+                max-width: (260 / $scalew) * 100vw;
+                height: 25vh;
                 margin: 0;
                 padding: 0;
                 list-style: none;
                 position: relative;
-                bottom: 15px;
+                right: (12 / $scalew) * 100vw;
+                bottom: (15 / $scaleh) * 100vh;
                 .address {
                     color: black;
-                    margin: 25px 0;
+                    margin: (15 / $scaleh) * 100vh 0;
                     padding: 0;
                     @include f-style(row, flex-start, center);
                     .address-icon {
-                        width: 60px;
-                        font-size: 60px;
-                        margin-right: 20px;
+                        width: (26 / $scalew) * 100vw;
+                        font-size: (26 / $scalew) * 100vw;
+                        margin-right: (5 / $scalew) * 100vw;
                     }
                     .address-text {
-                        font-size: 35px;
+                        font-size: (20 / $scalew) * 100vw;
                         font-weight: 600;
                         margin: 0;
                     }
@@ -727,21 +446,61 @@ body {
             }
         }
         .copyright-text {
-            position: absolute;
+            text-align: center;
+            height: (40 / $scaleh) * 100vh;
+            padding-bottom: (40 / $scaleh) * 100vh;
+            /*position: absolute;
             bottom: 30px;
-            right: 80px;
-            font-size: 35px;
+            right: 80px;*/
+            font-size: 22px;
             font-weight: 600;
             color: $gray;
             pointer-events: none;
+            .mobile-help {
+                display: inline-block;
+            }
         }
         .portuguese {
-            font-size: 30px;
+            font-size: 20px;
         }
         .watermark {
-            left: 37.5%;
-            top: 35%;
-            z-index: 1000;
+            top: 40%;
+            left: -(55 / $scalew) * 100vw;
+        }
+    }
+
+    .mobile-footer {
+        height: (30 / $scaleh) * 100vh;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        bottom: 0px;
+        z-index: 900;
+    }
+
+    @media (min-height: 800px) {
+        .mobile-menu {
+            .logo {
+                left: (10 / $scalew) * 100vw;
+            }
+        }
+        .contact {
+            .content {
+                .contact-content-info {
+                    margin-top: (10 / $scalew) * 100vw;
+                    font-size: (17 / $scalew) * 100vw;
+                    font-family: Lato, sans-serif;
+                    font-weight: 500;
+                    margin-bottom: (10 / $scalew) * 100vw;
+                }
+            }
+        }
+    }
+
+    @keyframes activate {
+        100% {
+            color: white;
+            font-size: (22 / $scalew) * 100vw;
         }
     }
 }
