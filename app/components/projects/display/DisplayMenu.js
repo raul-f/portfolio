@@ -46,7 +46,7 @@ const DisplayMenu = props => {
         },
         "html-css-websites": {
             setName: {
-                "en-US": "PURE HTML & CSS WEBSITES",
+                "en-US": "HTML & CSS WEBSITES",
                 "pt-BR": "SITES HTML & CSS"
             },
             setOptions: [

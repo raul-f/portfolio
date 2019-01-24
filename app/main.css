@@ -328,35 +328,28 @@ body {
     left: -8.33333vw;
   }
   .projects {
-    padding-top: 15.625vh;
-    padding-bottom: 6.25vh;
     background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
     background-size: cover;
     background-position: 50%;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     height: 200vh;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     position: absolute;
   }
   .projects .projects-background {
     position: fixed;
     height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
     background-color: rgba(17, 17, 17, 0.75);
     z-index: 100;
   }
   .projects .content {
-    position: absolute;
-    height: 200vh;
-    width: 100%;
-    z-index: 300;
+    height: 100%;
   }
-  .projects .content .filter {
+  .projects .filter {
+    position: relative;
     height: 50%;
-    width: 100%;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -371,32 +364,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    z-index: 400;
   }
-  .projects .content .filter .filter-info {
+  .projects .filter .filter-info {
     display: none;
   }
-  .projects .content .filter .filter-menu-box {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .projects .content .filter .filter-menu-box .filter-menu {
-    width: 69.44444vw;
-    margin-right: 8.33333vw;
-    margin-bottom: 31.25vh;
+  .projects .filter .filter-menu {
+    width: 72.22222vw;
+    margin-right: 11.11111vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -411,64 +386,71 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .projects .content .filter .filter-menu-box .filter-menu .menu-title {
+  .projects .filter .filter-menu .menu-title {
     margin: 0;
     font-weight: 800;
-    font-size: 8.33333vw;
-    line-height: 8.33333vw;
+    font-size: 9.72222vw;
+    line-height: 9.72222vw;
   }
-  .projects .content .filter .filter-menu-box .filter-menu .menu-break {
+  .projects .filter .filter-menu .menu-break {
     width: 100%;
     margin-bottom: 2.77778vw;
   }
-  .projects .content .filter .filter-menu-box .filter-menu .filter-option {
+  .projects .filter .filter-menu .filter-option {
     padding: 0;
     color: #707070;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 5.55556vw;
-    line-height: 6.94444vw;
-    cursor: pointer;
+    line-height: 7.77778vw;
     background: none;
     border: none;
     outline: none;
   }
-  .projects .content .filter .filter-menu-box .filter-menu .filter-option:hover {
-    -webkit-animation: activate 200ms forwards;
-            animation: activate 200ms forwards;
-  }
-  .projects .content .filter .filter-menu-box .filter-menu .sel {
+  .projects .filter .filter-menu .sel {
     font-size: 6.11111vw;
     color: white;
   }
-  .projects .content .display {
+  .projects .display {
+    position: relative;
     height: 50%;
-    width: 100%;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 400;
+  }
+  .projects .display .display-content-box {
+    position: relative;
+    top: 15.625vh;
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .projects .content .display .display-content-box {
-    position: relative;
-    height: 100%;
-    width: 50%;
-  }
-  .projects .content .display .display-content-box .display-content {
-    width: 580px;
-    position: absolute;
-    left: 50px;
-    top: 50px;
+  .projects .display .display-content-box .display-content {
+    width: 73.61111vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -482,56 +464,51 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    position: relative;
+    top: 4.16667vw;
+    right: 5.55556vw;
   }
-  .projects .content .display .display-content-box .display-content .display-screenshot {
-    max-width: 580px;
+  .projects .display .display-content-box .display-content .display-screenshot {
+    max-width: 73.61111vw;
   }
-  .projects .content .display .display-content-box .display-content .display-info {
-    font-size: 20px;
+  .projects .display .display-content-box .display-content .display-info {
+    font-size: 4.44444vw;
     font-family: Lato, sans-serif;
     font-weight: 500;
-    max-width: 580px;
   }
-  .projects .content .display .display-content-box .display-content .display-link-box {
+  .projects .display .display-content-box .display-content .display-link-box {
     width: 100%;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "repo-link page-link";
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "page-link" "repo-link";
+    -ms-grid-rows: 6.94444vw 6.94444vw;
+        grid-template-rows: 6.94444vw 6.94444vw;
   }
-  .projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
-    font-size: 25px;
+  .projects .display .display-content-box .display-content .display-link-box .display-pageLink {
+    font-size: 5.55556vw;
     font-weight: 600;
     color: #707070;
     text-decoration: none;
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: page-link;
-    -ms-grid-column-align: end;
-        justify-self: end;
-  }
-  .projects .content .display .display-content-box .display-content .display-link-box .display-pageLink:hover {
-    color: #a0a0a0;
-  }
-  .projects .content .display .display-content-box .display-content .display-link-box .display-repoLink {
-    -ms-grid-column-align: start;
-        justify-self: start;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    grid-area: page-link;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .projects .display .display-content-box .display-content .display-link-box .display-repoLink {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: repo-link;
-    font-size: 25px;
+    font-size: 5.55556vw;
     font-weight: 600;
     color: #707070;
     text-decoration: none;
   }
-  .projects .content .display .display-content-box .display-content .display-link-box .display-repoLink:hover {
-    color: #a0a0a0;
-  }
-  .projects .content .display .display-menu-box {
+  .projects .display .display-menu-box {
     position: relative;
-    height: 100%;
-    width: 50%;
+    height: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -546,9 +523,7 @@ body {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .projects .content .display .display-menu-box .display-menu {
-    width: 500px;
-    padding-right: 50px;
+  .projects .display .display-menu-box .display-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -562,36 +537,29 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    width: 90vw;
   }
-  .projects .content .display .display-menu-box .display-menu .menu-title {
-    margin: 0;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 40px;
+  .projects .display .display-menu-box .display-menu .menu-title {
+    display: none;
   }
-  .projects .content .display .display-menu-box .display-menu .menu-break {
-    width: 100%;
-    margin: 0 0 10px;
+  .projects .display .display-menu-box .display-menu .menu-break {
+    display: none;
   }
-  .projects .content .display .display-menu-box .display-menu .display-option {
+  .projects .display .display-menu-box .display-menu .display-option {
     padding: 0;
     color: #707070;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 5vw;
+    line-height: 6.11111vw;
     text-align: left;
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
   }
-  .projects .content .display .display-menu-box .display-menu .display-option:hover {
-    -webkit-animation: activate 200ms forwards;
-            animation: activate 200ms forwards;
-  }
-  .projects .content .display .display-menu-box .display-menu .sel {
-    font-size: 6.11111vw;
+  .projects .display .display-menu-box .display-menu .sel {
+    font-size: 5.55556vw;
     color: white;
   }
   .projects .scroll-btn {
@@ -618,8 +586,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     position: fixed;
-    right: 6.94444vw;
-    bottom: 3.90625vh;
+    right: 8.33333vw;
+    bottom: 6.25vh;
     z-index: 450;
   }
   .projects .scroll-btn i {
@@ -713,9 +681,6 @@ body {
   .contact .content .addresses .address-link {
     text-decoration: none;
     color: #707070;
-  }
-  .contact .content .addresses .address-link:hover {
-    color: #a0a0a0;
   }
   .contact .copyright-text {
     text-align: center;
@@ -924,12 +889,12 @@ body {
     color: #707070;
   }
   .logo {
-    width: 430px;
-    height: 160px;
-    padding: 15px 20px;
+    width: 31.47877vw;
+    height: 11.71303vw;
+    padding: 1.0981vw 1.46413vw;
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 7.32064vw;
     background-color: black;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -949,18 +914,18 @@ body {
   }
   .logo .profile-picture {
     border-radius: 50%;
-    height: 100px;
+    height: 7.32064vw;
   }
   .logo .logo-name {
     color: white;
-    font-size: 50px;
-    line-height: 50px;
-    margin: 0 10px;
+    font-size: 3.66032vw;
+    line-height: 3.66032vw;
+    margin: 0 0.73206vw;
     font-weight: 900;
   }
   .link-box {
-    height: 80px;
-    width: 300px;
+    height: 5.85652vw;
+    width: 21.96193vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -976,17 +941,17 @@ body {
             align-items: center;
     background-color: black;
     position: absolute;
-    bottom: 60px;
-    left: 100px;
+    bottom: 4.39239vw;
+    left: 7.32064vw;
     z-index: 400;
   }
   .link-box .link-icon {
     color: white;
-    font-size: 55px;
-    margin: 0 15px;
+    font-size: 4.02635vw;
+    margin: 0 1.0981vw;
   }
   .watermark {
-    font-size: 80px;
+    font-size: 5.85652vw;
     font-weight: 600;
     color: rgba(112, 112, 112, 0.7);
     position: fixed;
@@ -1014,14 +979,14 @@ body {
   }
   .language h1 {
     margin: 0;
-    font-size: 70px;
+    font-size: 5.12445vw;
     font-weight: 800;
   }
   .language h1 .gray-text {
     color: #707070;
   }
   .language .lang-options {
-    width: 250px;
+    width: 18.30161vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1035,7 +1000,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 20px 0;
+    margin: 1.46413vw 0;
   }
   .language .lang-options .lang-link {
     padding: 0;
@@ -1045,7 +1010,7 @@ body {
   }
   .language .lang-options .lang-link img {
     pointer-events: none;
-    width: 100px;
+    width: 7.32064vw;
   }
   .home {
     height: 100vh;
@@ -1081,8 +1046,8 @@ body {
   .home .intro-box .intro-text {
     position: initial;
     margin: 0;
-    max-width: 1100px;
-    font-size: 70px;
+    max-width: 80.52709vw;
+    font-size: 5.12445vw;
     font-weight: 800;
   }
   .home .intro-box .intro-text .mobile-hand {
@@ -1136,16 +1101,16 @@ body {
             align-items: center;
     position: relative;
     top: auto;
-    bottom: 50px;
+    bottom: 3.66032vw;
     left: 0;
   }
   .about .about-left .logo .profile-picture {
     border-radius: 50%;
-    height: 160px;
+    height: 11.71303vw;
   }
   .about .about-left .logo .logo-name {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 5.85652vw;
+    line-height: 5.85652vw;
   }
   .about .about-right {
     min-height: 100%;
@@ -1156,7 +1121,7 @@ body {
   .about .about-right .about-article {
     width: 90%;
     position: absolute;
-    top: 150px;
+    top: 10.98097vw;
     left: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1173,10 +1138,10 @@ body {
             align-items: center;
   }
   .about .about-right .about-article .about-title {
-    font-size: 50px;
+    font-size: 3.66032vw;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin: 0 0 20px 0;
+    margin: 0 0 1.46413vw 0;
     font-weight: 800;
   }
   .about .about-right .about-article .about-text {
@@ -1185,8 +1150,8 @@ body {
     text-align: justify;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 20px 0;
-    font-size: 21px;
+    margin: 0 0 1.46413vw 0;
+    font-size: 1.53734vw;
   }
   .about .navbar {
     right: -6px;
@@ -1201,8 +1166,8 @@ body {
   }
   .about .link-box {
     position: fixed;
-    bottom: 180px;
-    left: 191.5px;
+    bottom: 13.17716vw;
+    left: 14.01903vw;
   }
   .projects {
     background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
@@ -1265,13 +1230,13 @@ body {
     width: 50%;
   }
   .projects .content .filter .filter-info .filter-info-text {
-    width: 470px;
+    width: 34.40703vw;
     font-family: Lato, sans-serif;
     margin: 0;
     position: absolute;
-    left: 100px;
+    left: 7.32064vw;
     top: 50%;
-    font-size: 22px;
+    font-size: 1.61054vw;
   }
   .projects .content .filter .filter-menu-box {
     position: relative;
@@ -1292,8 +1257,8 @@ body {
             align-items: flex-end;
   }
   .projects .content .filter .filter-menu-box .filter-menu {
-    width: 500px;
-    padding-right: 50px;
+    width: 36.60322vw;
+    padding-right: 3.66032vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1311,20 +1276,20 @@ body {
   .projects .content .filter .filter-menu-box .filter-menu .menu-title {
     margin: 0;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.92826vw;
+    line-height: 2.92826vw;
   }
   .projects .content .filter .filter-menu-box .filter-menu .menu-break {
     width: 100%;
-    margin: 0 0 10px;
+    margin: 0 0 0.73206vw;
   }
   .projects .content .filter .filter-menu-box .filter-menu .filter-option {
     padding: 0;
     color: #707070;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 1.83016vw;
+    line-height: 2.34261vw;
     cursor: pointer;
     background: none;
     border: none;
@@ -1335,7 +1300,7 @@ body {
             animation: activate 200ms forwards;
   }
   .projects .content .filter .filter-menu-box .filter-menu .sel {
-    font-size: 28px;
+    font-size: 2.04978vw;
     color: white;
   }
   .projects .content .display {
@@ -1362,10 +1327,10 @@ body {
     width: 50%;
   }
   .projects .content .display .display-content-box .display-content {
-    width: 580px;
+    width: 42.45974vw;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 3.66032vw;
+    top: 3.66032vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1381,13 +1346,13 @@ body {
             align-items: flex-end;
   }
   .projects .content .display .display-content-box .display-content .display-screenshot {
-    max-width: 580px;
+    max-width: 42.45974vw;
   }
   .projects .content .display .display-content-box .display-content .display-info {
-    font-size: 20px;
+    font-size: 1.46413vw;
     font-family: Lato, sans-serif;
     font-weight: 500;
-    max-width: 580px;
+    max-width: 42.45974vw;
   }
   .projects .content .display .display-content-box .display-content .display-link-box {
     width: 100%;
@@ -1398,7 +1363,7 @@ body {
         grid-template-columns: 1fr 1fr;
   }
   .projects .content .display .display-content-box .display-content .display-link-box .display-pageLink {
-    font-size: 25px;
+    font-size: 1.83016vw;
     font-weight: 600;
     color: #707070;
     text-decoration: none;
@@ -1417,7 +1382,7 @@ body {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: repo-link;
-    font-size: 25px;
+    font-size: 1.83016vw;
     font-weight: 600;
     color: #707070;
     text-decoration: none;
@@ -1444,8 +1409,8 @@ body {
             align-items: flex-end;
   }
   .projects .content .display .display-menu-box .display-menu {
-    width: 500px;
-    padding-right: 50px;
+    width: 36.60322vw;
+    padding-right: 3.66032vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1463,20 +1428,20 @@ body {
   .projects .content .display .display-menu-box .display-menu .menu-title {
     margin: 0;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.92826vw;
+    line-height: 2.92826vw;
   }
   .projects .content .display .display-menu-box .display-menu .menu-break {
     width: 100%;
-    margin: 0 0 10px;
+    margin: 0 0 0.73206vw;
   }
   .projects .content .display .display-menu-box .display-menu .display-option {
     padding: 0;
     color: #707070;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 1.83016vw;
+    line-height: 2.34261vw;
     text-align: left;
     cursor: pointer;
     background: none;
@@ -1489,17 +1454,17 @@ body {
   }
   .projects .content .display .display-menu-box .display-menu .sel {
     color: white;
-    font-size: 28px;
+    font-size: 2.04978vw;
   }
   .projects .scroll-btn {
-    height: 40px;
-    width: 40px;
+    height: 2.92826vw;
+    width: 2.92826vw;
     background-color: white;
     border: none;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 2.34261vw;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1515,8 +1480,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 3.66032vw;
+    bottom: 3.66032vw;
     z-index: 450;
   }
   .projects .scroll-btn i {
@@ -1562,29 +1527,29 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    padding: 0 50px 0 100px;
+    padding: 0 3.66032vw 0 7.32064vw;
     position: relative;
-    top: 25px;
+    top: 1.83016vw;
   }
   .contact .content .contact-content-info {
-    font-size: 21px;
+    font-size: 1.53734vw;
     font-family: Lato, sans-serif;
-    width: 470px;
+    width: 34.40703vw;
     text-align: justify;
     font-weight: 500;
   }
   .contact .content .addresses {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 36.60322vw;
+    max-width: 36.60322vw;
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative;
-    bottom: 15px;
+    bottom: 1.0981vw;
   }
   .contact .content .addresses .address {
     color: black;
-    margin: 25px 0;
+    margin: 1.83016vw 0;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1601,12 +1566,12 @@ body {
             align-items: center;
   }
   .contact .content .addresses .address .address-icon {
-    width: 60px;
-    font-size: 60px;
-    margin-right: 20px;
+    width: 4.39239vw;
+    font-size: 4.39239vw;
+    margin-right: 1.46413vw;
   }
   .contact .content .addresses .address .address-text {
-    font-size: 35px;
+    font-size: 2.56223vw;
     font-weight: 600;
     margin: 0;
   }
@@ -1619,15 +1584,15 @@ body {
   }
   .contact .copyright-text {
     position: absolute;
-    bottom: 30px;
-    right: 80px;
-    font-size: 35px;
+    bottom: 2.19619vw;
+    right: 5.85652vw;
+    font-size: 2.56223vw;
     font-weight: 600;
     color: #707070;
     pointer-events: none;
   }
   .contact .portuguese {
-    font-size: 30px;
+    font-size: 2.19619vw;
   }
   .contact .watermark {
     left: 37.5%;

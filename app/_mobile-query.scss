@@ -198,176 +198,150 @@
     }
 
     .projects {
-        padding-top: (100 / $scaleh) * 100vh;
-        padding-bottom: (40 / $scaleh) * 100vh;
         background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
         background-size: cover;
         background-position: 50%;
-        background-repeat: no-repeat;
         background-attachment: fixed;
         height: 200vh;
-        width: 100vw;
+        width: 100%;
         overflow-x: hidden;
         position: absolute;
         .projects-background {
             position: fixed;
             height: 100vh;
-            width: 100vw;
-            overflow-x: hidden; // rgba(64, 64, 64, 0.8) 40%,
+            width: 100%;
             background-color: rgba($color: #111111, $alpha: 0.75);
             z-index: 100;
         }
         .content {
-            position: absolute;
-            height: 200vh;
-            width: 100%;
-            .filter {
-                height: 50%;
-                width: 100%;
-                color: white;
-                @include f-style(row, center, center);
-                .filter-info {
-                    display: none;
+            height: 100%;
+        }
+        .filter {
+            position: relative;
+            height: 50%;
+            color: white;
+            @include f-style(row, center, center);
+            .filter-info {
+                display: none;
+            }
+            .filter-menu {
+                width: (260 / $scalew) * 100vw;
+                margin-right: (40 / $scalew) * 100vw;
+                @include f-style(column, center, flex-start);
+                .menu-title {
+                    margin: 0;
+                    font-weight: 800;
+                    font-size: (35 / $scalew) * 100vw;
+                    line-height: (35 / $scalew) * 100vw;
                 }
-                .filter-menu-box {
-                    position: relative;
-                    height: 100%;
+                .menu-break {
                     width: 100%;
-                    @include f-style(column, center, center);
-                    .filter-menu {
-                        width: (250 / $scalew) * 100vw;
-                        margin-right: (30 / $scalew) * 100vw;
-                        margin-bottom: (200 / $scaleh) * 100vh;
-                        @include f-style(column, center, flex-start);
-                        .menu-title {
-                            margin: 0;
-                            font-weight: 800;
-                            font-size: (30 / $scalew) * 100vw;
-                            line-height: (30 / $scalew) * 100vw;
-                        }
-                        .menu-break {
-                            width: 100%;
-                            margin-bottom: (10 / $scalew) * 100vw;
-                        }
-                        .filter-option {
-                            padding: 0;
-                            color: $gray;
-                            font-family: "Montserrat", sans-serif;
-                            font-weight: 600;
-                            font-size: (20 / $scalew) * 100vw;
-                            line-height: (25 / $scalew) * 100vw;
-                            cursor: pointer;
-                            background: none;
-                            border: none;
-                            outline: none;
-                        }
-                        .filter-option:hover {
-                            animation: activate 200ms forwards;
-                        }
-                        .sel {
-                            font-size: (22 / $scalew) * 100vw;
-                            color: white;
-                        }
-                    }
+                    margin-bottom: (10 / $scalew) * 100vw;
+                }
+                .filter-option {
+                    padding: 0;
+                    color: $gray;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: (20 / $scalew) * 100vw;
+                    line-height: (28 / $scalew) * 100vw;
+                    background: none;
+                    border: none;
+                    outline: none;
+                }
+                .sel {
+                    font-size: (22 / $scalew) * 100vw;
+                    color: white;
                 }
             }
-            .display {
+            z-index: 400;
+        }
+        .display {
+            position: relative;
+            height: 50%;
+            color: white;
+            @include f-style(column, flex-start, center);
+            .display-content-box {
+                position: relative;
+                top: (100 / $scaleh) * 100vh;
                 height: 50%;
                 width: 100%;
-                color: white;
-                @include f-style(row, center, center);
-                .display-content-box {
+                @include f-style(column, flex-start, center);
+                .display-content {
+                    width: (265 / $scalew) * 100vw;
+                    @include f-style(column, flex-start, flex-end);
                     position: relative;
-                    height: 100%;
-                    width: 50%;
-                    .display-content {
-                        width: 580px;
-                        position: absolute;
-                        left: 50px;
-                        top: 50px;
-                        @include f-style(column, flex-start, flex-end);
-                        .display-screenshot {
-                            max-width: 580px;
-                        }
-                        .display-info {
-                            font-size: 20px;
-                            font-family: Lato, sans-serif;
-                            font-weight: 500;
-                            max-width: 580px;
-                        }
-                        .display-link-box {
-                            width: 100%;
-                            display: grid;
-                            grid-template-areas: "repo-link page-link";
-                            grid-template-columns: 1fr 1fr;
-                            .display-pageLink {
-                                font-size: 25px;
-                                font-weight: 600;
-                                color: $gray;
-                                text-decoration: none;
-                                grid-area: page-link;
-                                justify-self: end;
-                            }
-                            .display-pageLink:hover {
-                                color: $lightgray;
-                            }
-                            .display-repoLink {
-                                justify-self: start;
-                                grid-area: repo-link;
-                                font-size: 25px;
-                                font-weight: 600;
-                                color: $gray;
-                                text-decoration: none;
-                            }
-                            .display-repoLink:hover {
-                                color: $lightgray;
-                            }
-                        }
+                    top: (15 / $scalew) * 100vw;
+                    right: (20 / $scalew) * 100vw;
+                    .display-screenshot {
+                        max-width: (265 / $scalew) * 100vw;
                     }
-                }
-                .display-menu-box {
-                    position: relative;
-                    height: 100%;
-                    width: 50%;
-                    @include f-style(column, center, flex-end);
-                    .display-menu {
-                        width: 500px;
-                        padding-right: 50px;
-                        @include f-style(column, center, flex-start);
-                        .menu-title {
-                            margin: 0;
-                            font-weight: 800;
-                            font-size: 40px;
-                            line-height: 40px;
-                        }
-                        .menu-break {
-                            width: 100%;
-                            margin: 0 0 10px;
-                        }
-                        .display-option {
-                            padding: 0;
-                            color: $gray;
-                            font-family: "Montserrat", sans-serif;
+                    .display-info {
+                        font-size: (16 / $scalew) * 100vw;
+                        font-family: Lato, sans-serif;
+                        font-weight: 500;
+                    }
+                    .display-link-box {
+                        width: 100%;
+                        display: grid;
+                        grid-template-areas:
+                            "page-link"
+                            "repo-link";
+                        grid-template-rows: (25 / $scalew) * 100vw (
+                                25 / $scalew
+                            ) * 100vw;
+                        .display-pageLink {
+                            font-size: (20 / $scalew) * 100vw;
                             font-weight: 600;
-                            font-size: 25px;
-                            line-height: 32px;
-                            text-align: left;
-                            cursor: pointer;
-                            background: none;
-                            border: none;
-                            outline: none;
+                            color: $gray;
+                            text-decoration: none;
+                            grid-area: page-link;
+                            justify-self: start;
                         }
-                        .display-option:hover {
-                            animation: activate 200ms forwards;
-                        }
-                        .sel {
-                            font-size: (22 / $scalew) * 100vw;
-                            color: white;
+                        .display-repoLink {
+                            justify-self: start;
+                            grid-area: repo-link;
+                            font-size: (20 / $scalew) * 100vw;
+                            font-weight: 600;
+                            color: $gray;
+                            text-decoration: none;
                         }
                     }
                 }
             }
-            z-index: 300;
+            .display-menu-box {
+                position: relative;
+                height: 50%;
+                @include f-style(column, center, flex-end);
+                .display-menu {
+                    @include f-style(column, center, flex-start);
+                    width: 90vw;
+                    .menu-title {
+                        display: none;
+                    }
+                    .menu-break {
+                        display: none;
+                    }
+                    .display-option {
+                        padding: 0;
+                        color: $gray;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 600;
+                        font-size: (18 / $scalew) * 100vw;
+                        line-height: (22 / $scalew) * 100vw;
+                        text-align: left;
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                        outline: none;
+                    }
+                    .sel {
+                        font-size: (20 / $scalew) * 100vw;
+                        color: white;
+                    }
+                }
+            }
+            z-index: 400;
         }
         .scroll-btn {
             height: 40px;
@@ -381,8 +355,8 @@
             padding: 0;
             @include f-style(row, center, center);
             position: fixed;
-            right: (25 / $scalew) * 100vw;
-            bottom: (25 / $scaleh) * 100vh;
+            right: (30 / $scalew) * 100vw;
+            bottom: (40 / $scaleh) * 100vh;
             i {
                 margin: 0;
             }
@@ -439,9 +413,6 @@
                 .address-link {
                     text-decoration: none;
                     color: $gray;
-                }
-                .address-link:hover {
-                    color: $lightgray;
                 }
             }
         }

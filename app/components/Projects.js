@@ -93,7 +93,9 @@ class Projects extends React.Component {
                     anime({
                         ...this.state.settings,
                         rotate: this.state.rotate
-                    }).finished.then(() => this.setState({ animating: false }))
+                    }).finished.then(() => {
+                        this.setState({ animating: false })
+                    })
                 }
             )
         }
@@ -161,7 +163,6 @@ class Projects extends React.Component {
     }
 
     render() {
-        //console.log(this.props.language)
         return (
             <div id="projects" className="projects">
                 <div className="projects-background" />

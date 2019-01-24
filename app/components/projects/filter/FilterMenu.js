@@ -1,7 +1,6 @@
 import React from "react"
 
 const FilterMenu = props => {
-    console.log(props.language)
     return (
         <div className="filter-menu-box">
             <div className="filter-menu">
@@ -39,7 +38,7 @@ const FilterMenu = props => {
                 >
                     {props.language === "pt-BR"
                         ? "Sites HTML & CSS"
-                        : "Pure HTML & CSS Websites"}
+                        : "HTML & CSS Websites"}
                 </button>
                 <button
                     type="button"

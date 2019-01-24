@@ -51,47 +51,47 @@
     }
 
     .logo {
-        width: 430px;
-        height: 160px;
-        padding: 15px 20px;
+        width: (430 / $scale) * 100vw;
+        height: (160 / $scale) * 100vw;
+        padding: (15 / $scale) * 100vw (20 / $scale) * 100vw;
         position: absolute;
         top: 0;
-        left: 100px;
+        left: (100 / $scale) * 100vw;
         background-color: black;
         @include f-style(row, center, flex-end);
         text-decoration: none;
         .profile-picture {
             border-radius: 50%;
-            height: 100px;
+            height: (100 / $scale) * 100vw;
         }
         .logo-name {
             color: white;
-            font-size: 50px;
-            line-height: 50px;
-            margin: 0 10px;
+            font-size: (50 / $scale) * 100vw;
+            line-height: (50 / $scale) * 100vw;
+            margin: 0 (10 / $scale) * 100vw;
             font-weight: 900;
         }
         z-index: 600;
     }
 
     .link-box {
-        height: 80px;
-        width: 300px;
+        height: (80 / $scale) * 100vw;
+        width: (300 / $scale) * 100vw;
         @include f-style(row, center, center);
         background-color: black;
         position: absolute;
-        bottom: 60px;
-        left: 100px;
+        bottom: (60 / $scale) * 100vw;
+        left: (100 / $scale) * 100vw;
         .link-icon {
             color: white;
-            font-size: 55px;
-            margin: 0 15px;
+            font-size: (55 / $scale) * 100vw;
+            margin: 0 (15 / $scale) * 100vw;
         }
         z-index: 400;
     }
 
     .watermark {
-        font-size: 80px;
+        font-size: (80 / $scale) * 100vw;
         font-weight: 600;
         color: rgba($color: $gray, $alpha: 0.7);
         position: fixed;
@@ -107,7 +107,7 @@
         background-color: black;
         h1 {
             margin: 0;
-            font-size: 70px;
+            font-size: (70 / $scale) * 100vw;
             font-weight: 800;
             .gray-text {
                 color: $gray;
@@ -115,9 +115,9 @@
         }
         @include f-style(column, center, center);
         .lang-options {
-            width: 250px;
+            width: (250 / $scale) * 100vw;
             @include f-style(row, space-between, center);
-            margin: 20px 0;
+            margin: (20 / $scale) * 100vw 0;
             .lang-link {
                 padding: 0;
                 border: none;
@@ -125,7 +125,7 @@
                 background: none;
                 img {
                     pointer-events: none;
-                    width: 100px;
+                    width: (100 / $scale) * 100vw;
                 }
             }
         }
@@ -150,8 +150,8 @@
             .intro-text {
                 position: initial;
                 margin: 0;
-                max-width: 1100px;
-                font-size: 70px;
+                max-width: (1100 / $scale) * 100vw;
+                font-size: (70 / $scale) * 100vw;
                 font-weight: 800;
                 .mobile-hand {
                     display: initial;
@@ -183,15 +183,15 @@
                 @include f-style(row, center, center);
                 position: relative;
                 top: auto;
-                bottom: 50px;
+                bottom: (50 / $scale) * 100vw;
                 left: 0;
                 .profile-picture {
                     border-radius: 50%;
-                    height: 160px;
+                    height: (160 / $scale) * 100vw;
                 }
                 .logo-name {
-                    font-size: 80px;
-                    line-height: 80px;
+                    font-size: (80 / $scale) * 100vw;
+                    line-height: (80 / $scale) * 100vw;
                 }
             }
         }
@@ -203,14 +203,14 @@
             .about-article {
                 width: 90%;
                 position: absolute;
-                top: 150px;
+                top: (150 / $scale) * 100vw;
                 left: 5%;
                 // border: 1px solid black;
                 @include f-style(column, center, center);
                 .about-title {
-                    font-size: 50px;
+                    font-size: (50 / $scale) * 100vw;
                     align-self: flex-start;
-                    margin: 0 0 20px 0;
+                    margin: 0 0 (20 / $scale) * 100vw 0;
                     font-weight: 800;
                 }
                 .about-text {
@@ -218,8 +218,8 @@
                     font-family: Lato, sans-serif;
                     text-align: justify;
                     align-self: flex-end;
-                    margin: 0 0 20px 0;
-                    font-size: 21px;
+                    margin: 0 0 (20 / $scale) * 100vw 0;
+                    font-size: (21 / $scale) * 100vw;
                 }
             }
         }
@@ -236,8 +236,8 @@
         }
         .link-box {
             position: fixed;
-            bottom: 180px;
-            left: (1366px / 4) - 150;
+            bottom: (180 / $scale) * 100vw;
+            left: ((((1366 / $scale) * 100vw) / 4) - ((150 / $scale) * 100vw));
         }
     }
 
@@ -288,13 +288,13 @@
                     height: 100%;
                     width: 50%;
                     .filter-info-text {
-                        width: 470px;
+                        width: (470 / $scale) * 100vw;
                         font-family: Lato, sans-serif;
                         margin: 0;
                         position: absolute;
-                        left: 100px;
+                        left: (100 / $scale) * 100vw;
                         top: 50%;
-                        font-size: 22px;
+                        font-size: (22 / $scale) * 100vw;
                     }
                 }
                 .filter-menu-box {
@@ -303,36 +303,36 @@
                     width: 50%;
                     @include f-style(column, center, flex-end);
                     .filter-menu {
-                        width: 500px;
-                        padding-right: 50px;
+                        width: (500 / $scale) * 100vw;
+                        padding-right: (50 / $scale) * 100vw;
                         @include f-style(column, center, flex-start);
                         .menu-title {
                             margin: 0;
                             font-weight: 800;
-                            font-size: 40px;
-                            line-height: 40px;
+                            font-size: (40 / $scale) * 100vw;
+                            line-height: (40 / $scale) * 100vw;
                         }
                         .menu-break {
                             width: 100%;
-                            margin: 0 0 10px;
+                            margin: 0 0 (10 / $scale) * 100vw;
                         }
                         .filter-option {
                             padding: 0;
                             color: $gray;
                             font-family: "Montserrat", sans-serif;
                             font-weight: 600;
-                            font-size: 25px;
-                            line-height: 32px;
+                            font-size: (25 / $scale) * 100vw;
+                            line-height: (32 / $scale) * 100vw;
                             cursor: pointer;
                             background: none;
                             border: none;
                             outline: none;
-                        }
-                        .filter-option:hover {
-                            animation: activate 200ms forwards;
+                            &:hover {
+                                animation: activate 200ms forwards;
+                            }
                         }
                         .sel {
-                            font-size: 28px;
+                            font-size: (28 / $scale) * 100vw;
                             color: white;
                         }
                     }
@@ -348,19 +348,19 @@
                     height: 100%;
                     width: 50%;
                     .display-content {
-                        width: 580px;
+                        width: (580 / $scale) * 100vw;
                         position: absolute;
-                        left: 50px;
-                        top: 50px;
+                        left: (50 / $scale) * 100vw;
+                        top: (50 / $scale) * 100vw;
                         @include f-style(column, flex-start, flex-end);
                         .display-screenshot {
-                            max-width: 580px;
+                            max-width: (580 / $scale) * 100vw;
                         }
                         .display-info {
-                            font-size: 20px;
+                            font-size: (20 / $scale) * 100vw;
                             font-family: Lato, sans-serif;
                             font-weight: 500;
-                            max-width: 580px;
+                            max-width: (580 / $scale) * 100vw;
                         }
                         .display-link-box {
                             width: 100%;
@@ -368,26 +368,26 @@
                             grid-template-areas: "repo-link page-link";
                             grid-template-columns: 1fr 1fr;
                             .display-pageLink {
-                                font-size: 25px;
+                                font-size: (25 / $scale) * 100vw;
                                 font-weight: 600;
                                 color: $gray;
                                 text-decoration: none;
                                 grid-area: page-link;
                                 justify-self: end;
-                            }
-                            .display-pageLink:hover {
-                                color: $lightgray;
+                                &:hover {
+                                    color: $lightgray;
+                                }
                             }
                             .display-repoLink {
                                 justify-self: start;
                                 grid-area: repo-link;
-                                font-size: 25px;
+                                font-size: (25 / $scale) * 100vw;
                                 font-weight: 600;
                                 color: $gray;
                                 text-decoration: none;
-                            }
-                            .display-repoLink:hover {
-                                color: $lightgray;
+                                &:hover {
+                                    color: $lightgray;
+                                }
                             }
                         }
                     }
@@ -398,38 +398,38 @@
                     width: 50%;
                     @include f-style(column, center, flex-end);
                     .display-menu {
-                        width: 500px;
-                        padding-right: 50px;
+                        width: (500 / $scale) * 100vw;
+                        padding-right: (50 / $scale) * 100vw;
                         @include f-style(column, center, flex-start);
                         .menu-title {
                             margin: 0;
                             font-weight: 800;
-                            font-size: 40px;
-                            line-height: 40px;
+                            font-size: (40 / $scale) * 100vw;
+                            line-height: (40 / $scale) * 100vw;
                         }
                         .menu-break {
                             width: 100%;
-                            margin: 0 0 10px;
+                            margin: 0 0 (10 / $scale) * 100vw;
                         }
                         .display-option {
                             padding: 0;
                             color: $gray;
                             font-family: "Montserrat", sans-serif;
                             font-weight: 600;
-                            font-size: 25px;
-                            line-height: 32px;
+                            font-size: (25 / $scale) * 100vw;
+                            line-height: (32 / $scale) * 100vw;
                             text-align: left;
                             cursor: pointer;
                             background: none;
                             border: none;
                             outline: none;
-                        }
-                        .display-option:hover {
-                            animation: activate 200ms forwards;
+                            &:hover {
+                                animation: activate 200ms forwards;
+                            }
                         }
                         .sel {
                             color: white;
-                            font-size: 28px;
+                            font-size: (28 / $scale) * 100vw;
                         }
                     }
                 }
@@ -437,19 +437,19 @@
             z-index: 300;
         }
         .scroll-btn {
-            height: 40px;
-            width: 40px;
+            height: (40 / $scale) * 100vw;
+            width: (40 / $scale) * 100vw;
             background-color: white;
             border: none;
             border-radius: 50%;
             outline: none;
             cursor: pointer;
-            font-size: 32px;
+            font-size: (32 / $scale) * 100vw;
             padding: 0;
             @include f-style(row, center, center);
             position: fixed;
-            right: 50px;
-            bottom: 50px;
+            right: (50 / $scale) * 100vw;
+            bottom: (50 / $scale) * 100vw;
             i {
                 margin: 0;
             }
@@ -474,36 +474,36 @@
         .content {
             @include f-style(row, space-between, center);
             width: 100%;
-            padding: 0 50px 0 100px;
+            padding: 0 (50 / $scale) * 100vw 0 (100 / $scale) * 100vw;
             position: relative;
-            top: 25px;
+            top: (25 / $scale) * 100vw;
             .contact-content-info {
-                font-size: 21px;
+                font-size: (21 / $scale) * 100vw;
                 font-family: Lato, sans-serif;
-                width: 470px;
+                width: (470 / $scale) * 100vw;
                 text-align: justify;
                 font-weight: 500;
             }
             .addresses {
-                min-width: 500px;
-                max-width: 500px;
+                min-width: (500 / $scale) * 100vw;
+                max-width: (500 / $scale) * 100vw;
                 margin: 0;
                 padding: 0;
                 list-style: none;
                 position: relative;
-                bottom: 15px;
+                bottom: (15 / $scale) * 100vw;
                 .address {
                     color: black;
-                    margin: 25px 0;
+                    margin: (25 / $scale) * 100vw 0;
                     padding: 0;
                     @include f-style(row, flex-start, center);
                     .address-icon {
-                        width: 60px;
-                        font-size: 60px;
-                        margin-right: 20px;
+                        width: (60 / $scale) * 100vw;
+                        font-size: (60 / $scale) * 100vw;
+                        margin-right: (20 / $scale) * 100vw;
                     }
                     .address-text {
-                        font-size: 35px;
+                        font-size: (35 / $scale) * 100vw;
                         font-weight: 600;
                         margin: 0;
                     }
@@ -511,23 +511,23 @@
                 .address-link {
                     text-decoration: none;
                     color: $gray;
-                }
-                .address-link:hover {
-                    color: $lightgray;
+                    &:hover {
+                        color: $lightgray;
+                    }
                 }
             }
         }
         .copyright-text {
             position: absolute;
-            bottom: 30px;
-            right: 80px;
-            font-size: 35px;
+            bottom: (30 / $scale) * 100vw;
+            right: (80 / $scale) * 100vw;
+            font-size: (35 / $scale) * 100vw;
             font-weight: 600;
             color: $gray;
             pointer-events: none;
         }
         .portuguese {
-            font-size: 30px;
+            font-size: (30 / $scale) * 100vw;
         }
         .watermark {
             left: 37.5%;
