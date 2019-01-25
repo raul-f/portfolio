@@ -32,8 +32,8 @@ body {
         grid-template-areas: "logo button" "table table" "links links";
     -ms-grid-columns: 1fr 13.88889vw;
         grid-template-columns: 1fr 13.88889vw;
-    -ms-grid-rows: 15.625vh 1fr 36.71875vh;
-        grid-template-rows: 15.625vh 1fr 36.71875vh;
+    -ms-grid-rows: 15.625vh 1fr 41.40625vh;
+        grid-template-rows: 15.625vh 1fr 41.40625vh;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -146,7 +146,7 @@ body {
     color: gray;
   }
   .mobile-menu .link-box {
-    min-height: 23.4375vh;
+    min-height: 25vh;
     overflow: hidden;
     text-decoration: none;
     font-size: 22.22222vw;
