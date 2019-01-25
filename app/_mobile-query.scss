@@ -30,7 +30,7 @@
             "table table"
             "links links";
         grid-template-columns: 1fr (50 / $scalew) * 100vw;
-        grid-template-rows: (100 / $scaleh) * 100vh 1fr (135 / $scaleh) * 100vh;
+        grid-template-rows: (100 / $scaleh) * 100vh 1fr (235 / $scaleh) * 100vh;
         position: fixed;
         top: 0;
         .logo {
@@ -206,10 +206,12 @@
     }
 
     .projects {
-        background-image: url("https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg");
-        background-size: cover;
-        background-position: 50%;
-        background-attachment: fixed;
+        .mobile-background {
+            position: fixed;
+            left: -85%;
+            z-index: 50;
+            height: 120vh;
+        }
         height: 200vh;
         width: 100%;
         overflow-x: hidden;
@@ -358,23 +360,7 @@
             z-index: 400;
         }
         .scroll-btn {
-            height: 40px;
-            width: 40px;
-            background-color: white;
-            border: none;
-            border-radius: 50%;
-            outline: none;
-            cursor: pointer;
-            font-size: 32px;
-            padding: 0;
-            @include f-style(row, center, center);
-            position: fixed;
-            right: (30 / $scalew) * 100vw;
-            bottom: (40 / $scaleh) * 100vh;
-            i {
-                margin: 0;
-            }
-            z-index: 450;
+            display: none;
         }
         .watermark {
             right: -(60 / $scalew) * 100vw;

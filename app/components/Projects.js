@@ -165,6 +165,10 @@ class Projects extends React.Component {
     render() {
         return (
             <div id="projects" className="projects">
+                <img
+                    src="https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg"
+                    className="mobile-background"
+                />
                 <div className="projects-background" />
                 <MobileMenu language={this.props.language} />
                 <Logo />
