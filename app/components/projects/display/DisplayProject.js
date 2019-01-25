@@ -30,14 +30,12 @@ const DisplayProject = props => {
         },
         shortr: {
             screenshotUrl:
-                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/shortr.png",
             description: {
-                "en-US":
-                    "The API is in place, but the interface is pending. Check the github repo!",
-                "pt-BR":
-                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+                "en-US": "A minimal URL shortener.",
+                "pt-BR": "Um encurtador de URLs mínimo."
             },
-            link: "",
+            link: "https://codepen.io/raul-f/full/ErVdxp",
             repoLink: "https://github.com/raul-f/shortr",
             type: "fullstack"
         },

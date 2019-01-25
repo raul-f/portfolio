@@ -6,12 +6,9 @@ const DisplayMenu = props => {
             setName: { "en-US": "PERSONAL PICKS", "pt-BR": "DESTAQUES" },
             setOptions: [
                 {
-                    name: {
-                        "en-US": "Random Quote Machine",
-                        "pt-BR": "Máquina de Citações Aleatórias"
-                    },
-                    id: "random-quote-machine",
-                    hash: "166f6abef74056d74e89fa20d5f6c793"
+                    name: { "en-US": "Shortr", "pt-BR": "Shortr" },
+                    id: "shortr",
+                    hash: "461d81e54ed7f5bdc045d16f89df4b48"
                 },
                 {
                     name: {
@@ -22,9 +19,12 @@ const DisplayMenu = props => {
                     hash: "9365886184452fafbaf4c97d5fcd01dc"
                 },
                 {
-                    name: { "en-US": "Shortr", "pt-BR": "Shortr" },
-                    id: "shortr",
-                    hash: "461d81e54ed7f5bdc045d16f89df4b48"
+                    name: {
+                        "en-US": "Random Quote Machine",
+                        "pt-BR": "Máquina de Citações Aleatórias"
+                    },
+                    id: "random-quote-machine",
+                    hash: "166f6abef74056d74e89fa20d5f6c793"
                 },
                 {
                     name: {

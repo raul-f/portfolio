@@ -65,7 +65,7 @@
             @include f-style(row, flex-start, center);
         }
         .outer-navbox {
-            min-height: (410 / $scaleh) * 100vh;
+            min-height: (380 / $scaleh) * 100vh;
             width: 100%;
             grid-area: table;
             @include f-style(column, center, center);
@@ -85,10 +85,10 @@
             }
         }
         .link-box {
-            min-height: (120 / $scaleh) * 100vh;
+            min-height: (150 / $scaleh) * 100vh;
             overflow: hidden;
             text-decoration: none;
-            font-size: (70 / $scalew) * 100vw;
+            font-size: (80 / $scalew) * 100vw;
             @include f-style(row, center, flex-start);
             .link-icon {
                 color: white;
@@ -325,7 +325,7 @@
                 @include f-style(column, center, flex-end);
                 .display-menu {
                     position: relative;
-                    top: (15 / $scaleh) * 100vh;
+                    top: (25 / $scaleh) * 100vh;
                     @include f-style(column, center, flex-start);
                     width: 90vw;
                     .menu-title {
@@ -360,7 +360,23 @@
             z-index: 400;
         }
         .scroll-btn {
-            display: none;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            font-size: 32px;
+            padding: 0;
+            @include f-style(row, center, center);
+            position: fixed;
+            right: (20 / $scalew) * 100vw;
+            bottom: (35 / $scaleh) * 100vh;
+            i {
+                margin: 0;
+            }
+            z-index: 450;
         }
         .watermark {
             right: -(60 / $scalew) * 100vw;

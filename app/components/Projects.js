@@ -16,8 +16,8 @@ class Projects extends React.Component {
         this.state = {
             selectedSet: "personal-picks",
             activeSet: "personal-picks",
-            selectedProject: "random-quote-machine",
-            activeProject: "random-quote-machine",
+            selectedProject: "shortr",
+            activeProject: "shortr",
             settings: {
                 targets: ".scroll-btn",
                 easing: "easeInOutCubic",
@@ -76,11 +76,11 @@ class Projects extends React.Component {
 
     handleScrollBtn = () => {
         if (!this.state.animating) {
-            if (window.pageYOffset === window.innerHeight) {
+            if ((this.state.rotate / 180) % 2 === 1) {
                 window.scrollTo({ top: 0, behavior: "smooth" })
             } else {
                 window.scrollTo({
-                    top: window.innerHeight,
+                    top: 2 * window.innerHeight,
                     behavior: "smooth"
                 })
             }
@@ -105,10 +105,10 @@ class Projects extends React.Component {
         event.preventDefault()
         if (
             event.deltaY > 0 &&
-            window.pageYOffset === 0 &&
+            window.pageYOffset <= window.innerHeight &&
             !this.state.animating
         ) {
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+            window.scrollTo({ top: 2 * window.innerHeight, behavior: "smooth" })
             this.setState(
                 {
                     rotate: this.state.rotate + 180,
@@ -122,7 +122,7 @@ class Projects extends React.Component {
                 }
             )
         } else if (
-            window.pageYOffset === window.innerHeight &&
+            window.pageYOffset >= window.innerHeight &&
             event.deltaY < 0 &&
             !this.state.animating
         ) {
