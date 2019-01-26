@@ -4,7 +4,7 @@ const Copyright = props => (
     <h2
         className={
             props.language === "pt-BR"
-                ? "copyright-text portuguese"
+                ? "copyright-text portuguese-copyright"
                 : "copyright-text"
         }
     >

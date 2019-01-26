@@ -4,7 +4,7 @@ const express = require("express")
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use("/public", express.static(path.join(__dirname, "static")))
+app.use("/index.js", express.static(path.join(__dirname, "index.js")))
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"))

@@ -17,6 +17,18 @@ const Navbox = props => {
                     {props.language === "pt-BR" ? "Contato" : "Contact"}
                     <span className="gray-text">.</span>
                 </Link>
+                <button
+                    id="fullscreent-link"
+                    className="mobile-link"
+                    onClick={() => {
+                        document.exitFullscreen()
+                    }}
+                >
+                    {props.language === "pt-BR"
+                        ? "Sair da Tela Cheia"
+                        : "Exit Fullscreen"}
+                    <span className="gray-text">.</span>
+                </button>
             </div>
         </div>
     )

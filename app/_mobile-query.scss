@@ -2,6 +2,12 @@
     $scalew: 360;
     $scaleh: 640;
 
+    body {
+        min-height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     .navbar,
     .logo,
     .link-box,
@@ -20,7 +26,7 @@
 
     .mobile-menu {
         color: white;
-        height: (100 / $scaleh) * 100vh;
+        height: (70 / $scaleh) * 100vh;
         width: 100%;
         background-color: black;
         overflow: hidden;
@@ -30,7 +36,7 @@
             "table table"
             "links links";
         grid-template-columns: 1fr (50 / $scalew) * 100vw;
-        grid-template-rows: (100 / $scaleh) * 100vh 1fr (265 / $scaleh) * 100vh;
+        grid-template-rows: (70 / $scaleh) * 100vh 1fr (265 / $scaleh) * 100vh;
         position: fixed;
         top: 0;
         .logo {
@@ -44,13 +50,13 @@
             @include f-style(row, center, center);
             .profile-picture {
                 border-radius: 50%;
-                height: (55 / $scaleh) * 100vh;
+                height: (45 / $scaleh) * 100vh;
             }
             .logo-name {
                 padding-left: (5 / $scalew) * 100vw;
                 color: white;
-                font-size: (27 / $scalew) * 100vw;
-                line-height: (27 / $scalew) * 100vw;
+                font-size: (22 / $scalew) * 100vw;
+                line-height: (22 / $scalew) * 100vw;
                 font-weight: 900;
             }
         }
@@ -65,21 +71,25 @@
             @include f-style(row, flex-start, center);
         }
         .outer-navbox {
-            min-height: (380 / $scaleh) * 100vh;
+            min-height: (440 / $scaleh) * 100vh;
             width: 100%;
             grid-area: table;
             @include f-style(column, center, center);
             .inner-navbox {
-                width: (110 / $scalew) * 100vw;
-                height: (180 / $scaleh) * 100vh;
+                width: 100%;
+                height: (230 / $scaleh) * 100vh;
                 @include f-style(column, space-between, center);
                 .mobile-link {
                     color: white;
                     text-decoration: none;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: Montserrat, sans-serif;
                     font-size: (30 / $scalew) * 100vw;
                     font-weight: 600;
                     .gray-text {
-                        color: gray;
+                        color: $gray;
                     }
                 }
             }
@@ -165,6 +175,7 @@
     }
 
     .about {
+        overflow-x: hidden;
         min-height: 100vh;
         position: absolute;
         top: 0;
@@ -177,11 +188,11 @@
             @include f-style(column, flex-start, center);
             .about-article {
                 width: 95%;
-                margin-top: (140 / $scaleh) * 100vh;
-                margin-bottom: (40 / $scaleh) * 100vh;
+                margin-top: (85 / $scaleh) * 100vh;
+                padding-bottom: (30 / $scaleh) * 100vh;
                 @include f-style(column, flex-start, center);
                 .about-title {
-                    width: (300 / $scalew) * 100vw;
+                    width: (350 / $scalew) * 100vw;
                     font-size: (28 / $scalew) * 100vw;
                     align-self: flex-start;
                     margin: 0;
@@ -195,7 +206,7 @@
                     align-self: flex-end;
                     margin: 0;
                     margin-bottom: (10 / $scaleh) * 100vh;
-                    font-size: (17 / $scalew) * 100vw;
+                    font-size: (18 / $scalew) * 100vw;
                 }
             }
         }
@@ -273,19 +284,20 @@
             color: white;
             @include f-style(column, flex-start, center);
             .display-content-box {
-                position: relative;
-                top: (100 / $scaleh) * 100vh;
+                position: absolute;
+                top: (85 / $scaleh) * 100vh;
+                //padding-top: (85 / $scaleh) * 100vh;
                 height: 50%;
                 width: 100%;
                 @include f-style(column, flex-start, center);
                 .display-content {
-                    width: (265 / $scalew) * 100vw;
+                    width: (275 / $scalew) * 100vw;
                     @include f-style(column, flex-start, flex-end);
                     position: relative;
-                    top: (15 / $scaleh) * 100vh;
+                    //top: (15 / $scaleh) * 100vh;
                     right: (30 / $scalew) * 100vw;
                     .display-screenshot {
-                        max-width: (265 / $scalew) * 100vw;
+                        max-width: (275 / $scalew) * 100vw;
                     }
                     .display-info {
                         font-size: (16 / $scalew) * 100vw;
@@ -320,23 +332,24 @@
                 }
             }
             .display-menu-box {
-                position: relative;
-                height: 50%;
+                position: absolute;
                 @include f-style(column, center, flex-end);
+                bottom: (70 / $scaleh) * 100vh;
                 .display-menu {
                     position: relative;
-                    top: (25 / $scaleh) * 100vh;
+                    // top: (25 / $scaleh) * 100vh;
                     @include f-style(column, center, flex-start);
                     width: 90vw;
                     .menu-title {
                         margin: 0;
                         font-weight: 800;
                         font-size: (22 / $scalew) * 100vw;
+                        line-height: (22 / $scalew) * 100vw;
                     }
                     .menu-break {
+                        width: 100%;
                         margin: 0;
                         margin-bottom: (10 / $scaleh) * 100vh;
-                        width: 100%;
                     }
                     .display-option {
                         padding: 0;
@@ -388,19 +401,19 @@
     .contact {
         min-height: 100vh;
         position: absolute;
-        border: 1px solid;
         @include f-style(column, space-between, flex-end);
         .content {
-            padding-top: (100 / $scaleh) * 100vh;
+            position: relative;
+            top: (85 / $scaleh) * 100vh;
             width: (280 / $scalew) * 100vw;
             padding-right: (20 / $scalew) * 100vw;
             @include f-style(column, space-between, center);
             .contact-content-info {
-                font-size: (15 / $scalew) * 100vw;
+                font-size: (16 / $scalew) * 100vw;
                 font-family: Lato, sans-serif;
                 font-weight: 500;
                 position: relative;
-                top: (20 / $scaleh) * 100vh;
+                //top: (20 / $scaleh) * 100vh;
             }
             .addresses {
                 min-width: (260 / $scalew) * 100vw;
@@ -411,7 +424,7 @@
                 list-style: none;
                 position: relative;
                 right: (12 / $scalew) * 100vw;
-                //top: (25 / $scaleh) * 100vh;
+                //bottom: (10 / $scaleh) * 100vh;
                 .address {
                     color: black;
                     margin-top: (15 / $scaleh) * 100vh;
@@ -434,14 +447,19 @@
                     color: $gray;
                 }
             }
+            .addresses-portuguese {
+                bottom: (15 / $scaleh) * 100vh;
+            }
+        }
+        .portuguese {
+            top: (75 / $scaleh) * 100vh;
         }
         .copyright-text {
             text-align: center;
             height: (40 / $scaleh) * 100vh;
-            padding-bottom: (40 / $scaleh) * 100vh;
-            /*position: absolute;
-            bottom: 30px;
-            right: 80px;*/
+            padding-bottom: (30 / $scaleh) * 100vh;
+            position: relative;
+            bottom: (10 / $scaleh) * 100vh;
             font-size: 22px;
             font-weight: 600;
             color: $gray;
@@ -450,7 +468,7 @@
                 display: inline-block;
             }
         }
-        .portuguese {
+        .portuguese-copyright {
             font-size: 20px;
         }
         .watermark {

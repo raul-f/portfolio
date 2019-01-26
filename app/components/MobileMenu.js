@@ -20,13 +20,14 @@ class MobileMenu extends React.Component {
             if (this.state.open) {
                 anime({
                     targets: ".mobile-menu",
-                    height: (100 / 640) * window.visualViewport.height,
+                    height: (70 / 640) * window.visualViewport.height,
                     easing: "easeInOutQuart",
                     duration: 300
                 }).finished.then(() => {
                     this.setState({ animating: false })
                 })
             } else {
+                document.documentElement.requestFullscreen()
                 anime({
                     targets: ".mobile-menu",
                     height: window.visualViewport.height + 100,

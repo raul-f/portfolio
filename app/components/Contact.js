@@ -13,7 +13,13 @@ const Contact = props => {
         <div className="contact">
             <Navbar language={props.language} />
             <Logo />
-            <div className="content">
+            <div
+                className={
+                    props.language === "pt-BR"
+                        ? "content portuguese"
+                        : "content"
+                }
+            >
                 <Info language={props.language} />
                 <Adresses language={props.language} />
             </div>

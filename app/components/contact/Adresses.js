@@ -2,7 +2,13 @@ import React from "react"
 
 const Adresses = props => {
     return (
-        <ul className="addresses">
+        <ul
+            className={
+                props.language === "pt-BR"
+                    ? "addresses addresses-portuguese"
+                    : "addresses"
+            }
+        >
             <li className="address">
                 <i className="fas fa-envelope address-icon" />
                 <span className="address-text">raulf.dev@gmail.com</span>
