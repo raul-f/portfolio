@@ -105,7 +105,7 @@ class Projects extends React.Component {
         event.preventDefault()
         if (
             event.deltaY > 0 &&
-            window.pageYOffset <= window.innerHeight &&
+            window.pageYOffset < window.innerHeight &&
             !this.state.animating
         ) {
             window.scrollTo({ top: 2 * window.innerHeight, behavior: "smooth" })
