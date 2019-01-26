@@ -30,8 +30,29 @@ class Projects extends React.Component {
     }
 
     handleFilterSelection = event => {
+        if (window.innerWidth < 500) {
+            document.documentElement.requestFullscreen()
+            window.scrollTo({
+                top: 2 * window.innerHeight,
+                behavior: "smooth"
+            })
+            this.setState(
+                {
+                    rotate: this.state.rotate + 180,
+                    animating: true
+                },
+                () => {
+                    anime({
+                        ...this.state.settings,
+                        rotate: this.state.rotate
+                    }).finished.then(() => {
+                        this.setState({ animating: false })
+                    })
+                }
+            )
+        }
         const initProjects = {
-            "personal-picks": "random-quote-machine",
+            "personal-picks": "shortr",
             "html-css-websites": "tribute-page",
             "single-page-apps": "random-quote-machine",
             "d3js-charts": "bar-chart",
@@ -57,6 +78,9 @@ class Projects extends React.Component {
     }
 
     handleDisplaySelection = event => {
+        if (window.innerWidth < 500) {
+            document.documentElement.requestFullscreen()
+        }
         this.setState({
             selectedProject: event.target.id,
             activeProject: event.target.id
@@ -75,6 +99,9 @@ class Projects extends React.Component {
     }
 
     handleScrollBtn = () => {
+        if (window.innerWidth < 500) {
+            document.documentElement.requestFullscreen()
+        }
         if (!this.state.animating) {
             if ((this.state.rotate / 180) % 2 === 1) {
                 window.scrollTo({ top: 0, behavior: "smooth" })

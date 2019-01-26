@@ -22,6 +22,9 @@ class App extends React.Component {
     }
 
     changeLanguage = event => {
+        if (window.innerWidth < 500) {
+            document.documentElement.requestFullscreen()
+        }
         this.setState({ language: event.target.id, status: true })
     }
 
