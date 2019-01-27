@@ -29,6 +29,10 @@ const FilterInfo = props => {
             "pt-BR":
                 "APIs que eu desenvolvi, com as páginas correspondentes para utilizá-las."
         },
+        microservices: {
+            "en-US": "Small, modular, back-end focused APIs.",
+            "pt-BR": "APIs diminutas, modulares e voltadas para o back-end."
+        },
         all: {
             "en-US": "The entirety of the projects I have developed so far.",
             "pt-BR": ""

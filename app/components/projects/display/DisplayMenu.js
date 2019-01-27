@@ -189,16 +189,6 @@ const DisplayMenu = props => {
             },
             setOptions: [
                 {
-                    name: { "en-US": "Timely", "pt-BR": "Timely" },
-                    id: "timely",
-                    hash: "3aa9dc55f225e35a57cd28d5795370a4"
-                },
-                {
-                    name: { "en-US": "HeadParser", "pt-BR": "HeadParser" },
-                    id: "headparser",
-                    hash: "e8ba500a7c1c3ff91e08215ef396d0d7"
-                },
-                {
                     name: { "en-US": "Shortr", "pt-BR": "Shortr" },
                     id: "shortr",
                     hash: "461d81e54ed7f5bdc045d16f89df4b48"
@@ -207,6 +197,21 @@ const DisplayMenu = props => {
                     name: { "en-US": "XTrack", "pt-BR": "XTrack" },
                     id: "xtrack",
                     hash: "d3f1772e9f5db35f3e3a923c30adb477"
+                }
+            ]
+        },
+        microservices: {
+            setName: { "en-US": "MICROSERVICES", "pt-BR": "MICROSSERVIÇOS" },
+            setOptions: [
+                {
+                    name: { "en-US": "Timely", "pt-BR": "Timely" },
+                    id: "timely",
+                    hash: "3aa9dc55f225e35a57cd28d5795370a4"
+                },
+                {
+                    name: { "en-US": "HeadParser", "pt-BR": "HeadParser" },
+                    id: "headparser",
+                    hash: "e8ba500a7c1c3ff91e08215ef396d0d7"
                 },
                 {
                     name: { "en-US": "Metareader", "pt-BR": "Metareader" },
@@ -221,8 +226,7 @@ const DisplayMenu = props => {
                 {
                     name: { "en-US": "", "pt-BR": "" },
                     id: "",
-                    hash: "",
-                    type: ""
+                    hash: ""
                 }
             ]
         }

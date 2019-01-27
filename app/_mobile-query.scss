@@ -493,6 +493,12 @@
             }
         }
         .projects {
+            .mobile-background {
+                position: fixed;
+                left: -100%;
+                z-index: 50;
+                height: 120vh;
+            }
             .filter {
                 flex-direction: column;
                 .filter-info {
@@ -537,8 +543,8 @@
                     }
                 }
                 .display-menu-box {
-                    height: (150 / $scaleh) * 100vh;
-                    top: (110 / $scaleh) * 100vh;
+                    //top: (110 / $scaleh) * 100vh;
+                    bottom: (55 / $scaleh) * 100vh;
                     align-items: flex-start;
                 }
             }
@@ -567,6 +573,13 @@
             }
             .copyright-text {
                 padding-bottom: (30 / $scaleh) * 100vh;
+            }
+        }
+        @media (max-width: 400px) {
+            .projects {
+                .mobile-background {
+                    left: -112%;
+                }
             }
         }
     }

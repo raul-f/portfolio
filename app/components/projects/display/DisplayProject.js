@@ -204,29 +204,29 @@ const DisplayProject = props => {
         },
         timely: {
             screenshotUrl:
-                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/timely.png",
             description: {
                 "en-US":
-                    "The API is in place, but the interface is pending. Check the github repo!",
+                    "A microservice that receives a date-string and returns an object with the string's associated unix and utc times.",
                 "pt-BR":
-                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+                    "Um microsserviço que recebe uma string codificando uma data e devolve um objeto com as datas unix e utc associadas."
             },
             link: "",
             repoLink: "https://github.com/raul-f/timely",
-            type: "fullstack"
+            type: "backend"
         },
         headparser: {
             screenshotUrl:
-                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/headparser.png",
             description: {
                 "en-US":
-                    "The API is in place, but the interface is pending. Check the github repo!",
+                    "A microservice that returns information about your device, like preferred language.",
                 "pt-BR":
-                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+                    "Um microsserviço que retorna informação sobre seu dispositivo, como idioma de preferência."
             },
             link: "",
             repoLink: "https://github.com/raul-f/headparser",
-            type: "fullstack"
+            type: "backend"
         },
         xtrack: {
             screenshotUrl:
@@ -243,16 +243,16 @@ const DisplayProject = props => {
         },
         metareader: {
             screenshotUrl:
-                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/placeholder.png",
+                "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolioscreenshots/metareader.png",
             description: {
                 "en-US":
-                    "The API is in place, but the interface is pending. Check the github repo!",
+                    "A microservice that receives a file and returns its name, size and type.",
                 "pt-BR":
-                    "A API está funcionando, mas a página ainda está pendente. Veja o repositório no Github!"
+                    "Um microsserviço que recebe um arquivo e retorna o seu tipo, nome e tamanho."
             },
             link: "",
             repoLink: "https://github.com/raul-f/metareader",
-            type: "fullstack"
+            type: "backend"
         },
         template: {
             screenshotUrl: "",
@@ -285,21 +285,25 @@ const DisplayProject = props => {
                     {sets[props.active].description[props.language]}
                 </p>
                 <div className="display-link-box">
-                    <a
-                        href={
-                            sets[props.active].link
-                                ? sets[props.active].link
-                                : null
-                        }
-                        target="_blank"
-                        className="display-pageLink"
-                    >
-                        {props.language === "pt-BR"
-                            ? "Veja ao vivo "
-                            : "Go see it live "}
-                        <i className="fas fa-chevron-right" />
-                    </a>
-                    {sets[props.active].type === "fullstack" && (
+                    {sets[props.active].type === "fullstack" ||
+                    sets[props.active].type === "frontend" ? (
+                        <a
+                            href={
+                                sets[props.active].link
+                                    ? sets[props.active].link
+                                    : null
+                            }
+                            target="_blank"
+                            className="display-pageLink"
+                        >
+                            {props.language === "pt-BR"
+                                ? "Veja ao vivo "
+                                : "Go see it live "}
+                            <i className="fas fa-chevron-right" />
+                        </a>
+                    ) : null}
+                    {sets[props.active].type === "fullstack" ||
+                    sets[props.active].type === "backend" ? (
                         <a
                             href={sets[props.active].repoLink}
                             target="_blank"
@@ -310,7 +314,7 @@ const DisplayProject = props => {
                                 : "Check the repo "}
                             <i className="fas fa-chevron-right" />
                         </a>
-                    )}
+                    ) : null}
                 </div>
             </div>
         </div>

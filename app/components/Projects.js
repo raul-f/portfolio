@@ -25,12 +25,13 @@ class Projects extends React.Component {
             },
             rotate: 0,
             style: { transform: "rotate(0deg)" },
-            animating: false
+            animating: false,
+            start: null
         }
     }
 
     handleFilterSelection = event => {
-        if (window.innerWidth < 500) {
+        if (window.innerWidth < 500 && window.innerHeight < 800) {
             document.documentElement.requestFullscreen()
             window.scrollTo({
                 top: 2 * window.innerHeight,
@@ -56,7 +57,8 @@ class Projects extends React.Component {
             "html-css-websites": "tribute-page",
             "single-page-apps": "random-quote-machine",
             "d3js-charts": "bar-chart",
-            "full-stack-web-apps": "timely"
+            "full-stack-web-apps": "shortr",
+            microservices: "timely"
         }
         this.setState({
             selectedSet: event.target.id,
@@ -172,8 +174,72 @@ class Projects extends React.Component {
         }
     }
 
+    handleTouch = event => {
+        switch (event.type) {
+            case "touchstart":
+                this.setState({ start: event.touches[0].clientY })
+                break
+            case "touchmove":
+                event.preventDefault()
+                let current = event.touches[0]
+                if (
+                    current.clientY < this.state.start - 5 &&
+                    !this.state.animating &&
+                    window.pageYOffset < window.innerHeight
+                ) {
+                    window.scrollTo({
+                        top: 2 * window.innerHeight,
+                        behavior: "smooth"
+                    })
+                    this.setState(
+                        {
+                            rotate: this.state.rotate + 180,
+                            animating: true
+                        },
+                        () => {
+                            anime({
+                                ...this.state.settings,
+                                rotate: this.state.rotate
+                            }).finished.then(() =>
+                                this.setState({ animating: false })
+                            )
+                        }
+                    )
+                } else if (
+                    current.clientY > this.state.start + 5 &&
+                    !this.state.animating &&
+                    window.pageYOffset >= window.innerHeight
+                ) {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    })
+                    this.setState(
+                        {
+                            rotate: this.state.rotate + 180,
+                            animating: true
+                        },
+                        () => {
+                            anime({
+                                ...this.state.settings,
+                                rotate: this.state.rotate
+                            }).finished.then(() =>
+                                this.setState({ animating: false })
+                            )
+                        }
+                    )
+                }
+        }
+    }
+
     componentDidMount() {
         document.addEventListener("wheel", this.handleScrolling)
+        document.addEventListener("touchmove", this.handleTouch, {
+            passive: false
+        })
+        document.addEventListener("touchstart", this.handleTouch, {
+            passive: false
+        })
         if (window.pageYOffset < 100) {
             window.scrollTo({ top: 0, behavior: "auto" })
         } else {
@@ -187,6 +253,8 @@ class Projects extends React.Component {
 
     componentWillUnmount() {
         document.removeEventListener("wheel", this.handleScrolling)
+        document.removeEventListener("touchmove", this.handleTouch)
+        document.removeEventListener("touchstart", this.handleTouch)
     }
 
     render() {

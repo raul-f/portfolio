@@ -750,6 +750,12 @@ body {
   .mobile-menu .logo {
     left: 2.77778vw;
   }
+  .projects .mobile-background {
+    position: fixed;
+    left: -100%;
+    z-index: 50;
+    height: 120vh;
+  }
   .projects .filter {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -798,8 +804,7 @@ body {
     line-height: 6.94444vw;
   }
   .projects .display .display-menu-box {
-    height: 23.4375vh;
-    top: 17.1875vh;
+    bottom: 8.59375vh;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -823,6 +828,12 @@ body {
   }
   .contact .copyright-text {
     padding-bottom: 4.6875vh;
+  }
+}
+
+@media (max-width: 500px) and (min-height: 800px) and (max-width: 400px) {
+  .projects .mobile-background {
+    left: -112%;
   }
 }
 
