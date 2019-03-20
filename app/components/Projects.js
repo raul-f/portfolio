@@ -225,7 +225,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('wheel', this.handleScrolling)
+    document.addEventListener('wheel', this.handleScrolling, { passive: false })
     document.addEventListener('touchmove', this.handleTouch, {
       passive: false,
     })
@@ -244,9 +244,9 @@ class Projects extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('wheel', this.handleScrolling, { passive: false })
-    document.removeEventListener('touchmove', this.handleTouch, { passive: false })
-    document.removeEventListener('touchstart', this.handleTouch, { passive: false })
+    document.removeEventListener('wheel', this.handleScrolling)
+    document.removeEventListener('touchmove', this.handleTouch)
+    document.removeEventListener('touchstart', this.handleTouch)
   }
 
   render() {
