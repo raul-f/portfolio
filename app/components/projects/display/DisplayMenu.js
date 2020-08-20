@@ -12,11 +12,11 @@ const DisplayMenu = props => {
         },
         {
           name: {
-            'en-US': 'Pomodoro Clock',
-            'pt-BR': 'Cronômetro Pomodoro',
+            'en-US': 'GitHub Stars',
+            'pt-BR': 'GitHub Stars',
           },
-          id: 'pomodoro-clock',
-          hash: '9365886184452fafbaf4c97d5fcd01dc',
+          id: 'github-stars',
+          hash: 'bc0ff06f466126cc64fe8b01ae496fe3',
         },
         {
           name: {
@@ -28,19 +28,19 @@ const DisplayMenu = props => {
         },
         {
           name: {
+            'en-US': 'Pomodoro Clock',
+            'pt-BR': 'Cronômetro Pomodoro',
+          },
+          id: 'pomodoro-clock',
+          hash: '9365886184452fafbaf4c97d5fcd01dc',
+        },
+        {
+          name: {
             'en-US': 'Product-Landing Page',
             'pt-BR': 'Página de Destino do Produto',
           },
           id: 'product-landing-page',
           hash: '0212803ee6f961b0c42b5d402fa55246',
-        },
-        {
-          name: {
-            'en-US': 'Drum Machine',
-            'pt-BR': 'Máquina de Ritmos',
-          },
-          id: 'drum-machine',
-          hash: '717d06318160bff54f6157868a8143e1',
         },
       ],
     },
