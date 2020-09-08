@@ -16,9 +16,9 @@ const AboutRight = props => {
         </p>
         <p className="about-text">
           {props.language === 'pt-BR'
-            ? `Eu sou um web designer e desenvolvedor de ${idade} anos morando em São Paulo, Brasil, que se sente confortável trabalhando com CSS, SASS, HTML,
-						JavaScript e React.js. Tenho um conhecimento básico de UX/UI, sou versado em Node.js, usuário prolífico de Git e do Github, e também sei trabalhar com D3.js.`
-            : `I'm a ${idade}-year-old web developer based in São Paulo, Brazil, who feels most comfortable working with CSS, SASS, HTML, JavaScript and React.js. I have some knowledge of UX/UI, am well-versed in Node.js, a prolific user of Git and Github, and I can work with D3.js, too.` /*I have ADHD, and my friends say that most of the time my behavior is between that of a cat and a kid - but I'm always hyperfocused when designing or coding.*/}
+            ? `Eu sou um web designer e desenvolvedor de ${idade} anos morando em São Paulo, Brasil, que se sente confortável trabalhando com React, Node.js e bancos de dados SQL. Tenho um conhecimento básico de UX/UI, sou versado em CSS, SASS, HTML e
+						JavaScript, usuário prolífico de Git e do Github, e também sei trabalhar com .NET Core e bancos de dados NoSQL.`
+            : `I'm a ${idade}-year-old web developer based in São Paulo, Brazil, who feels most comfortable working with React, Node.js and SQL databases. I have some knowledge of UX/UI, am well-versed in CSS, SASS, HTML and JavaScript, a prolific user of Git and Github, and I can work with .NET Core and NoSQL databases, too.` /*I have ADHD, and my friends say that most of the time my behavior is between that of a cat and a kid - but I'm always hyperfocused when designing or coding.*/}
         </p>
         <p className="about-text">
           {props.language === 'pt-BR'
