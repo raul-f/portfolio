@@ -1,35 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./main.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+
+import Language from "./components/Language";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import MobileMenu from "./components/MobileMenu";
+import TabletPlaceholder from "./components/TabletPlaceholder";
+
+// <App /> component
+
+const App = () => {
+  const [language, setLanguage] = useState("pt-BR");
+  const [status, setStatus] = useState(false);
+
+  function changeLanguage(event: React.MouseEvent<typeof Link>) {
+    if (window.innerWidth < 500) {
+      document.documentElement.requestFullscreen();
+    }
+    setLanguage(() => event.target.id);
+    setStatus(() => true);
+  }
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: status ? (
+        <div>
+          <TabletPlaceholder language={language} />
+          <MobileMenu language={language} />
+          <Home language={language} />
+        </div>
+      ) : (
+        <Language changeLanguage={changeLanguage} page="/" />
+      ),
+    },
+    {
+      path: "/about",
+      element: status ? (
+        <div>
+          <TabletPlaceholder language={language} />
+          <MobileMenu language={language} />
+          <About language={language} />
+        </div>
+      ) : (
+        <Language changeLanguage={changeLanguage} page="/about" />
+      ),
+    },
+    {
+      path: "/projects",
+      element: status ? (
+        <div>
+          <TabletPlaceholder language={language} />
+          <MobileMenu language={language} />
+          <Projects language={language} />
+        </div>
+      ) : (
+        <Language changeLanguage={changeLanguage} page="/projects" />
+      ),
+    },
+    {
+      path: "/contact",
+      element: status ? (
+        <div>
+          <TabletPlaceholder language={language} />
+          <MobileMenu language={language} />
+          <Contact language={language} />
+        </div>
+      ) : (
+        <Language changeLanguage={changeLanguage} page="/contact" />
+      ),
+    },
+  ]);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div id="app">
+      <RouterProvider router={router} />
+    </div>
+  );
+};
 
-export default App
+export default App;
