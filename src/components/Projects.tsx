@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import anime from "animejs";
 
 import Navbar from "./Navbar";
@@ -10,48 +10,26 @@ import ScrollBtn from "./projects/ScrollBtn";
 import Watermark from "./Watermark";
 import MobileMenu from "./MobileMenu";
 
-class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedSet: "personal-picks",
-      activeSet: "personal-picks",
-      selectedProject: "shortr",
-      activeProject: "shortr",
-      settings: {
-        targets: ".scroll-btn",
-        easing: "easeInOutCubic",
-        duration: 450,
-      },
-      rotate: 0,
-      style: { transform: "rotate(0deg)" },
-      animating: false,
-      start: null,
-    };
-  }
+interface ProjectProps {
+  language: string;
+}
 
-  handleFilterSelection = (event) => {
-    if (window.innerWidth < 500 && window.innerHeight < 800) {
-      document.documentElement.requestFullscreen();
-    }
-    window.scrollTo({
-      top: 2 * window.innerHeight,
-      behavior: "smooth",
-    });
-    this.setState(
-      {
-        rotate: this.state.rotate + 180,
-        animating: true,
-      },
-      () => {
-        anime({
-          ...this.state.settings,
-          rotate: this.state.rotate,
-        }).finished.then(() => {
-          this.setState({ animating: false });
-        });
-      }
-    );
+function Projects(props: ProjectProps) {
+  const [selectedSet, setSelectedSet] = useState("personal-picks");
+  const [activeSet, setActiveSet] = useState("personal-picks");
+  const [selectedProject, setSelectedProject] = useState("shortr");
+  const [activeProject, setActiveProject] = useState("shortr");
+  const [rotate, setRotate] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [start, setStart] = useState(0);
+
+  const settings = {
+    targets: ".scroll-btn",
+    easing: "easeInOutCubic",
+    duration: 450,
+  };
+
+  function handleFilterSelection(event: React.MouseEvent) {
     const initProjects = {
       "personal-picks": "shortr",
       "html-css-websites": "tribute-page",
@@ -60,52 +38,68 @@ class Projects extends React.Component {
       "full-stack-web-apps": "shortr",
       microservices: "timely",
     };
-    this.setState({
-      selectedSet: event.target.id,
-      activeSet: event.target.id,
-      selectedProject: initProjects[event.target.id],
-      activeProject: initProjects[event.target.id],
-    });
-  };
 
-  handleFilterPreview = (event) => {
+    const target = event.target as HTMLButtonElement;
+    const id = target.id as keyof typeof initProjects;
+
+    if (window.innerWidth < 500 && window.innerHeight < 800) {
+      document.documentElement.requestFullscreen();
+    }
+
+    window.scrollTo({
+      top: 2 * window.innerHeight,
+      behavior: "smooth",
+    });
+
+    setRotate((prevRotate) => prevRotate + 180);
+    setAnimating(true);
+
+    setSelectedSet(id);
+    setActiveSet(id);
+    setSelectedProject(initProjects[id]);
+    setActiveProject(initProjects[id]);
+  }
+
+  function handleFilterPreview(event: React.MouseEvent) {
+    const target = event.target as HTMLButtonElement;
     switch (event.type) {
       case "mouseover":
-        this.setState({ activeSet: event.target.id });
+        setActiveSet(target.id);
         break;
       default:
-        this.setState({ activeSet: this.state.selectedSet });
+        setActiveSet(selectedSet);
         break;
     }
-  };
+  }
 
-  handleDisplaySelection = (event) => {
+  function handleDisplaySelection(event: React.MouseEvent) {
+    const target = event.target as HTMLButtonElement;
     if (window.innerWidth < 500) {
       document.documentElement.requestFullscreen();
     }
-    this.setState({
-      selectedProject: event.target.id,
-      activeProject: event.target.id,
-    });
-  };
+    setSelectedProject(target.id);
+    setActiveProject(target.id);
+  }
 
-  handleDisplayPreview = (event) => {
+  function handleDisplayPreview(event: React.MouseEvent) {
+    const target = event.target as HTMLButtonElement;
     switch (event.type) {
       case "mouseover":
-        this.setState({ activeProject: event.target.id });
+        setActiveProject(target.id);
         break;
       default:
-        this.setState({ activeProject: this.state.selectedProject });
+        setActiveProject(selectedProject);
         break;
     }
-  };
+  }
 
-  handleScrollBtn = () => {
+  function handleScrollBtn() {
     if (window.innerWidth < 500) {
       document.documentElement.requestFullscreen();
     }
-    if (!this.state.animating) {
-      if ((this.state.rotate / 180) % 2 === 1) {
+
+    if (!animating) {
+      if ((rotate / 180) % 2 === 1) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         window.scrollTo({
@@ -113,183 +107,143 @@ class Projects extends React.Component {
           behavior: "smooth",
         });
       }
-      this.setState(
-        {
-          rotate: this.state.rotate + 180,
-          animating: true,
-        },
-        () => {
-          anime({
-            ...this.state.settings,
-            rotate: this.state.rotate,
-          }).finished.then(() => {
-            this.setState({ animating: false });
-          });
-        }
-      );
-    }
-  };
 
-  handleScrolling = (event) => {
+      setRotate((prevRotate) => prevRotate + 180);
+      setAnimating(true);
+    }
+  }
+
+  function handleScrolling(e: Event) {
+    const event = e as WheelEvent;
     event.preventDefault();
     if (
       event.deltaY > 0 &&
       window.pageYOffset < window.innerHeight &&
-      !this.state.animating
+      !animating
     ) {
       window.scrollTo({ top: 2 * window.innerHeight, behavior: "smooth" });
-      this.setState(
-        {
-          rotate: this.state.rotate + 180,
-          animating: true,
-        },
-        () => {
-          anime({
-            ...this.state.settings,
-            rotate: this.state.rotate,
-          }).finished.then(() => this.setState({ animating: false }));
-        }
-      );
+      setRotate((prevRotate) => prevRotate + 180);
+      setAnimating(true);
     } else if (
       window.pageYOffset >= window.innerHeight &&
       event.deltaY < 0 &&
-      !this.state.animating
+      !animating
     ) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-      this.setState(
-        {
-          rotate: this.state.rotate + 180,
-          animating: true,
-        },
-        () => {
-          anime({
-            ...this.state.settings,
-            rotate: this.state.rotate,
-          }).finished.then(() => this.setState({ animating: false }));
-        }
-      );
+      setRotate((prevRotate) => prevRotate + 180);
+      setAnimating(true);
     }
-  };
+  }
 
-  handleTouch = (event) => {
+  function handleTouch(e: Event) {
+    const event = e as TouchEvent;
     switch (event.type) {
       case "touchstart":
-        this.setState({ start: event.touches[0].clientY });
+        setStart(event.touches[0].clientY);
         break;
       case "touchmove":
         event.preventDefault();
-        let current = event.touches[0];
         if (
-          current.clientY < this.state.start - 5 &&
-          !this.state.animating &&
+          event.touches[0].clientY < start - 5 &&
+          !animating &&
           window.pageYOffset < window.innerHeight
         ) {
           window.scrollTo({
             top: 2 * window.innerHeight,
             behavior: "smooth",
           });
-          this.setState(
-            {
-              rotate: this.state.rotate + 180,
-              animating: true,
-            },
-            () => {
-              anime({
-                ...this.state.settings,
-                rotate: this.state.rotate,
-              }).finished.then(() => this.setState({ animating: false }));
-            }
-          );
+          setRotate((prevRotate) => prevRotate + 180);
+          setAnimating(true);
         } else if (
-          current.clientY > this.state.start + 5 &&
-          !this.state.animating &&
+          event.touches[0].clientY > start + 5 &&
+          !animating &&
           window.pageYOffset >= window.innerHeight
         ) {
           window.scrollTo({
             top: 0,
             behavior: "smooth",
           });
-          this.setState(
-            {
-              rotate: this.state.rotate + 180,
-              animating: true,
-            },
-            () => {
-              anime({
-                ...this.state.settings,
-                rotate: this.state.rotate,
-              }).finished.then(() => this.setState({ animating: false }));
-            }
-          );
+          setRotate((prevRotate) => prevRotate + 180);
+          setAnimating(true);
         }
     }
-  };
+  }
 
-  componentDidMount() {
-    document.addEventListener("wheel", this.handleScrolling, {
+  useEffect(() => {
+    document.addEventListener("wheel", handleScrolling, {
       passive: false,
     });
-    document.addEventListener("touchmove", this.handleTouch, {
+    document.addEventListener("touchmove", handleTouch, {
       passive: false,
     });
-    document.addEventListener("touchstart", this.handleTouch, {
+    document.addEventListener("touchstart", handleTouch, {
       passive: false,
     });
-    if (window.pageYOffset < 100) {
-      window.scrollTo({ top: 0, behavior: "auto" });
-    } else {
-      window.scrollTo({ top: window.innerHeight, behavior: "auto" });
-      this.setState({
-        rotate: this.state.rotate + 180,
-        style: { transform: "rotate(180deg)" },
+
+    // if (window.pageYOffset > 0 && window.pageYOffset <= 100 && !animating) {
+    //   window.scrollTo({ top: 0, behavior: "auto" });
+    // } else if (
+    //   window.pageYOffset > 100 &&
+    //   window.pageYOffset < window.innerHeight &&
+    //   !animating
+    // ) {
+    //   window.scrollTo({ top: window.innerHeight, behavior: "auto" });
+    //   setRotate((prevRotate) => prevRotate + 180);
+    //   setAnimating(true);
+    // }
+
+    if (animating) {
+      anime({
+        ...settings,
+        rotate: rotate,
+      }).finished.then(() => {
+        setAnimating(false);
       });
     }
-  }
 
-  componentWillUnmount() {
-    document.removeEventListener("wheel", this.handleScrolling);
-    document.removeEventListener("touchmove", this.handleTouch);
-    document.removeEventListener("touchstart", this.handleTouch);
-  }
+    return () => {
+      document.removeEventListener("wheel", handleScrolling);
+      document.removeEventListener("touchmove", handleTouch);
+      document.removeEventListener("touchstart", handleTouch);
+    };
+  }, [animating]);
 
-  render() {
-    return (
-      <div id="projects" className="projects">
-        <img
-          src="https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg"
-          className="mobile-background"
+  return (
+    <div id="projects" className="projects">
+      <img
+        src="https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/Images/portfolio-assets/projects-background.jpg"
+        className="mobile-background"
+      />
+      <div className="projects-background" />
+      <MobileMenu language={props.language} />
+      <Logo />
+      <Navbar language={props.language} />
+      <div className="content">
+        <Filter
+          selected={selectedSet}
+          active={activeSet}
+          changeFilter={handleFilterSelection}
+          previewFilter={handleFilterPreview}
+          language={props.language}
         />
-        <div className="projects-background" />
-        <MobileMenu language={this.props.language} />
-        <Logo />
-        <Navbar language={this.props.language} />
-        <div className="content">
-          <Filter
-            selected={this.state.selectedSet}
-            active={this.state.activeSet}
-            changeFilter={this.handleFilterSelection}
-            previewFilter={this.handleFilterPreview}
-            language={this.props.language}
-          />
-          <Display
-            set={this.state.selectedSet}
-            selected={this.state.selectedProject}
-            active={this.state.activeProject}
-            changeProject={this.handleDisplaySelection}
-            previewProject={this.handleDisplayPreview}
-            language={this.props.language}
-          />
-        </div>
-        <ScrollBtn update={this.handleScrollBtn} style={this.state.style} />
-        <Watermark language={this.props.language} page="projects" />
-        <LinkBox />
-        <div className="mobile-footer" />
+        <Display
+          set={selectedSet}
+          selected={selectedProject}
+          active={activeProject}
+          changeProject={handleDisplaySelection}
+          previewProject={handleDisplayPreview}
+          language={props.language}
+        />
       </div>
-    );
-  }
+      <ScrollBtn update={handleScrollBtn} />
+      <Watermark language={props.language} page="projects" />
+      <LinkBox />
+      <div className="mobile-footer" />
+    </div>
+  );
 }
 
 export default Projects;

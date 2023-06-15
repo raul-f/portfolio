@@ -1,23 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import anime from "animejs";
 
 import Logo from "./Logo";
 import Navbox from "./mobilemenu/Navbox";
 import LinkBox from "./LinkBox";
 
-const MobileMenu = function (props: { language: string }) {
+interface MobileMenuProps {
+  language: string;
+}
+
+function MobileMenu(props: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const [animating, setAnimating] = useState(false);
 
   const toggleMenu = () => {
-    if (!animating) {
-      setAnimating(true);
-      if (open) {
+    setOpen((open) => !open);
+    setAnimating(true);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+    setAnimating(true);
+  };
+
+  useEffect(() => {
+    if (animating) {
+      if (!open) {
         anime({
           targets: ".mobile-menu",
-          height: (70 / 640) * window.visualViewport.height,
+          height:
+            window.visualViewport === null
+              ? 0
+              : (70 / 640) * window.visualViewport.height,
           easing: "easeInOutQuart",
-          duration: 300,
+          duration: 200,
         }).finished.then(() => {
           setAnimating(false);
         });
@@ -25,16 +41,18 @@ const MobileMenu = function (props: { language: string }) {
         document.documentElement.requestFullscreen();
         anime({
           targets: ".mobile-menu",
-          height: window.visualViewport.height + 100,
+          height:
+            window.visualViewport === null
+              ? 100
+              : window.visualViewport.height + 100,
           easing: "easeInOutQuart",
-          duration: 300,
+          duration: 200,
         }).finished.then(() => {
           setAnimating(false);
         });
       }
-      setOpen((open) => !open);
     }
-  };
+  }, [animating, open]);
 
   return (
     <div id="mobile-menu" className="mobile-menu">
@@ -42,10 +60,10 @@ const MobileMenu = function (props: { language: string }) {
       <button className="menu-btn" onClick={toggleMenu}>
         {open ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
       </button>
-      <Navbox language={props.language} />
+      <Navbox language={props.language} closeMenu={closeMenu} />
       <LinkBox />
     </div>
   );
-};
+}
 
 export default MobileMenu;

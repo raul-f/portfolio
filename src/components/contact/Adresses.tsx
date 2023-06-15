@@ -1,8 +1,16 @@
-import React from 'react'
+interface AdressesProps {
+  language: string;
+}
 
-const Adresses = props => {
+const Adresses = (props: AdressesProps) => {
   return (
-    <ul className={props.language === 'pt-BR' ? 'addresses addresses-portuguese' : 'addresses'}>
+    <ul
+      className={
+        props.language === "pt-BR"
+          ? "addresses addresses-portuguese"
+          : "addresses"
+      }
+    >
       <li className="address">
         <i className="fas fa-envelope address-icon" />
         <span className="address-text">raulf.dev@gmail.com</span>
@@ -24,12 +32,14 @@ const Adresses = props => {
         >
           <i className="fas fa-download address-icon" />
           <span className="address-text">
-            {props.language === 'pt-BR' ? ' Baixe meu currículo' : ' Download my CV'}
+            {props.language === "pt-BR"
+              ? " Baixe meu currículo"
+              : " Download my CV"}
           </span>
         </a>
       </li>
     </ul>
-  )
-}
+  );
+};
 
-export default Adresses
+export default Adresses;

@@ -1,16 +1,11 @@
-import React from 'react'
-
-const ScrollBtn = props => {
-  return (
-    <button
-      style={props.style}
-      type="button"
-      className="scroll-btn"
-      onClick={event => props.update(event)}
-    >
-      <i className="fas fa-arrow-down" />
-    </button>
-  )
+interface ScrollBtnProps {
+  update: () => void;
 }
 
-export default ScrollBtn
+const ScrollBtn = (props: ScrollBtnProps) => (
+  <button type="button" className="scroll-btn" onClick={props.update}>
+    <i className="fas fa-arrow-down" />
+  </button>
+);
+
+export default ScrollBtn;

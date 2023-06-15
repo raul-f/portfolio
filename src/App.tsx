@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./main.scss";
 
-import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Language from "./components/Language";
 import Home from "./components/Home";
@@ -13,15 +13,16 @@ import TabletPlaceholder from "./components/TabletPlaceholder";
 
 // <App /> component
 
-const App = () => {
+function App() {
   const [language, setLanguage] = useState("pt-BR");
   const [status, setStatus] = useState(false);
 
-  function changeLanguage(event: React.MouseEvent<typeof Link>) {
+  function changeLanguage(event: React.MouseEvent): void {
     if (window.innerWidth < 500) {
       document.documentElement.requestFullscreen();
     }
-    setLanguage(() => event.target.id);
+    const target = event.target as HTMLAnchorElement;
+    setLanguage(() => target.id);
     setStatus(() => true);
   }
 
@@ -81,6 +82,6 @@ const App = () => {
       <RouterProvider router={router} />
     </div>
   );
-};
+}
 
 export default App;

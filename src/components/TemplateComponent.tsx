@@ -1,11 +1,9 @@
-import React from 'react'
-
-const TC = props => {
+const TC = () => {
   return (
     <div id="temp">
       <span />
     </div>
-  )
-}
+  );
+};
 
-export default TC
+export default TC;
