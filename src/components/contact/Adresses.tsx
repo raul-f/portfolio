@@ -25,7 +25,11 @@ const Adresses = (props: AdressesProps) => {
       </li>
       <li>
         <a
-          href="https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/CV/raul-f-cv.pdf"
+          href={
+            props.language === "pt-BR"
+              ? "https://s3-sa-east-1.amazonaws.com/myhostedfiles.raulf/CV/raul-f-cv.pdf"
+              : "https://s3.sa-east-1.amazonaws.com/myhostedfiles.raulf/CV/eng-raul-f-cv.pdf"
+          }
           target="_blank"
           download="CV Raul Figueiredo"
           className="address address-link"
